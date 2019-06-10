@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class SimpleServlet - 10Jun2019
+ * Servlet implementation class SimpleServlet - 10Jun2019 - 09:45:00 AM
  */
 @WebServlet("/hello")
 public class SimpleServlet extends HttpServlet {
