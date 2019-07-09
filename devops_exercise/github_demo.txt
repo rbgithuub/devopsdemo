@@ -1,0 +1,482 @@
+
+Karthik@DESKTOP-6LO7J1S MINGW64 ~
+$ ssh-keygen -t rsa
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/Karthik/.ssh/id_rsa): /c/Users/Karthik/.ssh/git_id_rsa
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/Karthik/.ssh/git_id_rsa.
+Your public key has been saved in /c/Users/Karthik/.ssh/git_id_rsa.pub.
+The key fingerprint is:
+SHA256:5bLg8VtyyqOW08V3bpmAMK9mlkOmp+DlbjA2FUXqV34 Karthik@DESKTOP-6LO7J1S
+The key's randomart image is:
++---[RSA 3072]----+
+|       oo        |
+|      ..         |
+|      ..  o      |
+|     .. o=       |
+|     .+ S=o.E    |
+|    =. =oo=.o .  |
+|   ..+o*++o. + o |
+|   . +*.@*    =  |
+|    .+=O+o   .   |
++----[SHA256]-----+
+
+Karthik@DESKTOP-6LO7J1S MINGW64 ~
+$ cat /c/Users/Karthik/.ssh/git_id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDIseN4qM68oS9RmOO9GijhRioTTFckZEPEqEm4G8VFF8BOUHVkxr/X54bIwijQKZqnAbvmEKXzzveLZIFw
+PyGlj0fKkfiYQFCN7kaRHZIU3q15F1gSC0KplIjhlg0SU08v1IOsUqYZFClT+GCEHYqQAW3k/zNVXwXV6+i5B7tczNPfO+mN3w7OXbf2d8y1MgYjwRII7MLQ
+TiD4YbOMW/yYvB35Gm1tLRHWz/S09YP86HrUBDX9fVxPBaqpSj3nSMJncyUNGrAYa4/C+/GOyvt2zTG8tGp4coEDigr6cA4fTwd9RFhth91sCmwYSMIeZ2mT
+ZKEVoV780kRJwH0Z2o5xubSQ2lBuRaqn0zlUFnl8SfAcJ0OxUlCB7oJJ5MgU2DqqMs99AGTpu2pB0HbPCpCxCSOLXkO7k2tWif0kdp9fEDTcLpA9yCgg+BAY
+jHYzphA0r7HlqPgtH9iNyFnvJSj2WMlpZD+HDuOL5axxgMn+puokU3oIemcqFzB3Q8vVF7k= Karthik@DESKTOP-6LO7J1S
+
+Karthik@DESKTOP-6LO7J1S MINGW64 ~
+$ ssh -v git@github.com
+OpenSSH_8.0p1, OpenSSL 1.1.1c  28 May 2019
+debug1: Reading configuration data /etc/ssh/ssh_config
+debug1: Connecting to github.com [13.237.44.5] port 22.
+debug1: Connection established.
+debug1: identity file /c/Users/Karthik/.ssh/id_rsa type -1
+debug1: identity file /c/Users/Karthik/.ssh/id_rsa-cert type -1
+debug1: identity file /c/Users/Karthik/.ssh/id_dsa type -1
+debug1: identity file /c/Users/Karthik/.ssh/id_dsa-cert type -1
+debug1: identity file /c/Users/Karthik/.ssh/id_ecdsa type -1
+debug1: identity file /c/Users/Karthik/.ssh/id_ecdsa-cert type -1
+debug1: identity file /c/Users/Karthik/.ssh/id_ed25519 type -1
+debug1: identity file /c/Users/Karthik/.ssh/id_ed25519-cert type -1
+debug1: identity file /c/Users/Karthik/.ssh/id_xmss type -1
+debug1: identity file /c/Users/Karthik/.ssh/id_xmss-cert type -1
+debug1: Local version string SSH-2.0-OpenSSH_8.0
+debug1: Remote protocol version 2.0, remote software version babeld-93408c70
+debug1: no match: babeld-93408c70
+debug1: Authenticating to github.com:22 as 'git'
+debug1: SSH2_MSG_KEXINIT sent
+debug1: SSH2_MSG_KEXINIT received
+debug1: kex: algorithm: curve25519-sha256
+debug1: kex: host key algorithm: rsa-sha2-512
+debug1: kex: server->client cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none
+debug1: kex: client->server cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none
+debug1: expecting SSH2_MSG_KEX_ECDH_REPLY
+debug1: Server host key: ssh-rsa SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8
+debug1: Host 'github.com' is known and matches the RSA host key.
+debug1: Found key in /c/Users/Karthik/.ssh/known_hosts:1
+Warning: Permanently added the RSA host key for IP address '13.237.44.5' to the list of known hosts.
+debug1: rekey out after 134217728 blocks
+debug1: SSH2_MSG_NEWKEYS sent
+debug1: expecting SSH2_MSG_NEWKEYS
+debug1: SSH2_MSG_NEWKEYS received
+debug1: rekey in after 134217728 blocks
+debug1: Will attempt key: /c/Users/Karthik/.ssh/id_rsa
+debug1: Will attempt key: /c/Users/Karthik/.ssh/id_dsa
+debug1: Will attempt key: /c/Users/Karthik/.ssh/id_ecdsa
+debug1: Will attempt key: /c/Users/Karthik/.ssh/id_ed25519
+debug1: Will attempt key: /c/Users/Karthik/.ssh/id_xmss
+debug1: SSH2_MSG_EXT_INFO received
+debug1: kex_input_ext_info: server-sig-algs=<ssh-ed25519,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,ssh
+-rsa,rsa-sha2-512,rsa-sha2-256,ssh-dss>
+debug1: SSH2_MSG_SERVICE_ACCEPT received
+debug1: Authentications that can continue: publickey
+debug1: Next authentication method: publickey
+debug1: Trying private key: /c/Users/Karthik/.ssh/id_rsa
+debug1: Trying private key: /c/Users/Karthik/.ssh/id_dsa
+debug1: Trying private key: /c/Users/Karthik/.ssh/id_ecdsa
+debug1: Trying private key: /c/Users/Karthik/.ssh/id_ed25519
+debug1: Trying private key: /c/Users/Karthik/.ssh/id_xmss
+debug1: No more authentication methods to try.
+git@github.com: Permission denied (publickey).
+
+Karthik@DESKTOP-6LO7J1S MINGW64 ~
+$ cat /c/Users/Karthik/.ssh/known_hosts
+github.com,52.64.108.95 ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAq2A7hRGmdnm9tUDbO9IDSwBK6TbQa+PXYPCPy6rbTrTtw7PHkccKrpp0yVhp
+5HdEIcKr6pLlVDBfOLX9QUsyCOV0wzfjIJNlGEYsdlLJizHhbn2mUjvSAHQqZETYP81eFzLQNnPHt4EVVUh7VfDESU84KezmD5QlWpXLmvU31/yMf+Se8xhH
+TvKSCZIFImWwoG6mbUoWf9nzpIoaSjB+weqqUUmpaaasXVal72J+UX2B+2RPW3RcT0eOzQgqlJL3RKrTJvdsjE3JEAvGq3lGHSZXy28G3skua2SmVi/w4yCE
+6gbODqnTWlg7+wC604ydGXA8VJiS5ap43JXiUFFAaQ==
+13.237.44.5 ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAq2A7hRGmdnm9tUDbO9IDSwBK6TbQa+PXYPCPy6rbTrTtw7PHkccKrpp0yVhp5HdEIcKr6pLl
+VDBfOLX9QUsyCOV0wzfjIJNlGEYsdlLJizHhbn2mUjvSAHQqZETYP81eFzLQNnPHt4EVVUh7VfDESU84KezmD5QlWpXLmvU31/yMf+Se8xhHTvKSCZIFImWw
+oG6mbUoWf9nzpIoaSjB+weqqUUmpaaasXVal72J+UX2B+2RPW3RcT0eOzQgqlJL3RKrTJvdsjE3JEAvGq3lGHSZXy28G3skua2SmVi/w4yCE6gbODqnTWlg7
++wC604ydGXA8VJiS5ap43JXiUFFAaQ==
+
+Karthik@DESKTOP-6LO7J1S MINGW64 ~
+$ cd .ssh
+
+Karthik@DESKTOP-6LO7J1S MINGW64 ~/.ssh
+$ vi config
+
+Karthik@DESKTOP-6LO7J1S MINGW64 ~/.ssh
+$ vim config
+
+Karthik@DESKTOP-6LO7J1S MINGW64 ~/.ssh
+$ ls lrt
+ls: cannot access 'lrt': No such file or directory
+
+Karthik@DESKTOP-6LO7J1S MINGW64 ~/.ssh
+$ ls -lrt
+total 10
+-rw-r--r-- 1 Karthik 197121 2610 Jul  9 12:13 git_id_rsa
+-rw-r--r-- 1 Karthik 197121  577 Jul  9 12:13 git_id_rsa.pub
+-rw-r--r-- 1 Karthik 197121  798 Jul  9 12:19 known_hosts
+-rw-r--r-- 1 Karthik 197121  104 Jul  9 12:33 config
+
+Karthik@DESKTOP-6LO7J1S MINGW64 ~/.ssh
+$ ssh -v git@github.com
+OpenSSH_8.0p1, OpenSSL 1.1.1c  28 May 2019
+debug1: Reading configuration data /c/Users/Karthik/.ssh/config
+debug1: /c/Users/Karthik/.ssh/config line 1: Applying options for github.com
+debug1: Reading configuration data /etc/ssh/ssh_config
+debug1: Connecting to github.com [13.237.44.5] port 22.
+debug1: Connection established.
+debug1: identity file /c/Users/Karthik/.ssh/git_id_rsa type 0
+debug1: identity file /c/Users/Karthik/.ssh/git_id_rsa-cert type -1
+debug1: Local version string SSH-2.0-OpenSSH_8.0
+debug1: Remote protocol version 2.0, remote software version babeld-93408c70
+debug1: no match: babeld-93408c70
+debug1: Authenticating to github.com:22 as 'git'
+debug1: SSH2_MSG_KEXINIT sent
+debug1: SSH2_MSG_KEXINIT received
+debug1: kex: algorithm: curve25519-sha256
+debug1: kex: host key algorithm: rsa-sha2-512
+debug1: kex: server->client cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none
+debug1: kex: client->server cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none
+debug1: expecting SSH2_MSG_KEX_ECDH_REPLY
+debug1: Server host key: ssh-rsa SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8
+debug1: Host 'github.com' is known and matches the RSA host key.
+debug1: Found key in /c/Users/Karthik/.ssh/known_hosts:1
+debug1: rekey out after 134217728 blocks
+debug1: SSH2_MSG_NEWKEYS sent
+debug1: expecting SSH2_MSG_NEWKEYS
+debug1: SSH2_MSG_NEWKEYS received
+debug1: rekey in after 134217728 blocks
+debug1: Will attempt key: /c/Users/Karthik/.ssh/git_id_rsa RSA SHA256:5bLg8VtyyqOW08V3bpmAMK9mlkOmp+DlbjA2FUXqV34 explic
+it
+debug1: SSH2_MSG_EXT_INFO received
+debug1: kex_input_ext_info: server-sig-algs=<ssh-ed25519,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,ssh
+-rsa,rsa-sha2-512,rsa-sha2-256,ssh-dss>
+debug1: SSH2_MSG_SERVICE_ACCEPT received
+debug1: Authentications that can continue: publickey
+debug1: Next authentication method: publickey
+debug1: Offering public key: /c/Users/Karthik/.ssh/git_id_rsa RSA SHA256:5bLg8VtyyqOW08V3bpmAMK9mlkOmp+DlbjA2FUXqV34 exp
+licit
+debug1: Server accepts key: /c/Users/Karthik/.ssh/git_id_rsa RSA SHA256:5bLg8VtyyqOW08V3bpmAMK9mlkOmp+DlbjA2FUXqV34 expl
+icit
+debug1: Authentication succeeded (publickey).
+Authenticated to github.com ([13.237.44.5]:22).
+debug1: channel 0: new [client-session]
+debug1: Entering interactive session.
+debug1: pledge: network
+PTY allocation request failed on channel 0
+debug1: client_input_channel_req: channel 0 rtype exit-status reply 0
+Hi psvkarthik! You've successfully authenticated, but GitHub does not provide shell access.
+debug1: channel 0: free: client-session, nchannels 1
+Connection to github.com closed.
+Transferred: sent 3412, received 2376 bytes, in 1.8 seconds
+Bytes per second: sent 1855.9, received 1292.4
+debug1: Exit status 1
+
+Karthik@DESKTOP-6LO7J1S MINGW64 ~/.ssh
+$ cd ..
+
+Karthik@DESKTOP-6LO7J1S MINGW64 ~
+$ mkdir git_projects
+
+Karthik@DESKTOP-6LO7J1S MINGW64 ~
+$ ls -lrt
+total 10465
+drwxr-xr-x 1 Karthik 197121       0 Nov 13  2017  MicrosoftEdgeBackups/
+lrwxrwxrwx 1 Karthik 197121      60 Jul  8  2018  Templates -> /c/Users/Karthik/AppData/Roaming/Microsoft/Windows/Templa
+tes/
+lrwxrwxrwx 1 Karthik 197121      61 Jul  8  2018 'Start Menu' -> '/c/Users/Karthik/AppData/Roaming/Microsoft/Windows/Sta
+rt Menu'/
+lrwxrwxrwx 1 Karthik 197121      57 Jul  8  2018  SendTo -> /c/Users/Karthik/AppData/Roaming/Microsoft/Windows/SendTo/
+lrwxrwxrwx 1 Karthik 197121      57 Jul  8  2018  Recent -> /c/Users/Karthik/AppData/Roaming/Microsoft/Windows/Recent/
+lrwxrwxrwx 1 Karthik 197121      68 Jul  8  2018  PrintHood -> '/c/Users/Karthik/AppData/Roaming/Microsoft/Windows/Print
+er Shortcuts'/
+lrwxrwxrwx 1 Karthik 197121      68 Jul  8  2018  NetHood -> '/c/Users/Karthik/AppData/Roaming/Microsoft/Windows/Network
+ Shortcuts'/
+lrwxrwxrwx 1 Karthik 197121      26 Jul  8  2018 'My Documents' -> /c/Users/Karthik/Documents/
+lrwxrwxrwx 1 Karthik 197121      30 Jul  8  2018 'Local Settings' -> /c/Users/Karthik/AppData/Local/
+lrwxrwxrwx 1 Karthik 197121      60 Jul  8  2018  Cookies -> /c/Users/Karthik/AppData/Local/Microsoft/Windows/INetCookie
+s/
+lrwxrwxrwx 1 Karthik 197121      32 Jul  8  2018 'Application Data' -> /c/Users/Karthik/AppData/Roaming/
+-rw-r--r-- 1 Karthik 197121 1671168 Jul  8  2018  ntuser.dat.LOG2
+-rw-r--r-- 1 Karthik 197121 1048576 Jul  8  2018  ntuser.dat.LOG1
+-rw-r--r-- 1 Karthik 197121  524288 Jul  8  2018  NTUSER.DAT{5136b2a9-827a-11e8-b603-fc459640de22}.TMContainer0000000000
+0000000002.regtrans-ms
+-rw-r--r-- 1 Karthik 197121  524288 Jul  8  2018  NTUSER.DAT{5136b2a9-827a-11e8-b603-fc459640de22}.TMContainer0000000000
+0000000001.regtrans-ms
+-rw-r--r-- 1 Karthik 197121   65536 Jul  8  2018  NTUSER.DAT{5136b2a9-827a-11e8-b603-fc459640de22}.TM.blf
+drwxr-xr-x 1 Karthik 197121       0 Jul  8  2018  AppData/
+-rw-r--r-- 1 Karthik 197121      20 Jul  8  2018  ntuser.ini
+drwxr-xr-x 1 Karthik 197121       0 Jun 20 17:02 '3D Objects'/
+drwxr-xr-x 1 Karthik 197121       0 Jun 20 17:02  Contacts/
+drwxr-xr-x 1 Karthik 197121       0 Jun 20 17:02  Favorites/
+drwxr-xr-x 1 Karthik 197121       0 Jun 20 17:02  Videos/
+drwxr-xr-x 1 Karthik 197121       0 Jun 20 17:02  Searches/
+drwxr-xr-x 1 Karthik 197121       0 Jun 20 17:02  Music/
+drwxr-xr-x 1 Karthik 197121       0 Jun 20 17:02 'Saved Games'/
+drwxr-xr-x 1 Karthik 197121       0 Jun 20 17:02  Links/
+drwxr-xr-x 1 Karthik 197121       0 Jul  3 13:11 'VirtualBox VMs'/
+-rw-r--r-- 1 Karthik 197121 6553600 Jul  3 13:26  NTUSER.DAT
+drwxr-xr-x 1 Karthik 197121       0 Jul  3 13:28  IntelGraphicsProfiles/
+drwxr-xr-x 1 Karthik 197121       0 Jul  3 13:33  vagrant_ubuntu_16.04/
+drwxr-xr-x 1 Karthik 197121       0 Jul  4 12:05  Pictures/
+drwxr-xr-x 1 Karthik 197121       0 Jul  4 12:17  Desktop/
+drwxr-xr-x 1 Karthik 197121       0 Jul  4 13:19  Documents/
+drwxr-xr-x 1 Karthik 197121       0 Jul  9 11:02  Downloads/
+drwxr-xr-x 1 Karthik 197121       0 Jul  9 11:04  OneDrive/
+drwxr-xr-x 1 Karthik 197121       0 Jul  9 12:42  git_projects/
+
+Karthik@DESKTOP-6LO7J1S MINGW64 ~
+$ cd git_projects/
+
+Karthik@DESKTOP-6LO7J1S MINGW64 ~/git_projects
+$ git
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Use binary search to find the commit that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout   Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Reapply commits on top of another base tip
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+
+Karthik@DESKTOP-6LO7J1S MINGW64 ~/git_projects
+$ git clone git@github.com:psvkarthik/devopsdemo.git
+Cloning into 'devopsdemo'...
+Warning: Permanently added the RSA host key for IP address '13.236.229.21' to the list of known hosts.
+remote: Enumerating objects: 76, done.
+remote: Counting objects: 100% (76/76), done.
+Receiving objects:  11% (9/76)00% (41/41), done.R
+Rremote: Total 76 (delta 14), reused 61 (delta 8), pack-reused 0eceiving obj
+Receiving objects: 100% (76/76), 12.55 KiB | 803.00 KiB/s, done.
+Resolving deltas: 100% (14/14), done.
+
+Karthik@DESKTOP-6LO7J1S MINGW64 ~/git_projects
+$ cd devopsdemo
+
+Karthik@DESKTOP-6LO7J1S MINGW64 ~/git_projects/devopsdemo (master)
+$ ls -lrt
+total 10
+-rw-r--r-- 1 Karthik 197121  158 Jul  9 12:44 Dockerfile
+-rw-r--r-- 1 Karthik 197121  473 Jul  9 12:44 Jenkinsfile
+-rw-r--r-- 1 Karthik 197121 1162 Jul  9 12:44 README.md
+-rw-r--r-- 1 Karthik 197121 1654 Jul  9 12:44 pom.xml
+drwxr-xr-x 1 Karthik 197121    0 Jul  9 12:44 src/
+drwxr-xr-x 1 Karthik 197121    0 Jul  9 12:44 target/
+
+Karthik@DESKTOP-6LO7J1S MINGW64 ~/git_projects/devopsdemo (master)
+$ git branch
+* master
+
+Karthik@DESKTOP-6LO7J1S MINGW64 ~/git_projects/devopsdemo (master)
+$ git branch testgit
+
+Karthik@DESKTOP-6LO7J1S MINGW64 ~/git_projects/devopsdemo (master)
+$ ls -lart
+total 19
+drwxr-xr-x 1 Karthik 197121    0 Jul  9 12:44 ../
+-rw-r--r-- 1 Karthik 197121  214 Jul  9 12:44 .project
+-rw-r--r-- 1 Karthik 197121  158 Jul  9 12:44 Dockerfile
+-rw-r--r-- 1 Karthik 197121  473 Jul  9 12:44 Jenkinsfile
+-rw-r--r-- 1 Karthik 197121 1162 Jul  9 12:44 README.md
+-rw-r--r-- 1 Karthik 197121 1654 Jul  9 12:44 pom.xml
+drwxr-xr-x 1 Karthik 197121    0 Jul  9 12:44 src/
+drwxr-xr-x 1 Karthik 197121    0 Jul  9 12:44 ./
+drwxr-xr-x 1 Karthik 197121    0 Jul  9 12:44 target/
+drwxr-xr-x 1 Karthik 197121    0 Jul  9 12:44 .git/
+
+Karthik@DESKTOP-6LO7J1S MINGW64 ~/git_projects/devopsdemo (master)
+$ cd .git
+
+Karthik@DESKTOP-6LO7J1S MINGW64 ~/git_projects/devopsdemo/.git (GIT_DIR!)
+$ git status
+fatal: this operation must be run in a work tree
+
+Karthik@DESKTOP-6LO7J1S MINGW64 ~/git_projects/devopsdemo/.git (GIT_DIR!)
+$ ls -lrt
+total 12
+-rw-r--r-- 1 Karthik 197121   73 Jul  9 12:44 description
+drwxr-xr-x 1 Karthik 197121    0 Jul  9 12:44 hooks/
+drwxr-xr-x 1 Karthik 197121    0 Jul  9 12:44 info/
+drwxr-xr-x 1 Karthik 197121    0 Jul  9 12:44 objects/
+-rw-r--r-- 1 Karthik 197121  114 Jul  9 12:44 packed-refs
+drwxr-xr-x 1 Karthik 197121    0 Jul  9 12:44 refs/
+-rw-r--r-- 1 Karthik 197121   23 Jul  9 12:44 HEAD
+drwxr-xr-x 1 Karthik 197121    0 Jul  9 12:44 logs/
+-rw-r--r-- 1 Karthik 197121  303 Jul  9 12:44 config
+-rw-r--r-- 1 Karthik 197121 2078 Jul  9 12:44 index
+
+Karthik@DESKTOP-6LO7J1S MINGW64 ~/git_projects/devopsdemo/.git (GIT_DIR!)
+$ cd
+
+Karthik@DESKTOP-6LO7J1S MINGW64 ~
+$ cd /git_projects/devopsdemo
+bash: cd: /git_projects/devopsdemo: No such file or directory
+
+Karthik@DESKTOP-6LO7J1S MINGW64 ~
+$ cd /c/users/karthik/
+
+Karthik@DESKTOP-6LO7J1S MINGW64 /c/users/karthik
+$ cd git_projects/devopsdemo/
+
+Karthik@DESKTOP-6LO7J1S MINGW64 /c/users/karthik/git_projects/devopsdemo (master)
+$ git branch
+* master
+  testgit
+
+Karthik@DESKTOP-6LO7J1S MINGW64 /c/users/karthik/git_projects/devopsdemo (master)
+$ git checkout testgit
+Switched to branch 'testgit'
+
+Karthik@DESKTOP-6LO7J1S MINGW64 /c/users/karthik/git_projects/devopsdemo (testgit)
+$ history
+    1  exit
+    2  ssh-keygen -t rsa
+    3  cat /c/Users/Karthik/.ssh/git_id_rsa.pub
+    4  ssh -v git@github.com
+    5  cat /c/Users/Karthik/.ssh/known_hosts
+    6  cd .ssh
+    7  vi config
+    8  vim config
+    9  ls lrt
+   10  ls -lrt
+   11  ssh -v git@github.com
+   12  cd ..
+   13  mkdir git_projects
+   14  ls -lrt
+   15  cd git_projects/
+   16  git
+   17  git clone git@github.com:psvkarthik/devopsdemo.git
+   18  cd devopsdemo
+   19  ls -lrt
+   20  git branch
+   21  git branch testgit
+   22  ls -lart
+   23  cd .git
+   24  git status
+   25  ls -lrt
+   26  cd
+   27  cd /git_projects/devopsdemo
+   28  cd /c/users/karthik/
+   29  cd git_projects/devopsdemo/
+   30  git branch
+   31  git checkout testgit
+   32  history
+
+Karthik@DESKTOP-6LO7J1S MINGW64 /c/users/karthik/git_projects/devopsdemo (testgit)
+$ ls -lrt
+total 10
+-rw-r--r-- 1 Karthik 197121  158 Jul  9 12:44 Dockerfile
+-rw-r--r-- 1 Karthik 197121  473 Jul  9 12:44 Jenkinsfile
+-rw-r--r-- 1 Karthik 197121 1162 Jul  9 12:44 README.md
+-rw-r--r-- 1 Karthik 197121 1654 Jul  9 12:44 pom.xml
+drwxr-xr-x 1 Karthik 197121    0 Jul  9 12:44 src/
+drwxr-xr-x 1 Karthik 197121    0 Jul  9 12:44 target/
+
+Karthik@DESKTOP-6LO7J1S MINGW64 /c/users/karthik/git_projects/devopsdemo (testgit)
+$ vim git_cmd
+
+Karthik@DESKTOP-6LO7J1S MINGW64 /c/users/karthik/git_projects/devopsdemo (testgit)
+$ git status
+On branch testgit
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        git_cmd
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Karthik@DESKTOP-6LO7J1S MINGW64 /c/users/karthik/git_projects/devopsdemo (testgit)
+$ git add git_cmd
+warning: LF will be replaced by CRLF in git_cmd.
+The file will have its original line endings in your working directory
+
+Karthik@DESKTOP-6LO7J1S MINGW64 /c/users/karthik/git_projects/devopsdemo (testgit)
+$ git commit -a
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'Karthik@DESKTOP-6LO7J1S.(none)')
+
+Karthik@DESKTOP-6LO7J1S MINGW64 /c/users/karthik/git_projects/devopsdemo (testgit)
+$ git config --global user.email "psvkarthik@gmail.com"
+
+Karthik@DESKTOP-6LO7J1S MINGW64 /c/users/karthik/git_projects/devopsdemo (testgit)
+$ git config --global user.name "psvkarthik"
+
+Karthik@DESKTOP-6LO7J1S MINGW64 /c/users/karthik/git_projects/devopsdemo (testgit)
+$ cat ~/.gitconfig
+[user]
+        email = psvkarthik@gmail.com
+        name = psvkarthik
+
+Karthik@DESKTOP-6LO7J1S MINGW64 /c/users/karthik/git_projects/devopsdemo (testgit)
+$ git commit -am "This is my 1st commit"
+[testgit b022835] This is my 1st commit
+ 1 file changed, 2 insertions(+)
+ create mode 100644 git_cmd
+
+Karthik@DESKTOP-6LO7J1S MINGW64 /c/users/karthik/git_projects/devopsdemo (testgit)
+$ git remote -v
+origin  git@github.com:psvkarthik/devopsdemo.git (fetch)
+origin  git@github.com:psvkarthik/devopsdemo.git (push)
+
+Karthik@DESKTOP-6LO7J1S MINGW64 /c/users/karthik/git_projects/devopsdemo (testgit)
+$ git push origin testgit
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 300 bytes | 300.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'testgit' on GitHub by visiting:
+remote:      https://github.com/psvkarthik/devopsdemo/pull/new/testgit
+remote:
+To github.com:psvkarthik/devopsdemo.git
+ * [new branch]      testgit -> testgit
+
+Karthik@DESKTOP-6LO7J1S MINGW64 /c/users/karthik/git_projects/devopsdemo (testgit)
+$ mkdir
