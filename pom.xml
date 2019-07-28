@@ -42,4 +42,14 @@
             </plugin>
         </plugins>
   </build>
+  <distributionManagement>
+    <repository>
+      <id>releases</id>
+      <url>http://192.168.1.14:8083/repository/DevopsDemo/</url>
+    </repository>
+    <snapshotRepository>
+      <id>snapshots</id>
+      <url>http://192.168.1.14:8083/repository/DevopsDemo-Snap/</url>
+    </snapshotRepository>
+  </distributionManagement>
 </project>
