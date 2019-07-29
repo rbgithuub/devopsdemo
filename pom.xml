@@ -44,7 +44,7 @@
   </build>
   <distributionManagement>
     <repository>
-      <id>vagrantnexus</id>
+      <id>settingsserverid</id>
       <url>http://192.168.1.14:8083/repository/DevopsDemo-Snap/</url>
     </repository>
   </distributionManagement>
