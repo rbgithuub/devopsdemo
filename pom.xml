@@ -44,10 +44,6 @@
   </build>
   <distributionManagement>
     <repository>
-      <id>DevopsDemo</id>
-      <url>http://192.168.1.14:8083/repository/DevopsDemo/</url>
-       </repository>
-     <repository>
       <id>DevopsDemo-Snap</id>
       <url>http://192.168.1.14:8083/repository/DevopsDemo-Snap/</url>
     </repository>
