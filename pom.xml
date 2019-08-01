@@ -42,4 +42,13 @@
             </plugin>
         </plugins>
   </build>
+  <distributionManagement>
+    <repository>
+      <uniqueVersion>false</uniqueVersion>
+      <id>devopssnapshot</id>
+      <name>devopssnapshot</name>
+      <url>http://192.168.86.177:8081/repository/devopsdemo-snap/</url>
+      <layout>default</layout>
+    </repository>
+   </distributionManagement>
 </project>
