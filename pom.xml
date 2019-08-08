@@ -45,7 +45,7 @@
   <distributionManagement>
     <repository>
       <uniqueVersion>false</uniqueVersion>
-      <id>devopsdemo-snap</id>
+      <id>nexusjenkins</id>
       <name>devopsdemo-snap</name>
       <url>http://192.168.86.177:8081/repository/devopsdemo-snap/</url>
       <layout>default</layout>
