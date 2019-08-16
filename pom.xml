@@ -43,13 +43,13 @@
         </plugins>
   </build>
   <distributionManagement>
-    <snapshotrepository>
+    <snapshotRepository>
       <uniqueVersion>true</uniqueVersion>
       <id>devopsdemo-snapshot</id>
       <name>devopsdemo-snapshot</name>
       <url>http://192.168.86.177:8081/repository/devopsdemo-snaopshot/</url>
       <layout>default</layout>
-    </snapshotrepository>
+    </snapshotRepository>
     <repository>
       <uniqueVersion>true</uniqueVersion>
       <id>devopsdemo-release</id>
