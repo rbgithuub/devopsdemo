@@ -52,9 +52,9 @@
     </snapshotRepository>
     <repository>
       <uniqueVersion>true</uniqueVersion>
-      <id>devopsdemo-release</id>
-      <name>devopsdemo-release</name>
-      <url>http://192.168.86.177:8081/repository/devopsdemo-release/</url>
+      <id>maven-releases</id>
+      <name>maven-releases</name>
+      <url>http://192.168.86.177:8081/repository/maven-releases/</url>
       <layout>default</layout>
     </repository>
    </distributionManagement>
