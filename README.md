@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # devopsdemo
 Sample DevOps Project by opensourcetechy
 Testing auto build trigger
@@ -31,4 +30,3 @@ Testing auto build trigger
   <li>	Perform Deployment in Stage server </li>
   <li>	Perform Deployment in Prod Server </li>
 </ul>
->>>>>>> upstream/master
