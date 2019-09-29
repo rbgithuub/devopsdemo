@@ -356,3 +356,199 @@ Sun Sep 29 06:22:59 UTC 2019
 
 2019-09-29 07:00:57,804 p=5149 u=vagrant |  PLAY RECAP **************************************************************************************************************
 2019-09-29 07:00:57,806 p=5149 u=vagrant |  ansible-client1            : ok=3    changed=0    unreachable=0    failed=1   
+2019-09-29 07:13:03,509 p=5316 u=vagrant |  ansible-playbook 2.4.2.0
+  config file = /etc/ansible/ansible.cfg
+  configured module search path = [u'/home/vagrant/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/site-packages/ansible
+  executable location = /usr/bin/ansible-playbook
+  python version = 2.7.5 (default, Oct 30 2018, 23:45:53) [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
+2019-09-29 07:13:03,510 p=5316 u=vagrant |  Using /etc/ansible/ansible.cfg as config file
+2019-09-29 07:13:03,511 p=5316 u=vagrant |  ERROR! the playbook: playbooks/generic-setup.yml could not be found
+2019-09-29 07:14:09,551 p=5321 u=vagrant |  ansible-playbook 2.4.2.0
+  config file = /etc/ansible/ansible.cfg
+  configured module search path = [u'/home/vagrant/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/site-packages/ansible
+  executable location = /usr/bin/ansible-playbook
+  python version = 2.7.5 (default, Oct 30 2018, 23:45:53) [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
+2019-09-29 07:14:09,551 p=5321 u=vagrant |  Using /etc/ansible/ansible.cfg as config file
+2019-09-29 07:14:10,222 p=5321 u=vagrant |  PLAYBOOK: generic-setup.yml *********************************************************************************************
+2019-09-29 07:14:10,222 p=5321 u=vagrant |  1 plays in playbooks/generic-setup.yml
+2019-09-29 07:14:10,325 p=5321 u=vagrant |  PLAY [all] **************************************************************************************************************
+2019-09-29 07:14:10,361 p=5321 u=vagrant |  TASK [Gathering Facts] **************************************************************************************************
+2019-09-29 07:14:14,090 p=5321 u=vagrant |  ok: [ansible-client1]
+2019-09-29 07:14:14,092 p=5321 u=vagrant |  META: ran handlers
+2019-09-29 07:14:14,110 p=5321 u=vagrant |  TASK [jdk : Create the default directory for jdk setup] *****************************************************************
+2019-09-29 07:14:14,110 p=5321 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:3
+2019-09-29 07:14:15,456 p=5321 u=vagrant |  ok: [ansible-client1] => {"changed": false, "gid": 1000, "group": "vagrant", "mode": "0755", "owner": "vagrant", "path": "/usr/java/", "secontext": "unconfined_u:object_r:usr_t:s0", "size": 6, "state": "directory", "uid": 1000}
+2019-09-29 07:14:15,482 p=5321 u=vagrant |  TASK [jdk : Check whether jdk file exists or not] ***********************************************************************
+2019-09-29 07:14:15,482 p=5321 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:11
+2019-09-29 07:14:16,878 p=5321 u=vagrant |  ok: [ansible-client1] => {"changed": false, "stat": {"atime": 1569740457.605472, "attr_flags": "", "attributes": [], "block_size": 4096, "blocks": 0, "charset": "binary", "checksum": "da39a3ee5e6b4b0d3255bfef95601890afd80709", "ctime": 1569740375.5544646, "dev": 2049, "device_type": 0, "executable": false, "exists": true, "gid": 1000, "gr_name": "vagrant", "inode": 67556988, "isblk": false, "ischr": false, "isdir": false, "isfifo": false, "isgid": false, "islnk": false, "isreg": true, "issock": false, "isuid": false, "md5": "d41d8cd98f00b204e9800998ecf8427e", "mimetype": "inode/x-empty", "mode": "0664", "mtime": 1569740375.5544646, "nlink": 1, "path": "/tmp/jdk.txt", "pw_name": "vagrant", "readable": true, "rgrp": true, "roth": true, "rusr": true, "size": 0, "uid": 1000, "version": "18446744073191931738", "wgrp": true, "woth": false, "writeable": true, "wusr": true, "xgrp": false, "xoth": false, "xusr": false}}
+2019-09-29 07:14:16,900 p=5321 u=vagrant |  TASK [jdk : debug] ******************************************************************************************************
+2019-09-29 07:14:16,901 p=5321 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:17
+2019-09-29 07:14:16,953 p=5321 u=vagrant |  fatal: [ansible-client1]: FAILED! => {"msg": "The conditional check 'jdk_download_file.exists == False' failed. The error was: error while evaluating conditional (jdk_download_file.exists == False): 'dict object' has no attribute 'exists'\n\nThe error appears to have been in '/home/vagrant/ansible_roles/jdk/tasks/main.yml': line 17, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n- debug:\n  ^ here\n"}
+2019-09-29 07:14:16,963 p=5321 u=vagrant |  	to retry, use: --limit @/home/vagrant/playbooks/generic-setup.retry
+
+2019-09-29 07:14:16,964 p=5321 u=vagrant |  PLAY RECAP **************************************************************************************************************
+2019-09-29 07:14:16,965 p=5321 u=vagrant |  ansible-client1            : ok=3    changed=0    unreachable=0    failed=1   
+2019-09-29 07:28:45,288 p=5441 u=vagrant |  ansible-playbook 2.4.2.0
+  config file = /etc/ansible/ansible.cfg
+  configured module search path = [u'/home/vagrant/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/site-packages/ansible
+  executable location = /usr/bin/ansible-playbook
+  python version = 2.7.5 (default, Oct 30 2018, 23:45:53) [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
+2019-09-29 07:28:45,290 p=5441 u=vagrant |  Using /etc/ansible/ansible.cfg as config file
+2019-09-29 07:28:46,098 p=5441 u=vagrant |  PLAYBOOK: generic-setup.yml *********************************************************************************************
+2019-09-29 07:28:46,099 p=5441 u=vagrant |  1 plays in playbooks/generic-setup.yml
+2019-09-29 07:28:46,202 p=5441 u=vagrant |  PLAY [all] **************************************************************************************************************
+2019-09-29 07:28:46,234 p=5441 u=vagrant |  TASK [Gathering Facts] **************************************************************************************************
+2019-09-29 07:28:50,013 p=5441 u=vagrant |  ok: [ansible-client1]
+2019-09-29 07:28:50,015 p=5441 u=vagrant |  META: ran handlers
+2019-09-29 07:28:50,033 p=5441 u=vagrant |  TASK [jdk : Create the default directory for jdk setup] *****************************************************************
+2019-09-29 07:28:50,034 p=5441 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:3
+2019-09-29 07:28:51,358 p=5441 u=vagrant |  ok: [ansible-client1] => {"changed": false, "gid": 1000, "group": "vagrant", "mode": "0755", "owner": "vagrant", "path": "/usr/java/", "secontext": "unconfined_u:object_r:usr_t:s0", "size": 6, "state": "directory", "uid": 1000}
+2019-09-29 07:28:51,383 p=5441 u=vagrant |  TASK [jdk : Check whether jdk file exists or not] ***********************************************************************
+2019-09-29 07:28:51,383 p=5441 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:11
+2019-09-29 07:28:52,774 p=5441 u=vagrant |  ok: [ansible-client1] => {"changed": false, "stat": {"atime": 1569740457.605472, "attr_flags": "", "attributes": [], "block_size": 4096, "blocks": 0, "charset": "binary", "checksum": "da39a3ee5e6b4b0d3255bfef95601890afd80709", "ctime": 1569740375.5544646, "dev": 2049, "device_type": 0, "executable": false, "exists": true, "gid": 1000, "gr_name": "vagrant", "inode": 67556988, "isblk": false, "ischr": false, "isdir": false, "isfifo": false, "isgid": false, "islnk": false, "isreg": true, "issock": false, "isuid": false, "md5": "d41d8cd98f00b204e9800998ecf8427e", "mimetype": "inode/x-empty", "mode": "0664", "mtime": 1569740375.5544646, "nlink": 1, "path": "/tmp/jdk.txt", "pw_name": "vagrant", "readable": true, "rgrp": true, "roth": true, "rusr": true, "size": 0, "uid": 1000, "version": "18446744073191931738", "wgrp": true, "woth": false, "writeable": true, "wusr": true, "xgrp": false, "xoth": false, "xusr": false}}
+2019-09-29 07:28:52,802 p=5441 u=vagrant |  TASK [jdk : debug] ******************************************************************************************************
+2019-09-29 07:28:52,803 p=5441 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:17
+2019-09-29 07:28:52,857 p=5441 u=vagrant |  skipping: [ansible-client1] => {"changed": false, "skip_reason": "Conditional result was False"}
+2019-09-29 07:28:52,875 p=5441 u=vagrant |  TASK [jdk : Download the jdk from oracle website] ***********************************************************************
+2019-09-29 07:28:52,877 p=5441 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:21
+2019-09-29 07:28:52,930 p=5441 u=vagrant |  skipping: [ansible-client1] => {"changed": false, "skip_reason": "Conditional result was False"}
+2019-09-29 07:28:52,964 p=5441 u=vagrant |  TASK [jdk : Extract the jdk file] ***************************************************************************************
+2019-09-29 07:28:52,964 p=5441 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:27
+2019-09-29 07:28:53,333 p=5441 u=vagrant |  fatal: [ansible-client1]: FAILED! => {"changed": false, "msg": "Could not find or access '/tmp/jdk_ri-8u40-b25-linux-x64-10_feb_2015.tar.gz'"}
+2019-09-29 07:28:53,343 p=5441 u=vagrant |  	to retry, use: --limit @/home/vagrant/playbooks/generic-setup.retry
+
+2019-09-29 07:28:53,343 p=5441 u=vagrant |  PLAY RECAP **************************************************************************************************************
+2019-09-29 07:28:53,344 p=5441 u=vagrant |  ansible-client1            : ok=3    changed=0    unreachable=0    failed=1   
+2019-09-29 07:32:03,087 p=5489 u=vagrant |  ansible-playbook 2.4.2.0
+  config file = /etc/ansible/ansible.cfg
+  configured module search path = [u'/home/vagrant/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/site-packages/ansible
+  executable location = /usr/bin/ansible-playbook
+  python version = 2.7.5 (default, Oct 30 2018, 23:45:53) [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
+2019-09-29 07:32:03,088 p=5489 u=vagrant |  Using /etc/ansible/ansible.cfg as config file
+2019-09-29 07:32:03,888 p=5489 u=vagrant |  PLAYBOOK: generic-setup.yml *********************************************************************************************
+2019-09-29 07:32:03,889 p=5489 u=vagrant |  1 plays in playbooks/generic-setup.yml
+2019-09-29 07:32:03,993 p=5489 u=vagrant |  PLAY [all] **************************************************************************************************************
+2019-09-29 07:32:04,026 p=5489 u=vagrant |  TASK [Gathering Facts] **************************************************************************************************
+2019-09-29 07:32:08,143 p=5489 u=vagrant |  ok: [ansible-client1]
+2019-09-29 07:32:08,147 p=5489 u=vagrant |  META: ran handlers
+2019-09-29 07:32:08,169 p=5489 u=vagrant |  TASK [jdk : Create the default directory for jdk setup] *****************************************************************
+2019-09-29 07:32:08,169 p=5489 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:3
+2019-09-29 07:32:10,084 p=5489 u=vagrant |  ok: [ansible-client1] => {"changed": false, "gid": 1000, "group": "vagrant", "mode": "0755", "owner": "vagrant", "path": "/usr/java/", "secontext": "unconfined_u:object_r:usr_t:s0", "size": 6, "state": "directory", "uid": 1000}
+2019-09-29 07:32:10,124 p=5489 u=vagrant |  TASK [jdk : Check whether jdk file exists or not] ***********************************************************************
+2019-09-29 07:32:10,125 p=5489 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:11
+2019-09-29 07:32:11,945 p=5489 u=vagrant |  ok: [ansible-client1] => {"changed": false, "stat": {"exists": false}}
+2019-09-29 07:32:11,971 p=5489 u=vagrant |  TASK [jdk : debug] ******************************************************************************************************
+2019-09-29 07:32:11,971 p=5489 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:17
+2019-09-29 07:32:12,127 p=5489 u=vagrant |  ok: [ansible-client1] => {
+    "msg": "jdk download file status"
+}
+2019-09-29 07:32:12,159 p=5489 u=vagrant |  TASK [jdk : Download the jdk from oracle website] ***********************************************************************
+2019-09-29 07:32:12,160 p=5489 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:21
+2019-09-29 07:33:40,337 p=5489 u=vagrant |   [ERROR]: User interrupted execution
+
+2019-09-29 07:36:05,026 p=5536 u=vagrant |  ansible-playbook 2.4.2.0
+  config file = /etc/ansible/ansible.cfg
+  configured module search path = [u'/home/vagrant/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/site-packages/ansible
+  executable location = /usr/bin/ansible-playbook
+  python version = 2.7.5 (default, Oct 30 2018, 23:45:53) [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
+2019-09-29 07:36:05,027 p=5536 u=vagrant |  Using /etc/ansible/ansible.cfg as config file
+2019-09-29 07:36:05,817 p=5536 u=vagrant |  PLAYBOOK: generic-setup.yml *********************************************************************************************
+2019-09-29 07:36:05,817 p=5536 u=vagrant |  1 plays in playbooks/generic-setup.yml
+2019-09-29 07:36:05,926 p=5536 u=vagrant |  PLAY [all] **************************************************************************************************************
+2019-09-29 07:36:05,960 p=5536 u=vagrant |  TASK [Gathering Facts] **************************************************************************************************
+2019-09-29 07:36:13,307 p=5536 u=vagrant |  ok: [ansible-client1]
+2019-09-29 07:36:13,310 p=5536 u=vagrant |  META: ran handlers
+2019-09-29 07:36:13,329 p=5536 u=vagrant |  TASK [jdk : Create the default directory for jdk setup] *****************************************************************
+2019-09-29 07:36:13,330 p=5536 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:3
+2019-09-29 07:36:14,925 p=5536 u=vagrant |  ok: [ansible-client1] => {"changed": false, "gid": 1000, "group": "vagrant", "mode": "0755", "owner": "vagrant", "path": "/usr/java/", "secontext": "unconfined_u:object_r:usr_t:s0", "size": 6, "state": "directory", "uid": 1000}
+2019-09-29 07:36:14,947 p=5536 u=vagrant |  TASK [jdk : Check whether jdk file exists or not] ***********************************************************************
+2019-09-29 07:36:14,947 p=5536 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:11
+2019-09-29 07:36:18,891 p=5536 u=vagrant |  ok: [ansible-client1] => {"changed": false, "stat": {"atime": 1569739351.974782, "attr_flags": "", "attributes": [], "block_size": 4096, "blocks": 336176, "charset": "binary", "checksum": "06c7faba317b796cfc505b7d4816393a3b85cec2", "ctime": 1569742404.0710297, "dev": 2049, "device_type": 0, "executable": false, "exists": true, "gid": 0, "gr_name": "root", "inode": 67556984, "isblk": false, "ischr": false, "isdir": false, "isfifo": false, "isgid": false, "islnk": false, "isreg": true, "issock": false, "isuid": false, "md5": "f66a5a8015a9a965b02815db9868f710", "mimetype": "application/x-gzip", "mode": "0644", "mtime": 1569739350.91677, "nlink": 1, "path": "/tmp/jdk_ri-8u40-b25-linux-x64-10_feb_2015.tar.gz", "pw_name": "root", "readable": true, "rgrp": true, "roth": true, "rusr": true, "size": 172119622, "uid": 0, "version": "18446744073330795316", "wgrp": false, "woth": false, "writeable": true, "wusr": true, "xgrp": false, "xoth": false, "xusr": false}}
+2019-09-29 07:36:18,922 p=5536 u=vagrant |  TASK [jdk : debug] ******************************************************************************************************
+2019-09-29 07:36:18,922 p=5536 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:17
+2019-09-29 07:36:19,045 p=5536 u=vagrant |  ok: [ansible-client1] => {
+    "msg": "jdk download file already exists then skip downloading the file"
+}
+2019-09-29 07:36:19,071 p=5536 u=vagrant |  TASK [jdk : Download the jdk from oracle website] ***********************************************************************
+2019-09-29 07:36:19,072 p=5536 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:21
+2019-09-29 07:36:19,122 p=5536 u=vagrant |  skipping: [ansible-client1] => {"changed": false, "skip_reason": "Conditional result was False"}
+2019-09-29 07:36:19,142 p=5536 u=vagrant |  TASK [jdk : Extract the jdk file] ***************************************************************************************
+2019-09-29 07:36:19,143 p=5536 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:27
+2019-09-29 07:36:19,553 p=5536 u=vagrant |  fatal: [ansible-client1]: FAILED! => {"changed": false, "msg": "Could not find or access '/tmp/jdk_ri-8u40-b25-linux-x64-10_feb_2015.tar.gz'"}
+2019-09-29 07:36:19,559 p=5536 u=vagrant |  	to retry, use: --limit @/home/vagrant/playbooks/generic-setup.retry
+
+2019-09-29 07:36:19,560 p=5536 u=vagrant |  PLAY RECAP **************************************************************************************************************
+2019-09-29 07:36:19,560 p=5536 u=vagrant |  ansible-client1            : ok=4    changed=0    unreachable=0    failed=1   
+2019-09-29 07:39:59,177 p=5617 u=vagrant |  ansible-playbook 2.4.2.0
+  config file = /etc/ansible/ansible.cfg
+  configured module search path = [u'/home/vagrant/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/site-packages/ansible
+  executable location = /usr/bin/ansible-playbook
+  python version = 2.7.5 (default, Oct 30 2018, 23:45:53) [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
+2019-09-29 07:39:59,177 p=5617 u=vagrant |  Using /etc/ansible/ansible.cfg as config file
+2019-09-29 07:39:59,866 p=5617 u=vagrant |  PLAYBOOK: generic-setup.yml ***********************************************************************************************
+2019-09-29 07:39:59,866 p=5617 u=vagrant |  1 plays in playbooks/generic-setup.yml
+2019-09-29 07:39:59,973 p=5617 u=vagrant |  PLAY [all] ****************************************************************************************************************
+2019-09-29 07:40:00,016 p=5617 u=vagrant |  TASK [Gathering Facts] ****************************************************************************************************
+2019-09-29 07:40:03,869 p=5617 u=vagrant |  ok: [ansible-client1]
+2019-09-29 07:40:03,872 p=5617 u=vagrant |  META: ran handlers
+2019-09-29 07:40:03,892 p=5617 u=vagrant |  TASK [jdk : Create the default directory for jdk setup] *******************************************************************
+2019-09-29 07:40:03,893 p=5617 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:3
+2019-09-29 07:40:05,468 p=5617 u=vagrant |  ok: [ansible-client1] => {"changed": false, "gid": 1000, "group": "vagrant", "mode": "0755", "owner": "vagrant", "path": "/usr/java/", "secontext": "unconfined_u:object_r:usr_t:s0", "size": 6, "state": "directory", "uid": 1000}
+2019-09-29 07:40:05,498 p=5617 u=vagrant |  TASK [jdk : Check whether jdk file exists or not] *************************************************************************
+2019-09-29 07:40:05,499 p=5617 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:11
+2019-09-29 07:40:08,744 p=5617 u=vagrant |  ok: [ansible-client1] => {"changed": false, "stat": {"atime": 1569742576.44966, "attr_flags": "", "attributes": [], "block_size": 4096, "blocks": 336176, "charset": "binary", "checksum": "06c7faba317b796cfc505b7d4816393a3b85cec2", "ctime": 1569742404.0710297, "dev": 2049, "device_type": 0, "executable": false, "exists": true, "gid": 0, "gr_name": "root", "inode": 67556984, "isblk": false, "ischr": false, "isdir": false, "isfifo": false, "isgid": false, "islnk": false, "isreg": true, "issock": false, "isuid": false, "md5": "f66a5a8015a9a965b02815db9868f710", "mimetype": "application/x-gzip", "mode": "0644", "mtime": 1569739350.91677, "nlink": 1, "path": "/tmp/jdk_ri-8u40-b25-linux-x64-10_feb_2015.tar.gz", "pw_name": "root", "readable": true, "rgrp": true, "roth": true, "rusr": true, "size": 172119622, "uid": 0, "version": "18446744073330795316", "wgrp": false, "woth": false, "writeable": true, "wusr": true, "xgrp": false, "xoth": false, "xusr": false}}
+2019-09-29 07:40:08,762 p=5617 u=vagrant |  TASK [jdk : debug] ********************************************************************************************************
+2019-09-29 07:40:08,762 p=5617 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:17
+2019-09-29 07:40:08,841 p=5617 u=vagrant |  ok: [ansible-client1] => {
+    "msg": "jdk download file already exists then skip downloading the file"
+}
+2019-09-29 07:40:08,855 p=5617 u=vagrant |  TASK [jdk : Download the jdk from oracle website] *************************************************************************
+2019-09-29 07:40:08,856 p=5617 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:21
+2019-09-29 07:40:08,894 p=5617 u=vagrant |  skipping: [ansible-client1] => {"changed": false, "skip_reason": "Conditional result was False"}
+2019-09-29 07:40:08,910 p=5617 u=vagrant |  TASK [jdk : Extract the jdk file] *****************************************************************************************
+2019-09-29 07:40:08,911 p=5617 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:27
+2019-09-29 07:40:09,175 p=5617 u=vagrant |  fatal: [ansible-client1]: FAILED! => {"changed": false, "msg": "Could not find or access '/tmp/jdk_ri-8u40-b25-linux-x64-10_feb_2015.tar.gz'"}
+2019-09-29 07:40:09,179 p=5617 u=vagrant |  	to retry, use: --limit @/home/vagrant/playbooks/generic-setup.retry
+
+2019-09-29 07:40:09,180 p=5617 u=vagrant |  PLAY RECAP ****************************************************************************************************************
+2019-09-29 07:40:09,181 p=5617 u=vagrant |  ansible-client1            : ok=4    changed=0    unreachable=0    failed=1   
+2019-09-29 07:43:20,753 p=5664 u=vagrant |  ansible-playbook 2.4.2.0
+  config file = /etc/ansible/ansible.cfg
+  configured module search path = [u'/home/vagrant/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/site-packages/ansible
+  executable location = /usr/bin/ansible-playbook
+  python version = 2.7.5 (default, Oct 30 2018, 23:45:53) [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
+2019-09-29 07:43:20,755 p=5664 u=vagrant |  Using /etc/ansible/ansible.cfg as config file
+2019-09-29 07:43:21,653 p=5664 u=vagrant |  PLAYBOOK: generic-setup.yml ***********************************************************************************************
+2019-09-29 07:43:21,654 p=5664 u=vagrant |  1 plays in playbooks/generic-setup.yml
+2019-09-29 07:43:21,848 p=5664 u=vagrant |  PLAY [all] ****************************************************************************************************************
+2019-09-29 07:43:21,898 p=5664 u=vagrant |  TASK [Gathering Facts] ****************************************************************************************************
+2019-09-29 07:43:26,151 p=5664 u=vagrant |  ok: [ansible-client1]
+2019-09-29 07:43:26,152 p=5664 u=vagrant |  META: ran handlers
+2019-09-29 07:43:26,172 p=5664 u=vagrant |  TASK [jdk : Create the default directory for jdk setup] *******************************************************************
+2019-09-29 07:43:26,173 p=5664 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:3
+2019-09-29 07:43:27,378 p=5664 u=vagrant |  ok: [ansible-client1] => {"changed": false, "gid": 1000, "group": "vagrant", "mode": "0755", "owner": "vagrant", "path": "/usr/java/", "secontext": "unconfined_u:object_r:usr_t:s0", "size": 6, "state": "directory", "uid": 1000}
+2019-09-29 07:43:27,404 p=5664 u=vagrant |  TASK [jdk : Check whether jdk file exists or not] *************************************************************************
+2019-09-29 07:43:27,404 p=5664 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:11
+2019-09-29 07:43:29,930 p=5664 u=vagrant |  ok: [ansible-client1] => {"changed": false, "stat": {"atime": 1569742576.44966, "attr_flags": "", "attributes": [], "block_size": 4096, "blocks": 336176, "charset": "binary", "checksum": "06c7faba317b796cfc505b7d4816393a3b85cec2", "ctime": 1569742404.0710297, "dev": 2049, "device_type": 0, "executable": false, "exists": true, "gid": 0, "gr_name": "root", "inode": 67556984, "isblk": false, "ischr": false, "isdir": false, "isfifo": false, "isgid": false, "islnk": false, "isreg": true, "issock": false, "isuid": false, "md5": "f66a5a8015a9a965b02815db9868f710", "mimetype": "application/x-gzip", "mode": "0644", "mtime": 1569739350.91677, "nlink": 1, "path": "/tmp/jdk_ri-8u40-b25-linux-x64-10_feb_2015.tar.gz", "pw_name": "root", "readable": true, "rgrp": true, "roth": true, "rusr": true, "size": 172119622, "uid": 0, "version": "18446744073330795316", "wgrp": false, "woth": false, "writeable": true, "wusr": true, "xgrp": false, "xoth": false, "xusr": false}}
+2019-09-29 07:43:29,950 p=5664 u=vagrant |  TASK [jdk : debug] ********************************************************************************************************
+2019-09-29 07:43:29,951 p=5664 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:17
+2019-09-29 07:43:30,039 p=5664 u=vagrant |  ok: [ansible-client1] => {
+    "msg": "jdk download file already exists then skip downloading the file"
+}
+2019-09-29 07:43:30,054 p=5664 u=vagrant |  TASK [jdk : Download the jdk from oracle website] *************************************************************************
+2019-09-29 07:43:30,055 p=5664 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:21
+2019-09-29 07:43:30,093 p=5664 u=vagrant |  skipping: [ansible-client1] => {"changed": false, "skip_reason": "Conditional result was False"}
+2019-09-29 07:43:30,107 p=5664 u=vagrant |  TASK [jdk : Extract the jdk file] *****************************************************************************************
+2019-09-29 07:43:30,107 p=5664 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:27
+2019-09-29 07:43:50,581 p=5664 u=vagrant |  changed: [ansible-client1] => {"changed": true, "dest": "/usr/java/", "extract_results": {"cmd": ["/bin/gtar", "--extract", "-C", "/usr/java/", "-z", "-f", "/tmp/jdk_ri-8u40-b25-linux-x64-10_feb_2015.tar.gz"], "err": "", "out": "", "rc": 0}, "gid": 1000, "group": "vagrant", "handler": "TgzArchive", "mode": "0755", "owner": "vagrant", "secontext": "unconfined_u:object_r:usr_t:s0", "size": 29, "src": "/tmp/jdk_ri-8u40-b25-linux-x64-10_feb_2015.tar.gz", "state": "directory", "uid": 1000}
+2019-09-29 07:43:50,583 p=5664 u=vagrant |  META: ran handlers
+2019-09-29 07:43:50,584 p=5664 u=vagrant |  META: ran handlers
+2019-09-29 07:43:50,588 p=5664 u=vagrant |  PLAY RECAP ****************************************************************************************************************
+2019-09-29 07:43:50,589 p=5664 u=vagrant |  ansible-client1            : ok=5    changed=1    unreachable=0    failed=0   

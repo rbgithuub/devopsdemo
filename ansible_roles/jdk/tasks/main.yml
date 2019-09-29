@@ -10,22 +10,22 @@
 
 - name: Check whether jdk file exists or not
   stat:
-    path: /tmp/jdk.txt
+    path: '{{ jdk_temp_path }}/{{jdk_install_file}}'
   register: jdk_download_file
 
 
 - debug: 
-    msg: "jdk download file status"
-  when: jdk_download_file.exists == False
+    msg: "jdk download file already exists then skip downloading the file"
+  when: jdk_download_file.stat.exists == True
 
 - name: Download the jdk from oracle website
   get_url: 
     url: '{{ jdk_download_base_url }}jdk{{ jdk_major_version }}u{{ jdk_minor_version }}/ri/{{jdk_install_file}}'
     dest: "{{jdk_temp_path}}"
-  when: jdk_download_file.exists == False
+  when: jdk_download_file.stat.exists == False
 
 - name: Extract the jdk file
   unarchive: 
     src: '{{ jdk_temp_path }}/{{jdk_install_file}}'
     dest: "{{ jdk_path }}"
-  
+    remote_src: yes
