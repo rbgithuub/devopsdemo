@@ -1,0 +1,31 @@
+---
+# tasks file for jdk
+- name: Create the default directory for jdk setup
+  file:
+    state: directory
+    path: "{{ jdk_path }}"
+    owner: "{{ jdk_path_owner }}"
+    group: "{{ jdk_path_group }}"
+    mode: "{{ jdk_path_mode }}"
+
+- name: Check whether jdk file exists or not
+  stat:
+    path: /tmp/jdk.txt
+  register: jdk_download_file
+
+
+- debug: 
+    msg: "jdk download file status"
+  when: jdk_download_file.exists == False
+
+- name: Download the jdk from oracle website
+  get_url: 
+    url: '{{ jdk_download_base_url }}jdk{{ jdk_major_version }}u{{ jdk_minor_version }}/ri/{{jdk_install_file}}'
+    dest: "{{jdk_temp_path}}"
+  when: jdk_download_file.exists == False
+
+- name: Extract the jdk file
+  unarchive: 
+    src: '{{ jdk_temp_path }}/{{jdk_install_file}}'
+    dest: "{{ jdk_path }}"
+  
