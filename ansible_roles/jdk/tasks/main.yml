@@ -29,3 +29,20 @@
     src: '{{ jdk_temp_path }}/{{jdk_install_file}}'
     dest: "{{ jdk_path }}"
     remote_src: yes
+
+- name: Modify the permissions for jdk folder
+  file:
+    state: directory
+    path: "{{ jdk_path }}"
+    owner: "{{ jdk_path_owner }}"
+    group: "{{ jdk_path_group }}"
+    mode: "{{ jdk_path_mode }}"
+    recurse: yes
+
+- name: Create Symbolic link pointing to latest jdk
+  file:
+    state: link
+    src: '{{ jdk_path }}/java-se-8u40-ri'
+    dest: '{{ jdk_path }}/jdk'
+
+
