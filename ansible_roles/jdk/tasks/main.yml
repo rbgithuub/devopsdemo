@@ -90,5 +90,5 @@
   register: cmdout
 
 - debug: 
-    var: cmdout.stdout_lines
+    var: cmdout.output
 
