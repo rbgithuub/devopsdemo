@@ -1,0 +1,19 @@
+Steps to create a tomcat role & 
+================================
+1) Create a directory for tomcat installation . eg: /opt/tomcat/
+2) We have to download the apache tomcat from external source under a local path eg: /tmp/
+3) We have to extract the file  under the path /opt/tomcat/
+4) We need to upload the artifacts from the jenkins path (or) nexus artifact server to the tomcat standard location $TOMCAT_HOME/webapps/
+5) Upload config files (if any) for the application
+6) Finally start the tomcat service.
+
+
+
+http://apache.mirror.digitalpacific.com.au/tomcat/tomcat-8/v8.5.46/bin/apache-tomcat-8.5.46.tar.gz
+
+variables
+===========
+tomcat_download_base_path: "http://apache.mirror.digitalpacific.com.au/tomcat/tomcat-"
+tomcat_version: "t"
+
+
