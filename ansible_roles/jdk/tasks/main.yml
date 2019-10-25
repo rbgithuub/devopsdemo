@@ -1,0 +1,94 @@
+---
+# tasks file for jdk
+- name: Create the default directory for jdk setup
+  file:
+    state: directory
+    path: "{{ jdk_path }}"
+    owner: "{{ jdk_path_owner }}"
+    group: "{{ jdk_path_group }}"
+    mode: "{{ jdk_path_mode }}"
+
+- name: Check whether jdk file exists or not
+  stat:
+    path: '{{ jdk_temp_path }}/{{jdk_install_file}}'
+  register: jdk_download_file
+
+
+- debug: 
+    msg: "jdk download file already exists then skip downloading the file"
+  when: jdk_download_file.stat.exists == True
+
+- name: Download the jdk from oracle website
+  get_url: 
+    url: '{{ jdk_download_base_url }}jdk{{ jdk_major_version }}u{{ jdk_minor_version }}/ri/{{jdk_install_file}}'
+    dest: "{{jdk_temp_path}}"
+  when: jdk_download_file.stat.exists == False
+
+- name: Check the folder name before extracting
+  stat:
+    path: '{{ jdk_path }}/java-se-8u40-ri'
+  register: jdk_extract_folder
+
+- name: Extract the jdk file
+  unarchive: 
+    src: '{{ jdk_temp_path }}/{{jdk_install_file}}'
+    dest: "{{ jdk_path }}"
+    remote_src: yes
+  when: jdk_extract_folder.stat.exists == False
+
+- name: Modify the permissions for jdk folder
+  file:
+    state: directory
+    path: "{{ jdk_path }}"
+    owner: "{{ jdk_path_owner }}"
+    group: "{{ jdk_path_group }}"
+    mode: "{{ jdk_path_mode }}"
+    recurse: yes
+
+- name: Create Symbolic link pointing to latest jdk
+  file:
+    state: link
+    src: '{{ jdk_path }}/java-se-8u40-ri'
+    dest: '{{ jdk_path }}/jdk'
+
+- name: Update the /etc/profile with JAVA_HOME and updated PATH variable
+  blockinfile:
+    path: /etc/profile
+    backup: yes
+    insertbefore: '^export'
+    block: |
+      JAVA_HOME=/usr/java/jdk/
+      PATH=$PATH:/usr/java/jdk/bin/
+
+- name: Replace the export varaibles in /etc/profile with JAVA_HOME variable
+  lineinfile:
+    path: /etc/profile
+    regexp: '^export'
+    line: 'export PATH USER LOGNAME MAIL HOSTNAME HISTSIZE HISTCONTROL JAVA_HOME' 
+
+- name: Update the /etc/profile with JAVA_HOME and updated PATH variable
+  blockinfile:
+    path: /home/vagrant/.bash_profile
+    backup: yes
+    insertbefore: '^export'
+    block: |
+      JAVA_HOME=/usr/java/jdk/
+      PATH=$PATH:/usr/java/jdk/bin/
+
+- name: Replace the export varaibles in /etc/profile with JAVA_HOME variable
+  lineinfile:
+    path: /home/vagrant/.bash_profile
+    regexp: '^export'
+    line: 'export PATH USER LOGNAME MAIL HOSTNAME HISTSIZE HISTCONTROL JAVA_HOME'
+
+- name: validate java command working
+  shell: |
+    source /etc/profile  
+    java -version
+  args:
+    executable: /bin/bash 
+  register: cmdout
+
+- debug: 
+    var: cmdout.output
+

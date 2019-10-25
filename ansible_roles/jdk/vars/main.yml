@@ -1,0 +1,12 @@
+---
+# vars file for jdk
+jdk_download_base_url: https://download.java.net/openjdk/
+jdk_major_version: 8
+jdk_minor_version: 40
+jdk_build_version: 25
+jdk_install_file: 'jdk_ri-{{ jdk_major_version }}u{{ jdk_minor_version }}-b{{jdk_build_version}}-linux-x64-10_feb_2015.tar.gz'
+jdk_temp_path: /tmp
+jdk_path: /usr/java/
+jdk_path_owner: vagrant
+jdk_path_group: vagrant
+jdk_path_mode: 0755
