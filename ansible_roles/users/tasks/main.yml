@@ -1,0 +1,26 @@
+---
+# tasks file for users
+- name: create a user by name autodeploy
+  user:
+    name: autodeploy
+    generate_ssh_key: yes
+ 
+- name: Fetch public key from remote server
+  fetch:
+     src: /home/autodeploy/.ssh/id_rsa.pub
+     dest: /home/vagrant/.ssh/{{inventory_hostname}}/{{inventory_hostname}}-id_rsa.pub
+     flat: yes
+
+- name: Fetch private key from remote server
+  fetch:
+     src: /home/autodeploy/.ssh/id_rsa
+     dest: /home/vagrant/.ssh/{{inventory_hostname}}/{{inventory_hostname}}-id_rsa
+     flat: yes
+
+- name: Append the public key to authorized key file
+  authorized_key: 
+     user: autodeploy
+     state: present
+     key: "{{ lookup('file','/home/vagrant/.ssh/{{inventory_hostname}}/{{inventory_hostname}}-id_rsa.pub') }}"
+     
+     
