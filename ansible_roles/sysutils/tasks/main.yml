@@ -1,0 +1,9 @@
+---
+# tasks file for sysutils
+- name: install frequently used system packages
+  yum: 
+   name:  "{{ item }}"
+   state: present
+  items:
+     - net-tools.x86_64
+     - vim-enhanced
