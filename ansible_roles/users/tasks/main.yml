@@ -22,5 +22,22 @@
      user: autodeploy
      state: present
      key: "{{ lookup('file','/home/vagrant/.ssh/{{inventory_hostname}}/{{inventory_hostname}}-id_rsa.pub') }}"
+
+
+- name: Create a sudoers file backup (.bkp)
+  copy:
+    remote_src: yes
+    src: /etc/sudoers
+    dest: /etc/
+    backup: yes
+
+- name: Enable sudo permission for autodeploy user
+  lineinfile:
+      dest: /etc/sudoers
+      state: present
+      regexp: '^%autodeploy'
+      line: '%autodeploy ALL=(ALL) NOPASSWD:ALL'
+
+  
      
      
