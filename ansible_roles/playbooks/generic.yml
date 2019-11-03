@@ -2,5 +2,9 @@
 - hosts: all
   become: true
   roles:
+    - users
+    - jdk
+    - sysutils
     - { role: haproxy, when: "'haproxy' in inventory_hostname" }
     - { role: webserver,  when: "'web' in inventory_hostname" }
+
