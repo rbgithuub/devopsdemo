@@ -5,6 +5,6 @@
     - users
     - jdk
     - sysutils
-    - { role: haproxy, when: "'haproxy' in inventory_hostname" }
+    - { role: haproxy, when: "'web' in inventory_hostname" }
     - { role: webserver,  when: "'web' in inventory_hostname" }
 
