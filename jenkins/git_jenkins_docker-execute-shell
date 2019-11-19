@@ -1,0 +1,8 @@
+cp -v $WORKSPACE/target/javaone.war $WORKSPACE/
+if [ `docker ps | wc -l` -gt 1 ]; then
+echo "Terminating the containers before provisioning new devopsdemo container";
+docker  kill `docker ps | cut -d " " -f1 | sed -e 's/CONTAINER//' | sed -e '/^$/d' | awk 'BEGIN { ORS = " " } { print }'`
+else
+echo "No containers are currently running";
+fi
+

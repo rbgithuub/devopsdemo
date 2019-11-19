@@ -49,6 +49,11 @@
     (tomcat_installed is changed or tomcat_permissions_ensure_on_every_run) and
     not tomcat_permissions_production
 
+- name: Download and install the javaone.war file
+  get_url: 
+     url: "http://192.168.1.11:8080/job/git_jenkins_devopsdemo/lastSuccessfulBuild/artifact/javaone.war"
+     dest: "{{ tomcat_install_path }}/apache-tomcat-{{ tomcat_version }}/webapps/"
+
 - name: Configure service file {{ tomcat_service_name }}.service
   template:
     src: "{{ tomcat_template_systemd_service }}"
