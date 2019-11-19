@@ -4,6 +4,7 @@
   roles:
     - users
     - sysutils
+    - { role: jdk, when: "'ansible' in inventory_hostname" }
     - { role: haproxy, when: "'web' in inventory_hostname" }
     - { role: webserver,  when: "'web' in inventory_hostname" }
 
