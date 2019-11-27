@@ -7,3 +7,4 @@
   items:
      - net-tools.x86_64
      - vim-enhanced
+     - unzip

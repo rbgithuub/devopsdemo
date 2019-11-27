@@ -1,0 +1,9 @@
+---
+- hosts: all
+  become: true
+  roles:
+    - users
+    - sysutils
+    - geerlingguy.sonar
+    - geerlingguy.java
+    - geerlingguy.mysql

@@ -45,3 +45,4 @@
 [devopsdemo]
 webserver1.server.com ansible_host=192.168.1.12 ansible_port=22 ansible_user=vagrant ansible_ssh_private_key_file=/home/vagrant/.ssh/id_rsa_webserver
 ansible1.server.com ansible_host=192.168.1.7 ansible_port=22 ansible_user=vagrant ansible_ssh_private_key_file=/home/vagrant/.ssh/id_rsa_ansible
+sonarqube1.server.com ansible_host=192.168.1.10 ansible_port=22 ansible_user=vagrant ansible_ssh_private_key_file=/home/vagrant/.ssh/id_rsa_sonarqube 
