@@ -1,0 +1,1092 @@
+2019-09-29 06:08:57,736 p=4316 u=vagrant |  PLAY [all] **************************************************************************************************************
+2019-09-29 06:08:57,770 p=4316 u=vagrant |  TASK [Gathering Facts] **************************************************************************************************
+2019-09-29 06:09:01,146 p=4316 u=vagrant |  ok: [ansible-client1]
+2019-09-29 06:09:01,166 p=4316 u=vagrant |  TASK [jdk : Create the default directory for jdk setup] *****************************************************************
+2019-09-29 06:09:02,532 p=4316 u=vagrant |  ok: [ansible-client1]
+2019-09-29 06:09:02,548 p=4316 u=vagrant |  TASK [jdk : Download the jdk from oracle website] ***********************************************************************
+2019-09-29 06:09:12,032 p=4316 u=vagrant |  changed: [ansible-client1]
+2019-09-29 06:09:12,042 p=4316 u=vagrant |  PLAY RECAP **************************************************************************************************************
+2019-09-29 06:09:12,043 p=4316 u=vagrant |  ansible-client1            : ok=3    changed=1    unreachable=0    failed=0   
+2019-09-29 06:23:00,034 p=4363 u=vagrant |  ansible-client1 | SUCCESS | rc=0 >>
+Sun Sep 29 06:22:59 UTC 2019
+
+2019-09-29 06:25:25,009 p=4465 u=vagrant |  PLAY [all] **************************************************************************************************************
+2019-09-29 06:25:25,037 p=4465 u=vagrant |  TASK [Gathering Facts] **************************************************************************************************
+2019-09-29 06:25:28,908 p=4465 u=vagrant |  ok: [ansible-client1]
+2019-09-29 06:25:28,943 p=4465 u=vagrant |  TASK [jdk : Create the default directory for jdk setup] *****************************************************************
+2019-09-29 06:25:31,089 p=4465 u=vagrant |  ok: [ansible-client1]
+2019-09-29 06:25:31,116 p=4465 u=vagrant |  TASK [jdk : Download the jdk from oracle website] ***********************************************************************
+2019-09-29 06:25:31,173 p=4465 u=vagrant |  fatal: [ansible-client1]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'jdk_hash_key' is undefined\n\nThe error appears to have been in '/home/vagrant/ansible_roles/jdk/tasks/main.yml': line 11, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n- name: Download the jdk from oracle website\n  ^ here\n\nexception type: <class 'ansible.errors.AnsibleUndefinedVariable'>\nexception: 'jdk_hash_key' is undefined"}
+2019-09-29 06:25:31,179 p=4465 u=vagrant |  	to retry, use: --limit @/home/vagrant/playbooks/generic-setup.retry
+
+2019-09-29 06:25:31,180 p=4465 u=vagrant |  PLAY RECAP **************************************************************************************************************
+2019-09-29 06:25:31,180 p=4465 u=vagrant |  ansible-client1            : ok=2    changed=0    unreachable=0    failed=1   
+2019-09-29 06:26:46,328 p=4509 u=vagrant |  ansible-playbook 2.4.2.0
+  config file = /etc/ansible/ansible.cfg
+  configured module search path = [u'/home/vagrant/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/site-packages/ansible
+  executable location = /usr/bin/ansible-playbook
+  python version = 2.7.5 (default, Oct 30 2018, 23:45:53) [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
+2019-09-29 06:26:46,328 p=4509 u=vagrant |  Using /etc/ansible/ansible.cfg as config file
+2019-09-29 06:26:46,865 p=4509 u=vagrant |  PLAYBOOK: generic-setup.yml *********************************************************************************************
+2019-09-29 06:26:46,866 p=4509 u=vagrant |  1 plays in playbooks/generic-setup.yml
+2019-09-29 06:26:46,938 p=4509 u=vagrant |  PLAY [all] **************************************************************************************************************
+2019-09-29 06:26:46,962 p=4509 u=vagrant |  TASK [Gathering Facts] **************************************************************************************************
+2019-09-29 06:26:49,982 p=4509 u=vagrant |  ok: [ansible-client1]
+2019-09-29 06:26:49,983 p=4509 u=vagrant |  META: ran handlers
+2019-09-29 06:26:49,998 p=4509 u=vagrant |  TASK [jdk : Create the default directory for jdk setup] *****************************************************************
+2019-09-29 06:26:49,998 p=4509 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:3
+2019-09-29 06:26:51,195 p=4509 u=vagrant |  ok: [ansible-client1] => {"changed": false, "gid": 1000, "group": "vagrant", "mode": "0755", "owner": "vagrant", "path": "/usr/java/", "secontext": "unconfined_u:object_r:usr_t:s0", "size": 6, "state": "directory", "uid": 1000}
+2019-09-29 06:26:51,213 p=4509 u=vagrant |  TASK [jdk : Download the jdk from oracle website] ***********************************************************************
+2019-09-29 06:26:51,213 p=4509 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:11
+2019-09-29 06:26:51,255 p=4509 u=vagrant |  fatal: [ansible-client1]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'jdk_hash_key' is undefined\n\nThe error appears to have been in '/home/vagrant/ansible_roles/jdk/tasks/main.yml': line 11, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n- name: Download the jdk from oracle website\n  ^ here\n\nexception type: <class 'ansible.errors.AnsibleUndefinedVariable'>\nexception: 'jdk_hash_key' is undefined"}
+2019-09-29 06:26:51,260 p=4509 u=vagrant |  	to retry, use: --limit @/home/vagrant/playbooks/generic-setup.retry
+
+2019-09-29 06:26:51,260 p=4509 u=vagrant |  PLAY RECAP **************************************************************************************************************
+2019-09-29 06:26:51,261 p=4509 u=vagrant |  ansible-client1            : ok=2    changed=0    unreachable=0    failed=1   
+2019-09-29 06:27:27,304 p=4573 u=vagrant |  ansible-playbook 2.4.2.0
+  config file = /etc/ansible/ansible.cfg
+  configured module search path = [u'/home/vagrant/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/site-packages/ansible
+  executable location = /usr/bin/ansible-playbook
+  python version = 2.7.5 (default, Oct 30 2018, 23:45:53) [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
+2019-09-29 06:27:27,305 p=4573 u=vagrant |  Using /etc/ansible/ansible.cfg as config file
+2019-09-29 06:27:27,921 p=4573 u=vagrant |  PLAYBOOK: generic-setup.yml *********************************************************************************************
+2019-09-29 06:27:27,921 p=4573 u=vagrant |  1 plays in playbooks/generic-setup.yml
+2019-09-29 06:27:28,006 p=4573 u=vagrant |  PLAY [all] **************************************************************************************************************
+2019-09-29 06:27:28,033 p=4573 u=vagrant |  TASK [Gathering Facts] **************************************************************************************************
+2019-09-29 06:27:30,167 p=4573 u=vagrant |  ok: [ansible-client1]
+2019-09-29 06:27:30,168 p=4573 u=vagrant |  META: ran handlers
+2019-09-29 06:27:30,183 p=4573 u=vagrant |  TASK [jdk : Create the default directory for jdk setup] *****************************************************************
+2019-09-29 06:27:30,184 p=4573 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:3
+2019-09-29 06:27:31,257 p=4573 u=vagrant |  ok: [ansible-client1] => {"changed": false, "gid": 1000, "group": "vagrant", "mode": "0755", "owner": "vagrant", "path": "/usr/java/", "secontext": "unconfined_u:object_r:usr_t:s0", "size": 6, "state": "directory", "uid": 1000}
+2019-09-29 06:27:31,273 p=4573 u=vagrant |  TASK [jdk : Download the jdk from oracle website] ***********************************************************************
+2019-09-29 06:27:31,273 p=4573 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:11
+2019-09-29 06:27:39,433 p=4573 u=vagrant |  fatal: [ansible-client1]: FAILED! => {"changed": false, "dest": "/tmp", "gid": 0, "group": "root", "mode": "01777", "msg": "Request failed", "owner": "root", "response": "HTTP Error 404: Not Found", "secontext": "system_u:object_r:tmp_t:s0", "size": 4096, "state": "directory", "status_code": 404, "uid": 0, "url": "https://download.java.net/openjdk/8u40-b25/jdk_ri8u40-b{jdk_build_version-}-linux-x64-10_feb_2015.tar.gz"}
+2019-09-29 06:27:39,443 p=4573 u=vagrant |  	to retry, use: --limit @/home/vagrant/playbooks/generic-setup.retry
+
+2019-09-29 06:27:39,444 p=4573 u=vagrant |  PLAY RECAP **************************************************************************************************************
+2019-09-29 06:27:39,445 p=4573 u=vagrant |  ansible-client1            : ok=2    changed=0    unreachable=0    failed=1   
+2019-09-29 06:30:23,715 p=4610 u=vagrant |  ansible-playbook 2.4.2.0
+  config file = /etc/ansible/ansible.cfg
+  configured module search path = [u'/home/vagrant/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/site-packages/ansible
+  executable location = /usr/bin/ansible-playbook
+  python version = 2.7.5 (default, Oct 30 2018, 23:45:53) [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
+2019-09-29 06:30:23,716 p=4610 u=vagrant |  Using /etc/ansible/ansible.cfg as config file
+2019-09-29 06:30:24,370 p=4610 u=vagrant |  PLAYBOOK: generic-setup.yml *********************************************************************************************
+2019-09-29 06:30:24,370 p=4610 u=vagrant |  1 plays in playbooks/generic-setup.yml
+2019-09-29 06:30:24,464 p=4610 u=vagrant |  PLAY [all] **************************************************************************************************************
+2019-09-29 06:30:24,496 p=4610 u=vagrant |  TASK [Gathering Facts] **************************************************************************************************
+2019-09-29 06:30:27,934 p=4610 u=vagrant |  ok: [ansible-client1]
+2019-09-29 06:30:27,936 p=4610 u=vagrant |  META: ran handlers
+2019-09-29 06:30:27,959 p=4610 u=vagrant |  TASK [jdk : Create the default directory for jdk setup] *****************************************************************
+2019-09-29 06:30:27,959 p=4610 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:3
+2019-09-29 06:30:29,347 p=4610 u=vagrant |  ok: [ansible-client1] => {"changed": false, "gid": 1000, "group": "vagrant", "mode": "0755", "owner": "vagrant", "path": "/usr/java/", "secontext": "unconfined_u:object_r:usr_t:s0", "size": 6, "state": "directory", "uid": 1000}
+2019-09-29 06:30:29,367 p=4610 u=vagrant |  TASK [jdk : Download the jdk from oracle website] ***********************************************************************
+2019-09-29 06:30:29,368 p=4610 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:11
+2019-09-29 06:30:37,845 p=4610 u=vagrant |  fatal: [ansible-client1]: FAILED! => {"changed": false, "dest": "/tmp", "gid": 0, "group": "root", "mode": "01777", "msg": "Request failed", "owner": "root", "response": "HTTP Error 404: Not Found", "secontext": "system_u:object_r:tmp_t:s0", "size": 4096, "state": "directory", "status_code": 404, "uid": 0, "url": "https://download.java.net/openjdk/jdk8u40/ri/jdk_ri8u40-b{jdk_build_version-}-linux-x64-10_feb_2015.tar.gz"}
+2019-09-29 06:30:37,850 p=4610 u=vagrant |  	to retry, use: --limit @/home/vagrant/playbooks/generic-setup.retry
+
+2019-09-29 06:30:37,850 p=4610 u=vagrant |  PLAY RECAP **************************************************************************************************************
+2019-09-29 06:30:37,851 p=4610 u=vagrant |  ansible-client1            : ok=2    changed=0    unreachable=0    failed=1   
+2019-09-29 06:31:57,929 p=4648 u=vagrant |  ansible-playbook 2.4.2.0
+  config file = /etc/ansible/ansible.cfg
+  configured module search path = [u'/home/vagrant/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/site-packages/ansible
+  executable location = /usr/bin/ansible-playbook
+  python version = 2.7.5 (default, Oct 30 2018, 23:45:53) [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
+2019-09-29 06:31:57,929 p=4648 u=vagrant |  Using /etc/ansible/ansible.cfg as config file
+2019-09-29 06:31:58,596 p=4648 u=vagrant |  PLAYBOOK: generic-setup.yml *********************************************************************************************
+2019-09-29 06:31:58,597 p=4648 u=vagrant |  1 plays in playbooks/generic-setup.yml
+2019-09-29 06:31:58,701 p=4648 u=vagrant |  PLAY [all] **************************************************************************************************************
+2019-09-29 06:31:58,733 p=4648 u=vagrant |  TASK [Gathering Facts] **************************************************************************************************
+2019-09-29 06:32:02,912 p=4648 u=vagrant |  ok: [ansible-client1]
+2019-09-29 06:32:02,914 p=4648 u=vagrant |  META: ran handlers
+2019-09-29 06:32:02,935 p=4648 u=vagrant |  TASK [jdk : Create the default directory for jdk setup] *****************************************************************
+2019-09-29 06:32:02,936 p=4648 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:3
+2019-09-29 06:32:04,370 p=4648 u=vagrant |  ok: [ansible-client1] => {"changed": false, "gid": 1000, "group": "vagrant", "mode": "0755", "owner": "vagrant", "path": "/usr/java/", "secontext": "unconfined_u:object_r:usr_t:s0", "size": 6, "state": "directory", "uid": 1000}
+2019-09-29 06:32:04,389 p=4648 u=vagrant |  TASK [jdk : Download the jdk from oracle website] ***********************************************************************
+2019-09-29 06:32:04,389 p=4648 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:11
+2019-09-29 06:32:07,790 p=4648 u=vagrant |  fatal: [ansible-client1]: FAILED! => {"changed": false, "dest": "/tmp", "gid": 0, "group": "root", "mode": "01777", "msg": "Request failed", "owner": "root", "response": "HTTP Error 404: Not Found", "secontext": "system_u:object_r:tmp_t:s0", "size": 4096, "state": "directory", "status_code": 404, "uid": 0, "url": "https://download.java.net/openjdk/jdk8u40/ri/jdk_ri-8u40-b{jdk_build_version-}-linux-x64-10_feb_2015.tar.gz"}
+2019-09-29 06:32:07,796 p=4648 u=vagrant |  	to retry, use: --limit @/home/vagrant/playbooks/generic-setup.retry
+
+2019-09-29 06:32:07,796 p=4648 u=vagrant |  PLAY RECAP **************************************************************************************************************
+2019-09-29 06:32:07,797 p=4648 u=vagrant |  ansible-client1            : ok=2    changed=0    unreachable=0    failed=1   
+2019-09-29 06:33:20,222 p=4686 u=vagrant |  ansible-playbook 2.4.2.0
+  config file = /etc/ansible/ansible.cfg
+  configured module search path = [u'/home/vagrant/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/site-packages/ansible
+  executable location = /usr/bin/ansible-playbook
+  python version = 2.7.5 (default, Oct 30 2018, 23:45:53) [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
+2019-09-29 06:33:20,223 p=4686 u=vagrant |  Using /etc/ansible/ansible.cfg as config file
+2019-09-29 06:33:20,858 p=4686 u=vagrant |  PLAYBOOK: generic-setup.yml *********************************************************************************************
+2019-09-29 06:33:20,859 p=4686 u=vagrant |  1 plays in playbooks/generic-setup.yml
+2019-09-29 06:33:20,942 p=4686 u=vagrant |  PLAY [all] **************************************************************************************************************
+2019-09-29 06:33:20,970 p=4686 u=vagrant |  TASK [Gathering Facts] **************************************************************************************************
+2019-09-29 06:33:26,276 p=4686 u=vagrant |  ok: [ansible-client1]
+2019-09-29 06:33:26,291 p=4686 u=vagrant |  META: ran handlers
+2019-09-29 06:33:26,342 p=4686 u=vagrant |  TASK [jdk : Create the default directory for jdk setup] *****************************************************************
+2019-09-29 06:33:26,343 p=4686 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:3
+2019-09-29 06:33:28,857 p=4686 u=vagrant |  ok: [ansible-client1] => {"changed": false, "gid": 1000, "group": "vagrant", "mode": "0755", "owner": "vagrant", "path": "/usr/java/", "secontext": "unconfined_u:object_r:usr_t:s0", "size": 6, "state": "directory", "uid": 1000}
+2019-09-29 06:33:28,885 p=4686 u=vagrant |  TASK [jdk : Download the jdk from oracle website] ***********************************************************************
+2019-09-29 06:33:28,886 p=4686 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:11
+2019-09-29 06:33:38,134 p=4686 u=vagrant |  fatal: [ansible-client1]: FAILED! => {"changed": false, "dest": "/tmp", "gid": 0, "group": "root", "mode": "01777", "msg": "Request failed", "owner": "root", "response": "HTTP Error 404: Not Found", "secontext": "system_u:object_r:tmp_t:s0", "size": 4096, "state": "directory", "status_code": 404, "uid": 0, "url": "https://download.java.net/openjdk/jdk8u40/ri/jdk_ri-8u40-b{jdk_build_version}-linux-x64-10_feb_2015.tar.gz"}
+2019-09-29 06:33:38,144 p=4686 u=vagrant |  	to retry, use: --limit @/home/vagrant/playbooks/generic-setup.retry
+
+2019-09-29 06:33:38,145 p=4686 u=vagrant |  PLAY RECAP **************************************************************************************************************
+2019-09-29 06:33:38,147 p=4686 u=vagrant |  ansible-client1            : ok=2    changed=0    unreachable=0    failed=1   
+2019-09-29 06:34:58,027 p=4725 u=vagrant |  ansible-playbook 2.4.2.0
+  config file = /etc/ansible/ansible.cfg
+  configured module search path = [u'/home/vagrant/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/site-packages/ansible
+  executable location = /usr/bin/ansible-playbook
+  python version = 2.7.5 (default, Oct 30 2018, 23:45:53) [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
+2019-09-29 06:34:58,027 p=4725 u=vagrant |  Using /etc/ansible/ansible.cfg as config file
+2019-09-29 06:34:58,679 p=4725 u=vagrant |  PLAYBOOK: generic-setup.yml *********************************************************************************************
+2019-09-29 06:34:58,679 p=4725 u=vagrant |  1 plays in playbooks/generic-setup.yml
+2019-09-29 06:34:58,767 p=4725 u=vagrant |  PLAY [all] **************************************************************************************************************
+2019-09-29 06:34:58,798 p=4725 u=vagrant |  TASK [Gathering Facts] **************************************************************************************************
+2019-09-29 06:35:02,535 p=4725 u=vagrant |  ok: [ansible-client1]
+2019-09-29 06:35:02,538 p=4725 u=vagrant |  META: ran handlers
+2019-09-29 06:35:02,557 p=4725 u=vagrant |  TASK [jdk : Create the default directory for jdk setup] *****************************************************************
+2019-09-29 06:35:02,558 p=4725 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:3
+2019-09-29 06:35:04,169 p=4725 u=vagrant |  ok: [ansible-client1] => {"changed": false, "gid": 1000, "group": "vagrant", "mode": "0755", "owner": "vagrant", "path": "/usr/java/", "secontext": "unconfined_u:object_r:usr_t:s0", "size": 6, "state": "directory", "uid": 1000}
+2019-09-29 06:35:04,191 p=4725 u=vagrant |  TASK [jdk : Download the jdk from oracle website] ***********************************************************************
+2019-09-29 06:35:04,191 p=4725 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:11
+2019-09-29 06:39:22,870 p=4725 u=vagrant |  An exception occurred during task execution. To see the full traceback, use -vvv. The error was: error: [Errno 104] Connection reset by peer
+2019-09-29 06:39:22,888 p=4725 u=vagrant |  fatal: [ansible-client1]: FAILED! => {"changed": false, "msg": "failed to create temporary content file: [Errno 104] Connection reset by peer"}
+2019-09-29 06:39:22,908 p=4725 u=vagrant |  	to retry, use: --limit @/home/vagrant/playbooks/generic-setup.retry
+
+2019-09-29 06:39:22,909 p=4725 u=vagrant |  PLAY RECAP **************************************************************************************************************
+2019-09-29 06:39:22,915 p=4725 u=vagrant |  ansible-client1            : ok=2    changed=0    unreachable=0    failed=1   
+2019-09-29 06:39:34,119 p=4797 u=vagrant |  ansible-playbook 2.4.2.0
+  config file = /etc/ansible/ansible.cfg
+  configured module search path = [u'/home/vagrant/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/site-packages/ansible
+  executable location = /usr/bin/ansible-playbook
+  python version = 2.7.5 (default, Oct 30 2018, 23:45:53) [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
+2019-09-29 06:39:34,120 p=4797 u=vagrant |  Using /etc/ansible/ansible.cfg as config file
+2019-09-29 06:39:34,780 p=4797 u=vagrant |  PLAYBOOK: generic-setup.yml *********************************************************************************************
+2019-09-29 06:39:34,780 p=4797 u=vagrant |  1 plays in playbooks/generic-setup.yml
+2019-09-29 06:39:34,887 p=4797 u=vagrant |  PLAY [all] **************************************************************************************************************
+2019-09-29 06:39:34,920 p=4797 u=vagrant |  TASK [Gathering Facts] **************************************************************************************************
+2019-09-29 06:39:37,758 p=4797 u=vagrant |  ok: [ansible-client1]
+2019-09-29 06:39:37,762 p=4797 u=vagrant |  META: ran handlers
+2019-09-29 06:39:37,784 p=4797 u=vagrant |  TASK [jdk : Create the default directory for jdk setup] *****************************************************************
+2019-09-29 06:39:37,785 p=4797 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:3
+2019-09-29 06:39:39,120 p=4797 u=vagrant |  ok: [ansible-client1] => {"changed": false, "gid": 1000, "group": "vagrant", "mode": "0755", "owner": "vagrant", "path": "/usr/java/", "secontext": "unconfined_u:object_r:usr_t:s0", "size": 6, "state": "directory", "uid": 1000}
+2019-09-29 06:39:39,138 p=4797 u=vagrant |  TASK [jdk : Download the jdk from oracle website] ***********************************************************************
+2019-09-29 06:39:39,139 p=4797 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:11
+2019-09-29 06:42:33,089 p=4797 u=vagrant |  changed: [ansible-client1] => {"changed": true, "checksum_dest": null, "checksum_src": "06c7faba317b796cfc505b7d4816393a3b85cec2", "dest": "/tmp/jdk_ri-8u40-b25-linux-x64-10_feb_2015.tar.gz", "gid": 0, "group": "root", "md5sum": "f66a5a8015a9a965b02815db9868f710", "mode": "0644", "msg": "OK (172119622 bytes)", "owner": "root", "secontext": "unconfined_u:object_r:user_tmp_t:s0", "size": 172119622, "src": "/tmp/tmpmtDaVq", "state": "file", "status_code": 200, "uid": 0, "url": "https://download.java.net/openjdk/jdk8u40/ri/jdk_ri-8u40-b25-linux-x64-10_feb_2015.tar.gz"}
+2019-09-29 06:42:33,091 p=4797 u=vagrant |  META: ran handlers
+2019-09-29 06:42:33,093 p=4797 u=vagrant |  META: ran handlers
+2019-09-29 06:42:33,096 p=4797 u=vagrant |  PLAY RECAP **************************************************************************************************************
+2019-09-29 06:42:33,097 p=4797 u=vagrant |  ansible-client1            : ok=3    changed=1    unreachable=0    failed=0   
+2019-09-29 06:46:56,417 p=4913 u=vagrant |  ansible-playbook 2.4.2.0
+  config file = /etc/ansible/ansible.cfg
+  configured module search path = [u'/home/vagrant/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/site-packages/ansible
+  executable location = /usr/bin/ansible-playbook
+  python version = 2.7.5 (default, Oct 30 2018, 23:45:53) [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
+2019-09-29 06:46:56,417 p=4913 u=vagrant |  Using /etc/ansible/ansible.cfg as config file
+2019-09-29 06:46:57,115 p=4913 u=vagrant |  PLAYBOOK: generic-setup.yml *********************************************************************************************
+2019-09-29 06:46:57,115 p=4913 u=vagrant |  1 plays in playbooks/generic-setup.yml
+2019-09-29 06:46:57,222 p=4913 u=vagrant |  PLAY [all] **************************************************************************************************************
+2019-09-29 06:46:57,258 p=4913 u=vagrant |  TASK [Gathering Facts] **************************************************************************************************
+2019-09-29 06:47:00,443 p=4913 u=vagrant |  ok: [ansible-client1]
+2019-09-29 06:47:00,445 p=4913 u=vagrant |  META: ran handlers
+2019-09-29 06:47:00,460 p=4913 u=vagrant |  TASK [jdk : Create the default directory for jdk setup] *****************************************************************
+2019-09-29 06:47:00,461 p=4913 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:3
+2019-09-29 06:47:01,565 p=4913 u=vagrant |  ok: [ansible-client1] => {"changed": false, "gid": 1000, "group": "vagrant", "mode": "0755", "owner": "vagrant", "path": "/usr/java/", "secontext": "unconfined_u:object_r:usr_t:s0", "size": 6, "state": "directory", "uid": 1000}
+2019-09-29 06:47:01,582 p=4913 u=vagrant |  TASK [jdk : Download the jdk from oracle website] ***********************************************************************
+2019-09-29 06:47:01,583 p=4913 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:11
+2019-09-29 06:47:24,022 p=4913 u=vagrant |   [ERROR]: User interrupted execution
+
+2019-09-29 06:52:05,802 p=4950 u=vagrant |  ansible-playbook 2.4.2.0
+  config file = /etc/ansible/ansible.cfg
+  configured module search path = [u'/home/vagrant/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/site-packages/ansible
+  executable location = /usr/bin/ansible-playbook
+  python version = 2.7.5 (default, Oct 30 2018, 23:45:53) [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
+2019-09-29 06:52:05,803 p=4950 u=vagrant |  Using /etc/ansible/ansible.cfg as config file
+2019-09-29 06:52:06,563 p=4950 u=vagrant |  PLAYBOOK: generic-setup.yml *********************************************************************************************
+2019-09-29 06:52:06,564 p=4950 u=vagrant |  1 plays in playbooks/generic-setup.yml
+2019-09-29 06:52:06,663 p=4950 u=vagrant |  PLAY [all] **************************************************************************************************************
+2019-09-29 06:52:06,695 p=4950 u=vagrant |  TASK [Gathering Facts] **************************************************************************************************
+2019-09-29 06:52:10,705 p=4950 u=vagrant |  ok: [ansible-client1]
+2019-09-29 06:52:10,707 p=4950 u=vagrant |  META: ran handlers
+2019-09-29 06:52:10,733 p=4950 u=vagrant |  TASK [jdk : Create the default directory for jdk setup] *****************************************************************
+2019-09-29 06:52:10,733 p=4950 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:3
+2019-09-29 06:52:12,616 p=4950 u=vagrant |  ok: [ansible-client1] => {"changed": false, "gid": 1000, "group": "vagrant", "mode": "0755", "owner": "vagrant", "path": "/usr/java/", "secontext": "unconfined_u:object_r:usr_t:s0", "size": 6, "state": "directory", "uid": 1000}
+2019-09-29 06:52:12,655 p=4950 u=vagrant |  TASK [jdk : Check whether jdk file exists or not] ***********************************************************************
+2019-09-29 06:52:12,656 p=4950 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:11
+2019-09-29 06:52:14,378 p=4950 u=vagrant |  fatal: [ansible-client1]: FAILED! => {"changed": false, "msg": "Unsupported parameters for (stat) module: register Supported parameters include: checksum_algorithm,follow,get_attributes,get_checksum,get_md5,get_mime,path"}
+2019-09-29 06:52:14,384 p=4950 u=vagrant |  	to retry, use: --limit @/home/vagrant/playbooks/generic-setup.retry
+
+2019-09-29 06:52:14,385 p=4950 u=vagrant |  PLAY RECAP **************************************************************************************************************
+2019-09-29 06:52:14,386 p=4950 u=vagrant |  ansible-client1            : ok=2    changed=0    unreachable=0    failed=1   
+2019-09-29 06:52:44,083 p=4988 u=vagrant |  ansible-playbook 2.4.2.0
+  config file = /etc/ansible/ansible.cfg
+  configured module search path = [u'/home/vagrant/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/site-packages/ansible
+  executable location = /usr/bin/ansible-playbook
+  python version = 2.7.5 (default, Oct 30 2018, 23:45:53) [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
+2019-09-29 06:52:44,084 p=4988 u=vagrant |  Using /etc/ansible/ansible.cfg as config file
+2019-09-29 06:52:44,825 p=4988 u=vagrant |  PLAYBOOK: generic-setup.yml *********************************************************************************************
+2019-09-29 06:52:44,825 p=4988 u=vagrant |  1 plays in playbooks/generic-setup.yml
+2019-09-29 06:52:44,931 p=4988 u=vagrant |  PLAY [all] **************************************************************************************************************
+2019-09-29 06:52:44,969 p=4988 u=vagrant |  TASK [Gathering Facts] **************************************************************************************************
+2019-09-29 06:52:47,645 p=4988 u=vagrant |  ok: [ansible-client1]
+2019-09-29 06:52:47,647 p=4988 u=vagrant |  META: ran handlers
+2019-09-29 06:52:47,668 p=4988 u=vagrant |  TASK [jdk : Create the default directory for jdk setup] *****************************************************************
+2019-09-29 06:52:47,669 p=4988 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:3
+2019-09-29 06:52:49,129 p=4988 u=vagrant |  ok: [ansible-client1] => {"changed": false, "gid": 1000, "group": "vagrant", "mode": "0755", "owner": "vagrant", "path": "/usr/java/", "secontext": "unconfined_u:object_r:usr_t:s0", "size": 6, "state": "directory", "uid": 1000}
+2019-09-29 06:52:49,154 p=4988 u=vagrant |  TASK [jdk : Check whether jdk file exists or not] ***********************************************************************
+2019-09-29 06:52:49,155 p=4988 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:11
+2019-09-29 06:52:54,040 p=4988 u=vagrant |  ok: [ansible-client1] => {"changed": false, "stat": {"atime": 1569739351.974782, "attr_flags": "", "attributes": [], "block_size": 4096, "blocks": 336176, "charset": "binary", "checksum": "06c7faba317b796cfc505b7d4816393a3b85cec2", "ctime": 1569739351.972782, "dev": 2049, "device_type": 0, "executable": false, "exists": true, "gid": 0, "gr_name": "root", "inode": 67556984, "isblk": false, "ischr": false, "isdir": false, "isfifo": false, "isgid": false, "islnk": false, "isreg": true, "issock": false, "isuid": false, "md5": "f66a5a8015a9a965b02815db9868f710", "mimetype": "application/x-gzip", "mode": "0644", "mtime": 1569739350.91677, "nlink": 1, "path": "/tmp/jdk_ri-8u40-b25-linux-x64-10_feb_2015.tar.gz", "pw_name": "root", "readable": true, "rgrp": true, "roth": true, "rusr": true, "size": 172119622, "uid": 0, "version": "18446744073330795316", "wgrp": false, "woth": false, "writeable": true, "wusr": true, "xgrp": false, "xoth": false, "xusr": false}}
+2019-09-29 06:52:54,072 p=4988 u=vagrant |  TASK [jdk : Download the jdk from oracle website] ***********************************************************************
+2019-09-29 06:52:54,072 p=4988 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:16
+2019-09-29 06:52:54,138 p=4988 u=vagrant |  fatal: [ansible-client1]: FAILED! => {"msg": "The conditional check 'jdk_download_file.exists == False' failed. The error was: error while evaluating conditional (jdk_download_file.exists == False): 'dict object' has no attribute 'exists'\n\nThe error appears to have been in '/home/vagrant/ansible_roles/jdk/tasks/main.yml': line 16, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n- name: Download the jdk from oracle website\n  ^ here\n"}
+2019-09-29 06:52:54,149 p=4988 u=vagrant |  	to retry, use: --limit @/home/vagrant/playbooks/generic-setup.retry
+
+2019-09-29 06:52:54,150 p=4988 u=vagrant |  PLAY RECAP **************************************************************************************************************
+2019-09-29 06:52:54,152 p=4988 u=vagrant |  ansible-client1            : ok=3    changed=0    unreachable=0    failed=1   
+2019-09-29 06:54:27,330 p=5027 u=vagrant |  ansible-playbook 2.4.2.0
+  config file = /etc/ansible/ansible.cfg
+  configured module search path = [u'/home/vagrant/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/site-packages/ansible
+  executable location = /usr/bin/ansible-playbook
+  python version = 2.7.5 (default, Oct 30 2018, 23:45:53) [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
+2019-09-29 06:54:27,331 p=5027 u=vagrant |  Using /etc/ansible/ansible.cfg as config file
+2019-09-29 06:54:28,105 p=5027 u=vagrant |  PLAYBOOK: generic-setup.yml *********************************************************************************************
+2019-09-29 06:54:28,106 p=5027 u=vagrant |  1 plays in playbooks/generic-setup.yml
+2019-09-29 06:54:28,231 p=5027 u=vagrant |  PLAY [all] **************************************************************************************************************
+2019-09-29 06:54:28,278 p=5027 u=vagrant |  TASK [Gathering Facts] **************************************************************************************************
+2019-09-29 06:54:32,014 p=5027 u=vagrant |  ok: [ansible-client1]
+2019-09-29 06:54:32,016 p=5027 u=vagrant |  META: ran handlers
+2019-09-29 06:54:32,040 p=5027 u=vagrant |  TASK [jdk : Create the default directory for jdk setup] *****************************************************************
+2019-09-29 06:54:32,041 p=5027 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:3
+2019-09-29 06:54:33,531 p=5027 u=vagrant |  ok: [ansible-client1] => {"changed": false, "gid": 1000, "group": "vagrant", "mode": "0755", "owner": "vagrant", "path": "/usr/java/", "secontext": "unconfined_u:object_r:usr_t:s0", "size": 6, "state": "directory", "uid": 1000}
+2019-09-29 06:54:33,559 p=5027 u=vagrant |  TASK [jdk : Check whether jdk file exists or not] ***********************************************************************
+2019-09-29 06:54:33,560 p=5027 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:11
+2019-09-29 06:54:35,079 p=5027 u=vagrant |  ok: [ansible-client1] => {"changed": false, "stat": {"exists": false}}
+2019-09-29 06:54:35,108 p=5027 u=vagrant |  TASK [jdk : Download the jdk from oracle website] ***********************************************************************
+2019-09-29 06:54:35,109 p=5027 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:16
+2019-09-29 06:54:35,173 p=5027 u=vagrant |  fatal: [ansible-client1]: FAILED! => {"msg": "The conditional check 'jdk_download_file.exists == False' failed. The error was: error while evaluating conditional (jdk_download_file.exists == False): 'dict object' has no attribute 'exists'\n\nThe error appears to have been in '/home/vagrant/ansible_roles/jdk/tasks/main.yml': line 16, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n- name: Download the jdk from oracle website\n  ^ here\n"}
+2019-09-29 06:54:35,183 p=5027 u=vagrant |  	to retry, use: --limit @/home/vagrant/playbooks/generic-setup.retry
+
+2019-09-29 06:54:35,185 p=5027 u=vagrant |  PLAY RECAP **************************************************************************************************************
+2019-09-29 06:54:35,187 p=5027 u=vagrant |  ansible-client1            : ok=3    changed=0    unreachable=0    failed=1   
+2019-09-29 06:56:01,326 p=5067 u=vagrant |  ansible-playbook 2.4.2.0
+  config file = /etc/ansible/ansible.cfg
+  configured module search path = [u'/home/vagrant/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/site-packages/ansible
+  executable location = /usr/bin/ansible-playbook
+  python version = 2.7.5 (default, Oct 30 2018, 23:45:53) [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
+2019-09-29 06:56:01,327 p=5067 u=vagrant |  Using /etc/ansible/ansible.cfg as config file
+2019-09-29 06:56:02,184 p=5067 u=vagrant |  PLAYBOOK: generic-setup.yml *********************************************************************************************
+2019-09-29 06:56:02,185 p=5067 u=vagrant |  1 plays in playbooks/generic-setup.yml
+2019-09-29 06:56:02,309 p=5067 u=vagrant |  PLAY [all] **************************************************************************************************************
+2019-09-29 06:56:02,351 p=5067 u=vagrant |  TASK [Gathering Facts] **************************************************************************************************
+2019-09-29 06:56:06,132 p=5067 u=vagrant |  ok: [ansible-client1]
+2019-09-29 06:56:06,134 p=5067 u=vagrant |  META: ran handlers
+2019-09-29 06:56:06,158 p=5067 u=vagrant |  TASK [jdk : Create the default directory for jdk setup] *****************************************************************
+2019-09-29 06:56:06,158 p=5067 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:3
+2019-09-29 06:56:07,604 p=5067 u=vagrant |  ok: [ansible-client1] => {"changed": false, "gid": 1000, "group": "vagrant", "mode": "0755", "owner": "vagrant", "path": "/usr/java/", "secontext": "unconfined_u:object_r:usr_t:s0", "size": 6, "state": "directory", "uid": 1000}
+2019-09-29 06:56:07,632 p=5067 u=vagrant |  TASK [jdk : Check whether jdk file exists or not] ***********************************************************************
+2019-09-29 06:56:07,632 p=5067 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:11
+2019-09-29 06:56:09,060 p=5067 u=vagrant |  ok: [ansible-client1] => {"changed": false, "stat": {"exists": false}}
+2019-09-29 06:56:09,082 p=5067 u=vagrant |  TASK [jdk : Download the jdk from oracle website] ***********************************************************************
+2019-09-29 06:56:09,082 p=5067 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:16
+2019-09-29 06:56:09,140 p=5067 u=vagrant |  fatal: [ansible-client1]: FAILED! => {"msg": "The conditional check 'jdk_download_file.exists == False' failed. The error was: error while evaluating conditional (jdk_download_file.exists == False): 'dict object' has no attribute 'exists'\n\nThe error appears to have been in '/home/vagrant/ansible_roles/jdk/tasks/main.yml': line 16, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n- name: Download the jdk from oracle website\n  ^ here\n"}
+2019-09-29 06:56:09,153 p=5067 u=vagrant |  	to retry, use: --limit @/home/vagrant/playbooks/generic-setup.retry
+
+2019-09-29 06:56:09,154 p=5067 u=vagrant |  PLAY RECAP **************************************************************************************************************
+2019-09-29 06:56:09,155 p=5067 u=vagrant |  ansible-client1            : ok=3    changed=0    unreachable=0    failed=1   
+2019-09-29 06:58:52,620 p=5108 u=vagrant |  ansible-playbook 2.4.2.0
+  config file = /etc/ansible/ansible.cfg
+  configured module search path = [u'/home/vagrant/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/site-packages/ansible
+  executable location = /usr/bin/ansible-playbook
+  python version = 2.7.5 (default, Oct 30 2018, 23:45:53) [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
+2019-09-29 06:58:52,621 p=5108 u=vagrant |  Using /etc/ansible/ansible.cfg as config file
+2019-09-29 06:58:53,289 p=5108 u=vagrant |  PLAYBOOK: generic-setup.yml *********************************************************************************************
+2019-09-29 06:58:53,289 p=5108 u=vagrant |  1 plays in playbooks/generic-setup.yml
+2019-09-29 06:58:53,384 p=5108 u=vagrant |  PLAY [all] **************************************************************************************************************
+2019-09-29 06:58:53,415 p=5108 u=vagrant |  TASK [Gathering Facts] **************************************************************************************************
+2019-09-29 06:58:57,644 p=5108 u=vagrant |  ok: [ansible-client1]
+2019-09-29 06:58:57,646 p=5108 u=vagrant |  META: ran handlers
+2019-09-29 06:58:57,666 p=5108 u=vagrant |  TASK [jdk : Create the default directory for jdk setup] *****************************************************************
+2019-09-29 06:58:57,667 p=5108 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:3
+2019-09-29 06:58:59,136 p=5108 u=vagrant |  ok: [ansible-client1] => {"changed": false, "gid": 1000, "group": "vagrant", "mode": "0755", "owner": "vagrant", "path": "/usr/java/", "secontext": "unconfined_u:object_r:usr_t:s0", "size": 6, "state": "directory", "uid": 1000}
+2019-09-29 06:58:59,164 p=5108 u=vagrant |  TASK [jdk : Check whether jdk file exists or not] ***********************************************************************
+2019-09-29 06:58:59,164 p=5108 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:11
+2019-09-29 06:59:00,468 p=5108 u=vagrant |  ok: [ansible-client1] => {"changed": false, "stat": {"exists": false}}
+2019-09-29 06:59:01,276 p=5108 u=vagrant |  TASK [jdk : debug] ******************************************************************************************************
+2019-09-29 06:59:01,276 p=5108 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:16
+2019-09-29 06:59:01,343 p=5108 u=vagrant |  fatal: [ansible-client1]: FAILED! => {"msg": "The conditional check 'jdk_download_file.exists == False' failed. The error was: error while evaluating conditional (jdk_download_file.exists == False): 'dict object' has no attribute 'exists'\n\nThe error appears to have been in '/home/vagrant/ansible_roles/jdk/tasks/main.yml': line 16, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n- debug:\n  ^ here\n"}
+2019-09-29 06:59:01,349 p=5108 u=vagrant |  	to retry, use: --limit @/home/vagrant/playbooks/generic-setup.retry
+
+2019-09-29 06:59:01,350 p=5108 u=vagrant |  PLAY RECAP **************************************************************************************************************
+2019-09-29 06:59:01,351 p=5108 u=vagrant |  ansible-client1            : ok=3    changed=0    unreachable=0    failed=1   
+2019-09-29 07:00:49,968 p=5149 u=vagrant |  ansible-playbook 2.4.2.0
+  config file = /etc/ansible/ansible.cfg
+  configured module search path = [u'/home/vagrant/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/site-packages/ansible
+  executable location = /usr/bin/ansible-playbook
+  python version = 2.7.5 (default, Oct 30 2018, 23:45:53) [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
+2019-09-29 07:00:49,968 p=5149 u=vagrant |  Using /etc/ansible/ansible.cfg as config file
+2019-09-29 07:00:50,660 p=5149 u=vagrant |  PLAYBOOK: generic-setup.yml *********************************************************************************************
+2019-09-29 07:00:50,661 p=5149 u=vagrant |  1 plays in playbooks/generic-setup.yml
+2019-09-29 07:00:50,780 p=5149 u=vagrant |  PLAY [all] **************************************************************************************************************
+2019-09-29 07:00:50,820 p=5149 u=vagrant |  TASK [Gathering Facts] **************************************************************************************************
+2019-09-29 07:00:54,696 p=5149 u=vagrant |  ok: [ansible-client1]
+2019-09-29 07:00:54,699 p=5149 u=vagrant |  META: ran handlers
+2019-09-29 07:00:54,732 p=5149 u=vagrant |  TASK [jdk : Create the default directory for jdk setup] *****************************************************************
+2019-09-29 07:00:54,733 p=5149 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:3
+2019-09-29 07:00:56,203 p=5149 u=vagrant |  ok: [ansible-client1] => {"changed": false, "gid": 1000, "group": "vagrant", "mode": "0755", "owner": "vagrant", "path": "/usr/java/", "secontext": "unconfined_u:object_r:usr_t:s0", "size": 6, "state": "directory", "uid": 1000}
+2019-09-29 07:00:56,224 p=5149 u=vagrant |  TASK [jdk : Check whether jdk file exists or not] ***********************************************************************
+2019-09-29 07:00:56,225 p=5149 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:11
+2019-09-29 07:00:57,700 p=5149 u=vagrant |  ok: [ansible-client1] => {"changed": false, "stat": {"atime": 1569740375.5544646, "attr_flags": "", "attributes": [], "block_size": 4096, "blocks": 0, "charset": "binary", "checksum": "da39a3ee5e6b4b0d3255bfef95601890afd80709", "ctime": 1569740375.5544646, "dev": 2049, "device_type": 0, "executable": false, "exists": true, "gid": 1000, "gr_name": "vagrant", "inode": 67556988, "isblk": false, "ischr": false, "isdir": false, "isfifo": false, "isgid": false, "islnk": false, "isreg": true, "issock": false, "isuid": false, "md5": "d41d8cd98f00b204e9800998ecf8427e", "mimetype": "inode/x-empty", "mode": "0664", "mtime": 1569740375.5544646, "nlink": 1, "path": "/tmp/jdk.txt", "pw_name": "vagrant", "readable": true, "rgrp": true, "roth": true, "rusr": true, "size": 0, "uid": 1000, "version": "18446744073191931738", "wgrp": true, "woth": false, "writeable": true, "wusr": true, "xgrp": false, "xoth": false, "xusr": false}}
+2019-09-29 07:00:57,729 p=5149 u=vagrant |  TASK [jdk : debug] ******************************************************************************************************
+2019-09-29 07:00:57,729 p=5149 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:17
+2019-09-29 07:00:57,796 p=5149 u=vagrant |  fatal: [ansible-client1]: FAILED! => {"msg": "The conditional check 'jdk_download_file.exists == False' failed. The error was: error while evaluating conditional (jdk_download_file.exists == False): 'dict object' has no attribute 'exists'\n\nThe error appears to have been in '/home/vagrant/ansible_roles/jdk/tasks/main.yml': line 17, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n- debug:\n  ^ here\n"}
+2019-09-29 07:00:57,803 p=5149 u=vagrant |  	to retry, use: --limit @/home/vagrant/playbooks/generic-setup.retry
+
+2019-09-29 07:00:57,804 p=5149 u=vagrant |  PLAY RECAP **************************************************************************************************************
+2019-09-29 07:00:57,806 p=5149 u=vagrant |  ansible-client1            : ok=3    changed=0    unreachable=0    failed=1   
+2019-09-29 07:13:03,509 p=5316 u=vagrant |  ansible-playbook 2.4.2.0
+  config file = /etc/ansible/ansible.cfg
+  configured module search path = [u'/home/vagrant/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/site-packages/ansible
+  executable location = /usr/bin/ansible-playbook
+  python version = 2.7.5 (default, Oct 30 2018, 23:45:53) [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
+2019-09-29 07:13:03,510 p=5316 u=vagrant |  Using /etc/ansible/ansible.cfg as config file
+2019-09-29 07:13:03,511 p=5316 u=vagrant |  ERROR! the playbook: playbooks/generic-setup.yml could not be found
+2019-09-29 07:14:09,551 p=5321 u=vagrant |  ansible-playbook 2.4.2.0
+  config file = /etc/ansible/ansible.cfg
+  configured module search path = [u'/home/vagrant/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/site-packages/ansible
+  executable location = /usr/bin/ansible-playbook
+  python version = 2.7.5 (default, Oct 30 2018, 23:45:53) [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
+2019-09-29 07:14:09,551 p=5321 u=vagrant |  Using /etc/ansible/ansible.cfg as config file
+2019-09-29 07:14:10,222 p=5321 u=vagrant |  PLAYBOOK: generic-setup.yml *********************************************************************************************
+2019-09-29 07:14:10,222 p=5321 u=vagrant |  1 plays in playbooks/generic-setup.yml
+2019-09-29 07:14:10,325 p=5321 u=vagrant |  PLAY [all] **************************************************************************************************************
+2019-09-29 07:14:10,361 p=5321 u=vagrant |  TASK [Gathering Facts] **************************************************************************************************
+2019-09-29 07:14:14,090 p=5321 u=vagrant |  ok: [ansible-client1]
+2019-09-29 07:14:14,092 p=5321 u=vagrant |  META: ran handlers
+2019-09-29 07:14:14,110 p=5321 u=vagrant |  TASK [jdk : Create the default directory for jdk setup] *****************************************************************
+2019-09-29 07:14:14,110 p=5321 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:3
+2019-09-29 07:14:15,456 p=5321 u=vagrant |  ok: [ansible-client1] => {"changed": false, "gid": 1000, "group": "vagrant", "mode": "0755", "owner": "vagrant", "path": "/usr/java/", "secontext": "unconfined_u:object_r:usr_t:s0", "size": 6, "state": "directory", "uid": 1000}
+2019-09-29 07:14:15,482 p=5321 u=vagrant |  TASK [jdk : Check whether jdk file exists or not] ***********************************************************************
+2019-09-29 07:14:15,482 p=5321 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:11
+2019-09-29 07:14:16,878 p=5321 u=vagrant |  ok: [ansible-client1] => {"changed": false, "stat": {"atime": 1569740457.605472, "attr_flags": "", "attributes": [], "block_size": 4096, "blocks": 0, "charset": "binary", "checksum": "da39a3ee5e6b4b0d3255bfef95601890afd80709", "ctime": 1569740375.5544646, "dev": 2049, "device_type": 0, "executable": false, "exists": true, "gid": 1000, "gr_name": "vagrant", "inode": 67556988, "isblk": false, "ischr": false, "isdir": false, "isfifo": false, "isgid": false, "islnk": false, "isreg": true, "issock": false, "isuid": false, "md5": "d41d8cd98f00b204e9800998ecf8427e", "mimetype": "inode/x-empty", "mode": "0664", "mtime": 1569740375.5544646, "nlink": 1, "path": "/tmp/jdk.txt", "pw_name": "vagrant", "readable": true, "rgrp": true, "roth": true, "rusr": true, "size": 0, "uid": 1000, "version": "18446744073191931738", "wgrp": true, "woth": false, "writeable": true, "wusr": true, "xgrp": false, "xoth": false, "xusr": false}}
+2019-09-29 07:14:16,900 p=5321 u=vagrant |  TASK [jdk : debug] ******************************************************************************************************
+2019-09-29 07:14:16,901 p=5321 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:17
+2019-09-29 07:14:16,953 p=5321 u=vagrant |  fatal: [ansible-client1]: FAILED! => {"msg": "The conditional check 'jdk_download_file.exists == False' failed. The error was: error while evaluating conditional (jdk_download_file.exists == False): 'dict object' has no attribute 'exists'\n\nThe error appears to have been in '/home/vagrant/ansible_roles/jdk/tasks/main.yml': line 17, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n- debug:\n  ^ here\n"}
+2019-09-29 07:14:16,963 p=5321 u=vagrant |  	to retry, use: --limit @/home/vagrant/playbooks/generic-setup.retry
+
+2019-09-29 07:14:16,964 p=5321 u=vagrant |  PLAY RECAP **************************************************************************************************************
+2019-09-29 07:14:16,965 p=5321 u=vagrant |  ansible-client1            : ok=3    changed=0    unreachable=0    failed=1   
+2019-09-29 07:28:45,288 p=5441 u=vagrant |  ansible-playbook 2.4.2.0
+  config file = /etc/ansible/ansible.cfg
+  configured module search path = [u'/home/vagrant/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/site-packages/ansible
+  executable location = /usr/bin/ansible-playbook
+  python version = 2.7.5 (default, Oct 30 2018, 23:45:53) [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
+2019-09-29 07:28:45,290 p=5441 u=vagrant |  Using /etc/ansible/ansible.cfg as config file
+2019-09-29 07:28:46,098 p=5441 u=vagrant |  PLAYBOOK: generic-setup.yml *********************************************************************************************
+2019-09-29 07:28:46,099 p=5441 u=vagrant |  1 plays in playbooks/generic-setup.yml
+2019-09-29 07:28:46,202 p=5441 u=vagrant |  PLAY [all] **************************************************************************************************************
+2019-09-29 07:28:46,234 p=5441 u=vagrant |  TASK [Gathering Facts] **************************************************************************************************
+2019-09-29 07:28:50,013 p=5441 u=vagrant |  ok: [ansible-client1]
+2019-09-29 07:28:50,015 p=5441 u=vagrant |  META: ran handlers
+2019-09-29 07:28:50,033 p=5441 u=vagrant |  TASK [jdk : Create the default directory for jdk setup] *****************************************************************
+2019-09-29 07:28:50,034 p=5441 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:3
+2019-09-29 07:28:51,358 p=5441 u=vagrant |  ok: [ansible-client1] => {"changed": false, "gid": 1000, "group": "vagrant", "mode": "0755", "owner": "vagrant", "path": "/usr/java/", "secontext": "unconfined_u:object_r:usr_t:s0", "size": 6, "state": "directory", "uid": 1000}
+2019-09-29 07:28:51,383 p=5441 u=vagrant |  TASK [jdk : Check whether jdk file exists or not] ***********************************************************************
+2019-09-29 07:28:51,383 p=5441 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:11
+2019-09-29 07:28:52,774 p=5441 u=vagrant |  ok: [ansible-client1] => {"changed": false, "stat": {"atime": 1569740457.605472, "attr_flags": "", "attributes": [], "block_size": 4096, "blocks": 0, "charset": "binary", "checksum": "da39a3ee5e6b4b0d3255bfef95601890afd80709", "ctime": 1569740375.5544646, "dev": 2049, "device_type": 0, "executable": false, "exists": true, "gid": 1000, "gr_name": "vagrant", "inode": 67556988, "isblk": false, "ischr": false, "isdir": false, "isfifo": false, "isgid": false, "islnk": false, "isreg": true, "issock": false, "isuid": false, "md5": "d41d8cd98f00b204e9800998ecf8427e", "mimetype": "inode/x-empty", "mode": "0664", "mtime": 1569740375.5544646, "nlink": 1, "path": "/tmp/jdk.txt", "pw_name": "vagrant", "readable": true, "rgrp": true, "roth": true, "rusr": true, "size": 0, "uid": 1000, "version": "18446744073191931738", "wgrp": true, "woth": false, "writeable": true, "wusr": true, "xgrp": false, "xoth": false, "xusr": false}}
+2019-09-29 07:28:52,802 p=5441 u=vagrant |  TASK [jdk : debug] ******************************************************************************************************
+2019-09-29 07:28:52,803 p=5441 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:17
+2019-09-29 07:28:52,857 p=5441 u=vagrant |  skipping: [ansible-client1] => {"changed": false, "skip_reason": "Conditional result was False"}
+2019-09-29 07:28:52,875 p=5441 u=vagrant |  TASK [jdk : Download the jdk from oracle website] ***********************************************************************
+2019-09-29 07:28:52,877 p=5441 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:21
+2019-09-29 07:28:52,930 p=5441 u=vagrant |  skipping: [ansible-client1] => {"changed": false, "skip_reason": "Conditional result was False"}
+2019-09-29 07:28:52,964 p=5441 u=vagrant |  TASK [jdk : Extract the jdk file] ***************************************************************************************
+2019-09-29 07:28:52,964 p=5441 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:27
+2019-09-29 07:28:53,333 p=5441 u=vagrant |  fatal: [ansible-client1]: FAILED! => {"changed": false, "msg": "Could not find or access '/tmp/jdk_ri-8u40-b25-linux-x64-10_feb_2015.tar.gz'"}
+2019-09-29 07:28:53,343 p=5441 u=vagrant |  	to retry, use: --limit @/home/vagrant/playbooks/generic-setup.retry
+
+2019-09-29 07:28:53,343 p=5441 u=vagrant |  PLAY RECAP **************************************************************************************************************
+2019-09-29 07:28:53,344 p=5441 u=vagrant |  ansible-client1            : ok=3    changed=0    unreachable=0    failed=1   
+2019-09-29 07:32:03,087 p=5489 u=vagrant |  ansible-playbook 2.4.2.0
+  config file = /etc/ansible/ansible.cfg
+  configured module search path = [u'/home/vagrant/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/site-packages/ansible
+  executable location = /usr/bin/ansible-playbook
+  python version = 2.7.5 (default, Oct 30 2018, 23:45:53) [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
+2019-09-29 07:32:03,088 p=5489 u=vagrant |  Using /etc/ansible/ansible.cfg as config file
+2019-09-29 07:32:03,888 p=5489 u=vagrant |  PLAYBOOK: generic-setup.yml *********************************************************************************************
+2019-09-29 07:32:03,889 p=5489 u=vagrant |  1 plays in playbooks/generic-setup.yml
+2019-09-29 07:32:03,993 p=5489 u=vagrant |  PLAY [all] **************************************************************************************************************
+2019-09-29 07:32:04,026 p=5489 u=vagrant |  TASK [Gathering Facts] **************************************************************************************************
+2019-09-29 07:32:08,143 p=5489 u=vagrant |  ok: [ansible-client1]
+2019-09-29 07:32:08,147 p=5489 u=vagrant |  META: ran handlers
+2019-09-29 07:32:08,169 p=5489 u=vagrant |  TASK [jdk : Create the default directory for jdk setup] *****************************************************************
+2019-09-29 07:32:08,169 p=5489 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:3
+2019-09-29 07:32:10,084 p=5489 u=vagrant |  ok: [ansible-client1] => {"changed": false, "gid": 1000, "group": "vagrant", "mode": "0755", "owner": "vagrant", "path": "/usr/java/", "secontext": "unconfined_u:object_r:usr_t:s0", "size": 6, "state": "directory", "uid": 1000}
+2019-09-29 07:32:10,124 p=5489 u=vagrant |  TASK [jdk : Check whether jdk file exists or not] ***********************************************************************
+2019-09-29 07:32:10,125 p=5489 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:11
+2019-09-29 07:32:11,945 p=5489 u=vagrant |  ok: [ansible-client1] => {"changed": false, "stat": {"exists": false}}
+2019-09-29 07:32:11,971 p=5489 u=vagrant |  TASK [jdk : debug] ******************************************************************************************************
+2019-09-29 07:32:11,971 p=5489 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:17
+2019-09-29 07:32:12,127 p=5489 u=vagrant |  ok: [ansible-client1] => {
+    "msg": "jdk download file status"
+}
+2019-09-29 07:32:12,159 p=5489 u=vagrant |  TASK [jdk : Download the jdk from oracle website] ***********************************************************************
+2019-09-29 07:32:12,160 p=5489 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:21
+2019-09-29 07:33:40,337 p=5489 u=vagrant |   [ERROR]: User interrupted execution
+
+2019-09-29 07:36:05,026 p=5536 u=vagrant |  ansible-playbook 2.4.2.0
+  config file = /etc/ansible/ansible.cfg
+  configured module search path = [u'/home/vagrant/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/site-packages/ansible
+  executable location = /usr/bin/ansible-playbook
+  python version = 2.7.5 (default, Oct 30 2018, 23:45:53) [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
+2019-09-29 07:36:05,027 p=5536 u=vagrant |  Using /etc/ansible/ansible.cfg as config file
+2019-09-29 07:36:05,817 p=5536 u=vagrant |  PLAYBOOK: generic-setup.yml *********************************************************************************************
+2019-09-29 07:36:05,817 p=5536 u=vagrant |  1 plays in playbooks/generic-setup.yml
+2019-09-29 07:36:05,926 p=5536 u=vagrant |  PLAY [all] **************************************************************************************************************
+2019-09-29 07:36:05,960 p=5536 u=vagrant |  TASK [Gathering Facts] **************************************************************************************************
+2019-09-29 07:36:13,307 p=5536 u=vagrant |  ok: [ansible-client1]
+2019-09-29 07:36:13,310 p=5536 u=vagrant |  META: ran handlers
+2019-09-29 07:36:13,329 p=5536 u=vagrant |  TASK [jdk : Create the default directory for jdk setup] *****************************************************************
+2019-09-29 07:36:13,330 p=5536 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:3
+2019-09-29 07:36:14,925 p=5536 u=vagrant |  ok: [ansible-client1] => {"changed": false, "gid": 1000, "group": "vagrant", "mode": "0755", "owner": "vagrant", "path": "/usr/java/", "secontext": "unconfined_u:object_r:usr_t:s0", "size": 6, "state": "directory", "uid": 1000}
+2019-09-29 07:36:14,947 p=5536 u=vagrant |  TASK [jdk : Check whether jdk file exists or not] ***********************************************************************
+2019-09-29 07:36:14,947 p=5536 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:11
+2019-09-29 07:36:18,891 p=5536 u=vagrant |  ok: [ansible-client1] => {"changed": false, "stat": {"atime": 1569739351.974782, "attr_flags": "", "attributes": [], "block_size": 4096, "blocks": 336176, "charset": "binary", "checksum": "06c7faba317b796cfc505b7d4816393a3b85cec2", "ctime": 1569742404.0710297, "dev": 2049, "device_type": 0, "executable": false, "exists": true, "gid": 0, "gr_name": "root", "inode": 67556984, "isblk": false, "ischr": false, "isdir": false, "isfifo": false, "isgid": false, "islnk": false, "isreg": true, "issock": false, "isuid": false, "md5": "f66a5a8015a9a965b02815db9868f710", "mimetype": "application/x-gzip", "mode": "0644", "mtime": 1569739350.91677, "nlink": 1, "path": "/tmp/jdk_ri-8u40-b25-linux-x64-10_feb_2015.tar.gz", "pw_name": "root", "readable": true, "rgrp": true, "roth": true, "rusr": true, "size": 172119622, "uid": 0, "version": "18446744073330795316", "wgrp": false, "woth": false, "writeable": true, "wusr": true, "xgrp": false, "xoth": false, "xusr": false}}
+2019-09-29 07:36:18,922 p=5536 u=vagrant |  TASK [jdk : debug] ******************************************************************************************************
+2019-09-29 07:36:18,922 p=5536 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:17
+2019-09-29 07:36:19,045 p=5536 u=vagrant |  ok: [ansible-client1] => {
+    "msg": "jdk download file already exists then skip downloading the file"
+}
+2019-09-29 07:36:19,071 p=5536 u=vagrant |  TASK [jdk : Download the jdk from oracle website] ***********************************************************************
+2019-09-29 07:36:19,072 p=5536 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:21
+2019-09-29 07:36:19,122 p=5536 u=vagrant |  skipping: [ansible-client1] => {"changed": false, "skip_reason": "Conditional result was False"}
+2019-09-29 07:36:19,142 p=5536 u=vagrant |  TASK [jdk : Extract the jdk file] ***************************************************************************************
+2019-09-29 07:36:19,143 p=5536 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:27
+2019-09-29 07:36:19,553 p=5536 u=vagrant |  fatal: [ansible-client1]: FAILED! => {"changed": false, "msg": "Could not find or access '/tmp/jdk_ri-8u40-b25-linux-x64-10_feb_2015.tar.gz'"}
+2019-09-29 07:36:19,559 p=5536 u=vagrant |  	to retry, use: --limit @/home/vagrant/playbooks/generic-setup.retry
+
+2019-09-29 07:36:19,560 p=5536 u=vagrant |  PLAY RECAP **************************************************************************************************************
+2019-09-29 07:36:19,560 p=5536 u=vagrant |  ansible-client1            : ok=4    changed=0    unreachable=0    failed=1   
+2019-09-29 07:39:59,177 p=5617 u=vagrant |  ansible-playbook 2.4.2.0
+  config file = /etc/ansible/ansible.cfg
+  configured module search path = [u'/home/vagrant/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/site-packages/ansible
+  executable location = /usr/bin/ansible-playbook
+  python version = 2.7.5 (default, Oct 30 2018, 23:45:53) [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
+2019-09-29 07:39:59,177 p=5617 u=vagrant |  Using /etc/ansible/ansible.cfg as config file
+2019-09-29 07:39:59,866 p=5617 u=vagrant |  PLAYBOOK: generic-setup.yml ***********************************************************************************************
+2019-09-29 07:39:59,866 p=5617 u=vagrant |  1 plays in playbooks/generic-setup.yml
+2019-09-29 07:39:59,973 p=5617 u=vagrant |  PLAY [all] ****************************************************************************************************************
+2019-09-29 07:40:00,016 p=5617 u=vagrant |  TASK [Gathering Facts] ****************************************************************************************************
+2019-09-29 07:40:03,869 p=5617 u=vagrant |  ok: [ansible-client1]
+2019-09-29 07:40:03,872 p=5617 u=vagrant |  META: ran handlers
+2019-09-29 07:40:03,892 p=5617 u=vagrant |  TASK [jdk : Create the default directory for jdk setup] *******************************************************************
+2019-09-29 07:40:03,893 p=5617 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:3
+2019-09-29 07:40:05,468 p=5617 u=vagrant |  ok: [ansible-client1] => {"changed": false, "gid": 1000, "group": "vagrant", "mode": "0755", "owner": "vagrant", "path": "/usr/java/", "secontext": "unconfined_u:object_r:usr_t:s0", "size": 6, "state": "directory", "uid": 1000}
+2019-09-29 07:40:05,498 p=5617 u=vagrant |  TASK [jdk : Check whether jdk file exists or not] *************************************************************************
+2019-09-29 07:40:05,499 p=5617 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:11
+2019-09-29 07:40:08,744 p=5617 u=vagrant |  ok: [ansible-client1] => {"changed": false, "stat": {"atime": 1569742576.44966, "attr_flags": "", "attributes": [], "block_size": 4096, "blocks": 336176, "charset": "binary", "checksum": "06c7faba317b796cfc505b7d4816393a3b85cec2", "ctime": 1569742404.0710297, "dev": 2049, "device_type": 0, "executable": false, "exists": true, "gid": 0, "gr_name": "root", "inode": 67556984, "isblk": false, "ischr": false, "isdir": false, "isfifo": false, "isgid": false, "islnk": false, "isreg": true, "issock": false, "isuid": false, "md5": "f66a5a8015a9a965b02815db9868f710", "mimetype": "application/x-gzip", "mode": "0644", "mtime": 1569739350.91677, "nlink": 1, "path": "/tmp/jdk_ri-8u40-b25-linux-x64-10_feb_2015.tar.gz", "pw_name": "root", "readable": true, "rgrp": true, "roth": true, "rusr": true, "size": 172119622, "uid": 0, "version": "18446744073330795316", "wgrp": false, "woth": false, "writeable": true, "wusr": true, "xgrp": false, "xoth": false, "xusr": false}}
+2019-09-29 07:40:08,762 p=5617 u=vagrant |  TASK [jdk : debug] ********************************************************************************************************
+2019-09-29 07:40:08,762 p=5617 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:17
+2019-09-29 07:40:08,841 p=5617 u=vagrant |  ok: [ansible-client1] => {
+    "msg": "jdk download file already exists then skip downloading the file"
+}
+2019-09-29 07:40:08,855 p=5617 u=vagrant |  TASK [jdk : Download the jdk from oracle website] *************************************************************************
+2019-09-29 07:40:08,856 p=5617 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:21
+2019-09-29 07:40:08,894 p=5617 u=vagrant |  skipping: [ansible-client1] => {"changed": false, "skip_reason": "Conditional result was False"}
+2019-09-29 07:40:08,910 p=5617 u=vagrant |  TASK [jdk : Extract the jdk file] *****************************************************************************************
+2019-09-29 07:40:08,911 p=5617 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:27
+2019-09-29 07:40:09,175 p=5617 u=vagrant |  fatal: [ansible-client1]: FAILED! => {"changed": false, "msg": "Could not find or access '/tmp/jdk_ri-8u40-b25-linux-x64-10_feb_2015.tar.gz'"}
+2019-09-29 07:40:09,179 p=5617 u=vagrant |  	to retry, use: --limit @/home/vagrant/playbooks/generic-setup.retry
+
+2019-09-29 07:40:09,180 p=5617 u=vagrant |  PLAY RECAP ****************************************************************************************************************
+2019-09-29 07:40:09,181 p=5617 u=vagrant |  ansible-client1            : ok=4    changed=0    unreachable=0    failed=1   
+2019-09-29 07:43:20,753 p=5664 u=vagrant |  ansible-playbook 2.4.2.0
+  config file = /etc/ansible/ansible.cfg
+  configured module search path = [u'/home/vagrant/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/site-packages/ansible
+  executable location = /usr/bin/ansible-playbook
+  python version = 2.7.5 (default, Oct 30 2018, 23:45:53) [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
+2019-09-29 07:43:20,755 p=5664 u=vagrant |  Using /etc/ansible/ansible.cfg as config file
+2019-09-29 07:43:21,653 p=5664 u=vagrant |  PLAYBOOK: generic-setup.yml ***********************************************************************************************
+2019-09-29 07:43:21,654 p=5664 u=vagrant |  1 plays in playbooks/generic-setup.yml
+2019-09-29 07:43:21,848 p=5664 u=vagrant |  PLAY [all] ****************************************************************************************************************
+2019-09-29 07:43:21,898 p=5664 u=vagrant |  TASK [Gathering Facts] ****************************************************************************************************
+2019-09-29 07:43:26,151 p=5664 u=vagrant |  ok: [ansible-client1]
+2019-09-29 07:43:26,152 p=5664 u=vagrant |  META: ran handlers
+2019-09-29 07:43:26,172 p=5664 u=vagrant |  TASK [jdk : Create the default directory for jdk setup] *******************************************************************
+2019-09-29 07:43:26,173 p=5664 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:3
+2019-09-29 07:43:27,378 p=5664 u=vagrant |  ok: [ansible-client1] => {"changed": false, "gid": 1000, "group": "vagrant", "mode": "0755", "owner": "vagrant", "path": "/usr/java/", "secontext": "unconfined_u:object_r:usr_t:s0", "size": 6, "state": "directory", "uid": 1000}
+2019-09-29 07:43:27,404 p=5664 u=vagrant |  TASK [jdk : Check whether jdk file exists or not] *************************************************************************
+2019-09-29 07:43:27,404 p=5664 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:11
+2019-09-29 07:43:29,930 p=5664 u=vagrant |  ok: [ansible-client1] => {"changed": false, "stat": {"atime": 1569742576.44966, "attr_flags": "", "attributes": [], "block_size": 4096, "blocks": 336176, "charset": "binary", "checksum": "06c7faba317b796cfc505b7d4816393a3b85cec2", "ctime": 1569742404.0710297, "dev": 2049, "device_type": 0, "executable": false, "exists": true, "gid": 0, "gr_name": "root", "inode": 67556984, "isblk": false, "ischr": false, "isdir": false, "isfifo": false, "isgid": false, "islnk": false, "isreg": true, "issock": false, "isuid": false, "md5": "f66a5a8015a9a965b02815db9868f710", "mimetype": "application/x-gzip", "mode": "0644", "mtime": 1569739350.91677, "nlink": 1, "path": "/tmp/jdk_ri-8u40-b25-linux-x64-10_feb_2015.tar.gz", "pw_name": "root", "readable": true, "rgrp": true, "roth": true, "rusr": true, "size": 172119622, "uid": 0, "version": "18446744073330795316", "wgrp": false, "woth": false, "writeable": true, "wusr": true, "xgrp": false, "xoth": false, "xusr": false}}
+2019-09-29 07:43:29,950 p=5664 u=vagrant |  TASK [jdk : debug] ********************************************************************************************************
+2019-09-29 07:43:29,951 p=5664 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:17
+2019-09-29 07:43:30,039 p=5664 u=vagrant |  ok: [ansible-client1] => {
+    "msg": "jdk download file already exists then skip downloading the file"
+}
+2019-09-29 07:43:30,054 p=5664 u=vagrant |  TASK [jdk : Download the jdk from oracle website] *************************************************************************
+2019-09-29 07:43:30,055 p=5664 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:21
+2019-09-29 07:43:30,093 p=5664 u=vagrant |  skipping: [ansible-client1] => {"changed": false, "skip_reason": "Conditional result was False"}
+2019-09-29 07:43:30,107 p=5664 u=vagrant |  TASK [jdk : Extract the jdk file] *****************************************************************************************
+2019-09-29 07:43:30,107 p=5664 u=vagrant |  task path: /home/vagrant/ansible_roles/jdk/tasks/main.yml:27
+2019-09-29 07:43:50,581 p=5664 u=vagrant |  changed: [ansible-client1] => {"changed": true, "dest": "/usr/java/", "extract_results": {"cmd": ["/bin/gtar", "--extract", "-C", "/usr/java/", "-z", "-f", "/tmp/jdk_ri-8u40-b25-linux-x64-10_feb_2015.tar.gz"], "err": "", "out": "", "rc": 0}, "gid": 1000, "group": "vagrant", "handler": "TgzArchive", "mode": "0755", "owner": "vagrant", "secontext": "unconfined_u:object_r:usr_t:s0", "size": 29, "src": "/tmp/jdk_ri-8u40-b25-linux-x64-10_feb_2015.tar.gz", "state": "directory", "uid": 1000}
+2019-09-29 07:43:50,583 p=5664 u=vagrant |  META: ran handlers
+2019-09-29 07:43:50,584 p=5664 u=vagrant |  META: ran handlers
+2019-09-29 07:43:50,588 p=5664 u=vagrant |  PLAY RECAP ****************************************************************************************************************
+2019-09-29 07:43:50,589 p=5664 u=vagrant |  ansible-client1            : ok=5    changed=1    unreachable=0    failed=0   
+2019-11-27 19:04:40,570 p=4588 u=vagrant |  - downloading role 'sonar', owned by geerlingguy
+2019-11-27 19:04:43,880 p=4588 u=vagrant |  - downloading role from https://github.com/geerlingguy/ansible-role-sonar/archive/1.4.1.tar.gz
+2019-11-27 19:04:45,145 p=4588 u=vagrant |  - extracting geerlingguy.sonar to /etc/ansible/roles/geerlingguy.sonar
+2019-11-27 19:04:45,145 p=4588 u=vagrant |  - extracting geerlingguy.sonar to /usr/share/ansible/roles/geerlingguy.sonar
+2019-11-27 19:04:45,145 p=4588 u=vagrant |  - extracting geerlingguy.sonar to /home/vagrant/ansible_roles/geerlingguy.sonar
+2019-11-27 19:04:45,159 p=4588 u=vagrant |  - geerlingguy.sonar (1.4.1) was installed successfully
+2019-11-27 19:04:45,160 p=4588 u=vagrant |  - adding dependency: geerlingguy.java
+2019-11-27 19:04:45,161 p=4588 u=vagrant |  - adding dependency: geerlingguy.mysql
+2019-11-27 19:04:46,474 p=4588 u=vagrant |  - downloading role 'java', owned by geerlingguy
+2019-11-27 19:04:49,847 p=4588 u=vagrant |  - downloading role from https://github.com/geerlingguy/ansible-role-java/archive/1.9.6.tar.gz
+2019-11-27 19:04:50,953 p=4588 u=vagrant |  - extracting geerlingguy.java to /etc/ansible/roles/geerlingguy.java
+2019-11-27 19:04:50,954 p=4588 u=vagrant |  - extracting geerlingguy.java to /usr/share/ansible/roles/geerlingguy.java
+2019-11-27 19:04:50,955 p=4588 u=vagrant |  - extracting geerlingguy.java to /home/vagrant/ansible_roles/geerlingguy.java
+2019-11-27 19:04:50,979 p=4588 u=vagrant |  - geerlingguy.java (1.9.6) was installed successfully
+2019-11-27 19:04:52,257 p=4588 u=vagrant |  - downloading role 'mysql', owned by geerlingguy
+2019-11-27 19:04:57,475 p=4588 u=vagrant |  - downloading role from https://github.com/geerlingguy/ansible-role-mysql/archive/2.9.5.tar.gz
+2019-11-27 19:04:58,639 p=4588 u=vagrant |  - extracting geerlingguy.mysql to /etc/ansible/roles/geerlingguy.mysql
+2019-11-27 19:04:58,640 p=4588 u=vagrant |  - extracting geerlingguy.mysql to /usr/share/ansible/roles/geerlingguy.mysql
+2019-11-27 19:04:58,641 p=4588 u=vagrant |  - extracting geerlingguy.mysql to /home/vagrant/ansible_roles/geerlingguy.mysql
+2019-11-27 19:04:58,665 p=4588 u=vagrant |  - geerlingguy.mysql (2.9.5) was installed successfully
+2019-11-27 19:13:12,214 p=4698 u=vagrant |  sonarqube1.server.com | SUCCESS | rc=0 >>
+Wed Nov 27 19:13:12 UTC 2019
+
+2019-11-27 19:15:52,056 p=4799 u=vagrant |  [DEPRECATION WARNING]: The use of 'include' for tasks has been deprecated. Use 'import_tasks' for static inclusions or 'include_tasks' for 
+dynamic inclusions. This feature will be removed in a future release. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2019-11-27 19:15:52,058 p=4799 u=vagrant |  [DEPRECATION WARNING]: include is kept for backwards compatibility but usage is discouraged. The module documentation details page may 
+explain more about this rationale.. This feature will be removed in a future release. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2019-11-27 19:15:52,394 p=4799 u=vagrant |  PLAY [all] ***********************************************************************************************************************************
+2019-11-27 19:15:52,460 p=4799 u=vagrant |  TASK [Gathering Facts] ***********************************************************************************************************************
+2019-11-27 19:15:55,845 p=4799 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 19:15:55,860 p=4799 u=vagrant |  TASK [users : create a user by name autodeploy] **********************************************************************************************
+2019-11-27 19:15:57,550 p=4799 u=vagrant |  changed: [sonarqube1.server.com]
+2019-11-27 19:15:57,581 p=4799 u=vagrant |  TASK [users : Fetch public key from remote server] *******************************************************************************************
+2019-11-27 19:15:58,688 p=4799 u=vagrant |  changed: [sonarqube1.server.com]
+2019-11-27 19:15:58,711 p=4799 u=vagrant |  TASK [users : Fetch private key from remote server] ******************************************************************************************
+2019-11-27 19:15:59,536 p=4799 u=vagrant |  changed: [sonarqube1.server.com]
+2019-11-27 19:15:59,555 p=4799 u=vagrant |  TASK [users : Append the public key to authorized key file] **********************************************************************************
+2019-11-27 19:16:01,114 p=4799 u=vagrant |  changed: [sonarqube1.server.com]
+2019-11-27 19:16:01,150 p=4799 u=vagrant |  TASK [users : Create a sudoers file backup (.bkp)] *******************************************************************************************
+2019-11-27 19:16:02,438 p=4799 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 19:16:02,462 p=4799 u=vagrant |  TASK [users : Enable sudo permission for autodeploy user] ************************************************************************************
+2019-11-27 19:16:03,691 p=4799 u=vagrant |  changed: [sonarqube1.server.com]
+2019-11-27 19:16:03,708 p=4799 u=vagrant |  TASK [sysutils : install frequently used system packages] ************************************************************************************
+2019-11-27 19:17:17,071 p=4799 u=vagrant |  changed: [sonarqube1.server.com] => (item=[u'net-tools.x86_64', u'vim-enhanced'])
+2019-11-27 19:17:17,110 p=4799 u=vagrant |  TASK [geerlingguy.java : Include OS-specific variables for Fedora or FreeBSD.] ***************************************************************
+2019-11-27 19:17:17,242 p=4799 u=vagrant |  skipping: [sonarqube1.server.com]
+2019-11-27 19:17:17,258 p=4799 u=vagrant |  TASK [geerlingguy.java : Include version-specific variables for CentOS/RHEL.] ****************************************************************
+2019-11-27 19:17:17,496 p=4799 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 19:17:17,521 p=4799 u=vagrant |  TASK [geerlingguy.java : Include version-specific variables for Ubuntu.] *********************************************************************
+2019-11-27 19:17:17,565 p=4799 u=vagrant |  skipping: [sonarqube1.server.com]
+2019-11-27 19:17:17,578 p=4799 u=vagrant |  TASK [geerlingguy.java : Include version-specific variables for Debian.] *********************************************************************
+2019-11-27 19:17:17,678 p=4799 u=vagrant |  skipping: [sonarqube1.server.com]
+2019-11-27 19:17:17,734 p=4799 u=vagrant |  TASK [geerlingguy.java : Define java_packages.] **********************************************************************************************
+2019-11-27 19:17:17,837 p=4799 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 19:17:17,851 p=4799 u=vagrant |  TASK [geerlingguy.java : include_tasks] ******************************************************************************************************
+2019-11-27 19:17:17,938 p=4799 u=vagrant |  included: /home/vagrant/ansible_roles/geerlingguy.java/tasks/setup-RedHat.yml for sonarqube1.server.com
+2019-11-27 19:17:18,144 p=4799 u=vagrant |  TASK [geerlingguy.java : Ensure Java is installed.] ******************************************************************************************
+2019-11-27 19:18:32,246 p=4799 u=vagrant |  changed: [sonarqube1.server.com]
+2019-11-27 19:18:32,261 p=4799 u=vagrant |  TASK [geerlingguy.java : include_tasks] ******************************************************************************************************
+2019-11-27 19:18:32,291 p=4799 u=vagrant |  skipping: [sonarqube1.server.com]
+2019-11-27 19:18:32,306 p=4799 u=vagrant |  TASK [geerlingguy.java : include_tasks] ******************************************************************************************************
+2019-11-27 19:18:32,333 p=4799 u=vagrant |  skipping: [sonarqube1.server.com]
+2019-11-27 19:18:32,436 p=4799 u=vagrant |  TASK [geerlingguy.java : Set JAVA_HOME if configured.] ***************************************************************************************
+2019-11-27 19:18:32,462 p=4799 u=vagrant |  skipping: [sonarqube1.server.com]
+2019-11-27 19:18:32,478 p=4799 u=vagrant |  TASK [geerlingguy.mysql : include_tasks] *****************************************************************************************************
+2019-11-27 19:18:32,546 p=4799 u=vagrant |  included: /home/vagrant/ansible_roles/geerlingguy.mysql/tasks/variables.yml for sonarqube1.server.com
+2019-11-27 19:18:32,564 p=4799 u=vagrant |  TASK [geerlingguy.mysql : Include OS-specific variables.] ************************************************************************************
+2019-11-27 19:18:32,772 p=4799 u=vagrant |  ok: [sonarqube1.server.com] => (item=/home/vagrant/ansible_roles/geerlingguy.mysql/vars/RedHat-7.yml)
+2019-11-27 19:18:32,788 p=4799 u=vagrant |  TASK [geerlingguy.mysql : Define mysql_packages.] ********************************************************************************************
+2019-11-27 19:18:32,859 p=4799 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 19:18:32,875 p=4799 u=vagrant |  TASK [geerlingguy.mysql : Define mysql_daemon.] **********************************************************************************************
+2019-11-27 19:18:32,949 p=4799 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 19:18:32,962 p=4799 u=vagrant |  TASK [geerlingguy.mysql : Define mysql_slow_query_log_file.] *********************************************************************************
+2019-11-27 19:18:33,034 p=4799 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 19:18:33,046 p=4799 u=vagrant |  TASK [geerlingguy.mysql : Define mysql_log_error.] *******************************************************************************************
+2019-11-27 19:18:33,117 p=4799 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 19:18:33,129 p=4799 u=vagrant |  TASK [geerlingguy.mysql : Define mysql_syslog_tag.] ******************************************************************************************
+2019-11-27 19:18:33,200 p=4799 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 19:18:33,214 p=4799 u=vagrant |  TASK [geerlingguy.mysql : Define mysql_pid_file.] ********************************************************************************************
+2019-11-27 19:18:33,299 p=4799 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 19:18:33,312 p=4799 u=vagrant |  TASK [geerlingguy.mysql : Define mysql_config_file.] *****************************************************************************************
+2019-11-27 19:18:33,387 p=4799 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 19:18:33,399 p=4799 u=vagrant |  TASK [geerlingguy.mysql : Define mysql_config_include_dir.] **********************************************************************************
+2019-11-27 19:18:33,468 p=4799 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 19:18:33,482 p=4799 u=vagrant |  TASK [geerlingguy.mysql : Define mysql_socket.] **********************************************************************************************
+2019-11-27 19:18:33,554 p=4799 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 19:18:33,568 p=4799 u=vagrant |  TASK [geerlingguy.mysql : Define mysql_supports_innodb_large_prefix.] ************************************************************************
+2019-11-27 19:18:33,634 p=4799 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 19:18:33,646 p=4799 u=vagrant |  TASK [geerlingguy.mysql : include_tasks] *****************************************************************************************************
+2019-11-27 19:18:33,697 p=4799 u=vagrant |  included: /home/vagrant/ansible_roles/geerlingguy.mysql/tasks/setup-RedHat.yml for sonarqube1.server.com
+2019-11-27 19:18:33,719 p=4799 u=vagrant |  TASK [geerlingguy.mysql : Ensure MySQL packages are installed.] ******************************************************************************
+2019-11-27 19:19:20,377 p=4799 u=vagrant |  changed: [sonarqube1.server.com]
+2019-11-27 19:19:20,390 p=4799 u=vagrant |  TASK [geerlingguy.mysql : Ensure MySQL Python libraries are installed.] **********************************************************************
+2019-11-27 19:19:25,903 p=4799 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 19:19:25,918 p=4799 u=vagrant |  TASK [geerlingguy.mysql : include_tasks] *****************************************************************************************************
+2019-11-27 19:19:25,952 p=4799 u=vagrant |  skipping: [sonarqube1.server.com]
+2019-11-27 19:19:25,967 p=4799 u=vagrant |  TASK [geerlingguy.mysql : include_tasks] *****************************************************************************************************
+2019-11-27 19:19:26,015 p=4799 u=vagrant |  skipping: [sonarqube1.server.com]
+2019-11-27 19:19:26,029 p=4799 u=vagrant |  TASK [geerlingguy.mysql : Check if MySQL packages were installed.] ***************************************************************************
+2019-11-27 19:19:26,142 p=4799 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 19:19:26,160 p=4799 u=vagrant |  TASK [geerlingguy.mysql : include_tasks] *****************************************************************************************************
+2019-11-27 19:19:26,245 p=4799 u=vagrant |  included: /home/vagrant/ansible_roles/geerlingguy.mysql/tasks/configure.yml for sonarqube1.server.com
+2019-11-27 19:19:26,277 p=4799 u=vagrant |  TASK [geerlingguy.mysql : Get MySQL version.] ************************************************************************************************
+2019-11-27 19:19:27,833 p=4799 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 19:19:27,845 p=4799 u=vagrant |  TASK [geerlingguy.mysql : Copy my.cnf global MySQL configuration.] ***************************************************************************
+2019-11-27 19:19:30,999 p=4799 u=vagrant |  changed: [sonarqube1.server.com]
+2019-11-27 19:19:31,016 p=4799 u=vagrant |  TASK [geerlingguy.mysql : Verify mysql include directory exists.] ****************************************************************************
+2019-11-27 19:19:31,056 p=4799 u=vagrant |  skipping: [sonarqube1.server.com]
+2019-11-27 19:19:31,070 p=4799 u=vagrant |  TASK [geerlingguy.mysql : Copy my.cnf override files into include directory.] ****************************************************************
+2019-11-27 19:19:31,115 p=4799 u=vagrant |  TASK [geerlingguy.mysql : Create slow query log file (if configured).] ***********************************************************************
+2019-11-27 19:19:31,140 p=4799 u=vagrant |  skipping: [sonarqube1.server.com]
+2019-11-27 19:19:31,157 p=4799 u=vagrant |  TASK [geerlingguy.mysql : Create datadir if it does not exist] *******************************************************************************
+2019-11-27 19:19:34,148 p=4799 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 19:19:34,165 p=4799 u=vagrant |  TASK [geerlingguy.mysql : Set ownership on slow query log file (if configured).] *************************************************************
+2019-11-27 19:19:34,192 p=4799 u=vagrant |  skipping: [sonarqube1.server.com]
+2019-11-27 19:19:34,214 p=4799 u=vagrant |  TASK [geerlingguy.mysql : Create error log file (if configured).] ****************************************************************************
+2019-11-27 19:19:34,930 p=4799 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 19:19:34,943 p=4799 u=vagrant |  TASK [geerlingguy.mysql : Set ownership on error log file (if configured).] ******************************************************************
+2019-11-27 19:19:35,660 p=4799 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 19:19:35,708 p=4799 u=vagrant |  TASK [geerlingguy.mysql : Ensure MySQL is started and enabled on boot.] **********************************************************************
+2019-11-27 19:19:45,690 p=4799 u=vagrant |  changed: [sonarqube1.server.com]
+2019-11-27 19:19:45,706 p=4799 u=vagrant |  TASK [geerlingguy.mysql : include_tasks] *****************************************************************************************************
+2019-11-27 19:19:45,788 p=4799 u=vagrant |  included: /home/vagrant/ansible_roles/geerlingguy.mysql/tasks/secure-installation.yml for sonarqube1.server.com
+2019-11-27 19:19:45,842 p=4799 u=vagrant |  TASK [geerlingguy.mysql : Ensure default user is present.] ***********************************************************************************
+2019-11-27 19:19:45,876 p=4799 u=vagrant |  skipping: [sonarqube1.server.com]
+2019-11-27 19:19:45,893 p=4799 u=vagrant |  TASK [geerlingguy.mysql : Copy user-my.cnf file with password credentials.] ******************************************************************
+2019-11-27 19:19:45,929 p=4799 u=vagrant |  skipping: [sonarqube1.server.com]
+2019-11-27 19:19:45,944 p=4799 u=vagrant |  TASK [geerlingguy.mysql : Disallow root login remotely] **************************************************************************************
+2019-11-27 19:19:47,283 p=4799 u=vagrant |  ok: [sonarqube1.server.com] => (item=DELETE FROM mysql.user WHERE User='root' AND Host NOT IN ('localhost', '127.0.0.1', '::1'))
+2019-11-27 19:19:47,296 p=4799 u=vagrant |  TASK [geerlingguy.mysql : Get list of hosts for the root user.] ******************************************************************************
+2019-11-27 19:19:48,035 p=4799 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 19:19:48,055 p=4799 u=vagrant |  TASK [geerlingguy.mysql : Update MySQL root password for localhost root account (5.7.x).] ****************************************************
+2019-11-27 19:19:48,129 p=4799 u=vagrant |  skipping: [sonarqube1.server.com] => (item=127.0.0.1) 
+2019-11-27 19:19:48,136 p=4799 u=vagrant |  skipping: [sonarqube1.server.com] => (item=::1) 
+2019-11-27 19:19:48,137 p=4799 u=vagrant |  skipping: [sonarqube1.server.com] => (item=localhost) 
+2019-11-27 19:19:48,155 p=4799 u=vagrant |  TASK [geerlingguy.mysql : Update MySQL root password for localhost root account (< 5.7.x).] **************************************************
+2019-11-27 19:19:49,071 p=4799 u=vagrant |  changed: [sonarqube1.server.com] => (item=127.0.0.1)
+2019-11-27 19:19:49,880 p=4799 u=vagrant |  changed: [sonarqube1.server.com] => (item=::1)
+2019-11-27 19:19:50,487 p=4799 u=vagrant |  changed: [sonarqube1.server.com] => (item=localhost)
+2019-11-27 19:19:50,505 p=4799 u=vagrant |  TASK [geerlingguy.mysql : Copy .my.cnf file with root password credentials.] *****************************************************************
+2019-11-27 19:19:52,044 p=4799 u=vagrant |  changed: [sonarqube1.server.com]
+2019-11-27 19:19:52,059 p=4799 u=vagrant |  TASK [geerlingguy.mysql : Get list of hosts for the anonymous user.] *************************************************************************
+2019-11-27 19:19:52,781 p=4799 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 19:19:52,796 p=4799 u=vagrant |  TASK [geerlingguy.mysql : Remove anonymous MySQL users.] *************************************************************************************
+2019-11-27 19:19:54,172 p=4799 u=vagrant |  changed: [sonarqube1.server.com] => (item=localhost)
+2019-11-27 19:19:54,790 p=4799 u=vagrant |  changed: [sonarqube1.server.com] => (item=sonarqube1.server.com)
+2019-11-27 19:19:54,806 p=4799 u=vagrant |  TASK [geerlingguy.mysql : Remove MySQL test database.] ***************************************************************************************
+2019-11-27 19:19:55,836 p=4799 u=vagrant |  changed: [sonarqube1.server.com]
+2019-11-27 19:19:55,860 p=4799 u=vagrant |  TASK [geerlingguy.mysql : include_tasks] *****************************************************************************************************
+2019-11-27 19:19:55,908 p=4799 u=vagrant |  included: /home/vagrant/ansible_roles/geerlingguy.mysql/tasks/databases.yml for sonarqube1.server.com
+2019-11-27 19:19:55,991 p=4799 u=vagrant |  TASK [geerlingguy.mysql : Ensure MySQL databases are present.] *******************************************************************************
+2019-11-27 19:19:56,035 p=4799 u=vagrant |  TASK [geerlingguy.mysql : include_tasks] *****************************************************************************************************
+2019-11-27 19:19:56,085 p=4799 u=vagrant |  included: /home/vagrant/ansible_roles/geerlingguy.mysql/tasks/users.yml for sonarqube1.server.com
+2019-11-27 19:19:56,170 p=4799 u=vagrant |  TASK [geerlingguy.mysql : Ensure MySQL users are present.] ***********************************************************************************
+2019-11-27 19:19:56,216 p=4799 u=vagrant |  TASK [geerlingguy.mysql : include_tasks] *****************************************************************************************************
+2019-11-27 19:19:56,285 p=4799 u=vagrant |  included: /home/vagrant/ansible_roles/geerlingguy.mysql/tasks/replication.yml for sonarqube1.server.com
+2019-11-27 19:19:56,412 p=4799 u=vagrant |  TASK [geerlingguy.mysql : Ensure replication user exists on master.] *************************************************************************
+2019-11-27 19:19:56,446 p=4799 u=vagrant |  skipping: [sonarqube1.server.com]
+2019-11-27 19:19:56,463 p=4799 u=vagrant |  TASK [geerlingguy.mysql : Check slave replication status.] ***********************************************************************************
+2019-11-27 19:19:56,510 p=4799 u=vagrant |  skipping: [sonarqube1.server.com]
+2019-11-27 19:19:56,545 p=4799 u=vagrant |  TASK [geerlingguy.mysql : Check master replication status.] **********************************************************************************
+2019-11-27 19:19:56,580 p=4799 u=vagrant |  skipping: [sonarqube1.server.com]
+2019-11-27 19:19:56,597 p=4799 u=vagrant |  TASK [geerlingguy.mysql : Configure replication on the slave.] *******************************************************************************
+2019-11-27 19:19:56,632 p=4799 u=vagrant |  skipping: [sonarqube1.server.com]
+2019-11-27 19:19:56,646 p=4799 u=vagrant |  TASK [geerlingguy.mysql : Start replication.] ************************************************************************************************
+2019-11-27 19:19:56,680 p=4799 u=vagrant |  skipping: [sonarqube1.server.com]
+2019-11-27 19:19:56,695 p=4799 u=vagrant |  TASK [geerlingguy.sonar : Create a database for Sonar.] **************************************************************************************
+2019-11-27 19:19:57,436 p=4799 u=vagrant |  changed: [sonarqube1.server.com]
+2019-11-27 19:19:57,450 p=4799 u=vagrant |  TASK [geerlingguy.sonar : Create a sonar user.] **********************************************************************************************
+2019-11-27 19:19:58,246 p=4799 u=vagrant |  changed: [sonarqube1.server.com] => (item=127.0.0.1)
+2019-11-27 19:19:58,906 p=4799 u=vagrant |  changed: [sonarqube1.server.com] => (item=::1)
+2019-11-27 19:19:59,550 p=4799 u=vagrant |  changed: [sonarqube1.server.com] => (item=localhost)
+2019-11-27 19:19:59,571 p=4799 u=vagrant |  TASK [geerlingguy.sonar : Download Sonar.] ***************************************************************************************************
+2019-11-27 19:20:28,845 p=4799 u=vagrant |  changed: [sonarqube1.server.com]
+2019-11-27 19:20:28,876 p=4799 u=vagrant |  TASK [geerlingguy.sonar : Unzip Sonar.] ******************************************************************************************************
+2019-11-27 19:20:31,591 p=4799 u=vagrant |  fatal: [sonarqube1.server.com]: FAILED! => {"changed": false, "msg": "Failed to find handler for \"/root/sonarqube-4.5.6.zip\". Make sure the required command to extract the file is installed. Command \"unzip\" not found. Command \"/bin/gtar\" could not handle archive."}
+2019-11-27 19:20:31,592 p=4799 u=vagrant |  RUNNING HANDLER [geerlingguy.mysql : restart mysql] ******************************************************************************************
+2019-11-27 19:20:31,595 p=4799 u=vagrant |  	to retry, use: --limit @/home/vagrant/devopsdemo/ansible_roles/generic-sonarqube.retry
+
+2019-11-27 19:20:31,596 p=4799 u=vagrant |  PLAY RECAP ***********************************************************************************************************************************
+2019-11-27 19:20:31,596 p=4799 u=vagrant |  sonarqube1.server.com      : ok=49   changed=17   unreachable=0    failed=1   
+2019-11-27 19:22:16,168 p=5543 u=vagrant |  ERROR! playbooks must be a list of plays
+
+The error appears to have been in '/home/vagrant/devopsdemo/ansible_roles/generic-sonarqube.retry': line 1, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+sonarqube1.server.com
+^ here
+
+2019-11-27 19:22:26,356 p=5551 u=vagrant |  [DEPRECATION WARNING]: The use of 'include' for tasks has been deprecated. Use 'import_tasks' for static inclusions or 'include_tasks' for 
+dynamic inclusions. This feature will be removed in a future release. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2019-11-27 19:22:26,357 p=5551 u=vagrant |  [DEPRECATION WARNING]: include is kept for backwards compatibility but usage is discouraged. The module documentation details page may 
+explain more about this rationale.. This feature will be removed in a future release. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2019-11-27 19:22:26,684 p=5551 u=vagrant |  PLAY [all] ***********************************************************************************************************************************
+2019-11-27 19:22:26,744 p=5551 u=vagrant |  TASK [Gathering Facts] ***********************************************************************************************************************
+2019-11-27 19:22:30,416 p=5551 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 19:22:30,442 p=5551 u=vagrant |  TASK [users : create a user by name autodeploy] **********************************************************************************************
+2019-11-27 19:22:32,308 p=5551 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 19:22:32,322 p=5551 u=vagrant |  TASK [users : Fetch public key from remote server] *******************************************************************************************
+2019-11-27 19:22:33,456 p=5551 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 19:22:33,475 p=5551 u=vagrant |  TASK [users : Fetch private key from remote server] ******************************************************************************************
+2019-11-27 19:22:34,324 p=5551 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 19:22:34,344 p=5551 u=vagrant |  TASK [users : Append the public key to authorized key file] **********************************************************************************
+2019-11-27 19:22:35,779 p=5551 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 19:22:35,797 p=5551 u=vagrant |  TASK [users : Create a sudoers file backup (.bkp)] *******************************************************************************************
+2019-11-27 19:22:37,025 p=5551 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 19:22:37,044 p=5551 u=vagrant |  TASK [users : Enable sudo permission for autodeploy user] ************************************************************************************
+2019-11-27 19:22:38,232 p=5551 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 19:22:38,251 p=5551 u=vagrant |  TASK [sysutils : install frequently used system packages] ************************************************************************************
+2019-11-27 19:22:47,387 p=5551 u=vagrant |  changed: [sonarqube1.server.com] => (item=[u'net-tools.x86_64', u'vim-enhanced', u'unzip'])
+2019-11-27 19:22:47,409 p=5551 u=vagrant |  TASK [geerlingguy.java : Include OS-specific variables for Fedora or FreeBSD.] ***************************************************************
+2019-11-27 19:22:47,454 p=5551 u=vagrant |  skipping: [sonarqube1.server.com]
+2019-11-27 19:22:47,478 p=5551 u=vagrant |  TASK [geerlingguy.java : Include version-specific variables for CentOS/RHEL.] ****************************************************************
+2019-11-27 19:22:47,586 p=5551 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 19:22:47,603 p=5551 u=vagrant |  TASK [geerlingguy.java : Include version-specific variables for Ubuntu.] *********************************************************************
+2019-11-27 19:22:47,648 p=5551 u=vagrant |  skipping: [sonarqube1.server.com]
+2019-11-27 19:22:47,665 p=5551 u=vagrant |  TASK [geerlingguy.java : Include version-specific variables for Debian.] *********************************************************************
+2019-11-27 19:22:47,699 p=5551 u=vagrant |  skipping: [sonarqube1.server.com]
+2019-11-27 19:22:47,718 p=5551 u=vagrant |  TASK [geerlingguy.java : Define java_packages.] **********************************************************************************************
+2019-11-27 19:22:47,815 p=5551 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 19:22:47,835 p=5551 u=vagrant |  TASK [geerlingguy.java : include_tasks] ******************************************************************************************************
+2019-11-27 19:22:47,898 p=5551 u=vagrant |  included: /home/vagrant/ansible_roles/geerlingguy.java/tasks/setup-RedHat.yml for sonarqube1.server.com
+2019-11-27 19:22:47,927 p=5551 u=vagrant |  TASK [geerlingguy.java : Ensure Java is installed.] ******************************************************************************************
+2019-11-27 19:22:49,967 p=5551 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 19:22:49,984 p=5551 u=vagrant |  TASK [geerlingguy.java : include_tasks] ******************************************************************************************************
+2019-11-27 19:22:50,026 p=5551 u=vagrant |  skipping: [sonarqube1.server.com]
+2019-11-27 19:22:50,053 p=5551 u=vagrant |  TASK [geerlingguy.java : include_tasks] ******************************************************************************************************
+2019-11-27 19:22:50,095 p=5551 u=vagrant |  skipping: [sonarqube1.server.com]
+2019-11-27 19:22:50,113 p=5551 u=vagrant |  TASK [geerlingguy.java : Set JAVA_HOME if configured.] ***************************************************************************************
+2019-11-27 19:22:50,151 p=5551 u=vagrant |  skipping: [sonarqube1.server.com]
+2019-11-27 19:22:50,171 p=5551 u=vagrant |  TASK [geerlingguy.mysql : include_tasks] *****************************************************************************************************
+2019-11-27 19:22:50,266 p=5551 u=vagrant |  included: /home/vagrant/ansible_roles/geerlingguy.mysql/tasks/variables.yml for sonarqube1.server.com
+2019-11-27 19:22:50,286 p=5551 u=vagrant |  TASK [geerlingguy.mysql : Include OS-specific variables.] ************************************************************************************
+2019-11-27 19:22:50,436 p=5551 u=vagrant |  ok: [sonarqube1.server.com] => (item=/home/vagrant/ansible_roles/geerlingguy.mysql/vars/RedHat-7.yml)
+2019-11-27 19:22:50,458 p=5551 u=vagrant |  TASK [geerlingguy.mysql : Define mysql_packages.] ********************************************************************************************
+2019-11-27 19:22:50,616 p=5551 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 19:22:50,633 p=5551 u=vagrant |  TASK [geerlingguy.mysql : Define mysql_daemon.] **********************************************************************************************
+2019-11-27 19:22:50,779 p=5551 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 19:22:50,797 p=5551 u=vagrant |  TASK [geerlingguy.mysql : Define mysql_slow_query_log_file.] *********************************************************************************
+2019-11-27 19:22:50,943 p=5551 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 19:22:50,958 p=5551 u=vagrant |  TASK [geerlingguy.mysql : Define mysql_log_error.] *******************************************************************************************
+2019-11-27 19:22:51,119 p=5551 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 19:22:51,137 p=5551 u=vagrant |  TASK [geerlingguy.mysql : Define mysql_syslog_tag.] ******************************************************************************************
+2019-11-27 19:22:51,279 p=5551 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 19:22:51,303 p=5551 u=vagrant |  TASK [geerlingguy.mysql : Define mysql_pid_file.] ********************************************************************************************
+2019-11-27 19:22:51,440 p=5551 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 19:22:51,459 p=5551 u=vagrant |  TASK [geerlingguy.mysql : Define mysql_config_file.] *****************************************************************************************
+2019-11-27 19:22:51,605 p=5551 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 19:22:51,625 p=5551 u=vagrant |  TASK [geerlingguy.mysql : Define mysql_config_include_dir.] **********************************************************************************
+2019-11-27 19:22:51,764 p=5551 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 19:22:51,783 p=5551 u=vagrant |  TASK [geerlingguy.mysql : Define mysql_socket.] **********************************************************************************************
+2019-11-27 19:22:51,928 p=5551 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 19:22:51,949 p=5551 u=vagrant |  TASK [geerlingguy.mysql : Define mysql_supports_innodb_large_prefix.] ************************************************************************
+2019-11-27 19:22:52,087 p=5551 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 19:22:52,108 p=5551 u=vagrant |  TASK [geerlingguy.mysql : include_tasks] *****************************************************************************************************
+2019-11-27 19:22:52,186 p=5551 u=vagrant |  included: /home/vagrant/ansible_roles/geerlingguy.mysql/tasks/setup-RedHat.yml for sonarqube1.server.com
+2019-11-27 19:22:52,217 p=5551 u=vagrant |  TASK [geerlingguy.mysql : Ensure MySQL packages are installed.] ******************************************************************************
+2019-11-27 19:22:53,638 p=5551 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 19:22:53,656 p=5551 u=vagrant |  TASK [geerlingguy.mysql : Ensure MySQL Python libraries are installed.] **********************************************************************
+2019-11-27 19:22:55,027 p=5551 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 19:22:55,046 p=5551 u=vagrant |  TASK [geerlingguy.mysql : include_tasks] *****************************************************************************************************
+2019-11-27 19:22:55,097 p=5551 u=vagrant |  skipping: [sonarqube1.server.com]
+2019-11-27 19:22:55,112 p=5551 u=vagrant |  TASK [geerlingguy.mysql : include_tasks] *****************************************************************************************************
+2019-11-27 19:22:55,158 p=5551 u=vagrant |  skipping: [sonarqube1.server.com]
+2019-11-27 19:22:55,177 p=5551 u=vagrant |  TASK [geerlingguy.mysql : Check if MySQL packages were installed.] ***************************************************************************
+2019-11-27 19:22:55,289 p=5551 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 19:22:55,306 p=5551 u=vagrant |  TASK [geerlingguy.mysql : include_tasks] *****************************************************************************************************
+2019-11-27 19:22:55,410 p=5551 u=vagrant |  included: /home/vagrant/ansible_roles/geerlingguy.mysql/tasks/configure.yml for sonarqube1.server.com
+2019-11-27 19:22:55,459 p=5551 u=vagrant |  TASK [geerlingguy.mysql : Get MySQL version.] ************************************************************************************************
+2019-11-27 19:22:56,762 p=5551 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 19:22:56,776 p=5551 u=vagrant |  TASK [geerlingguy.mysql : Copy my.cnf global MySQL configuration.] ***************************************************************************
+2019-11-27 19:22:59,021 p=5551 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 19:22:59,044 p=5551 u=vagrant |  TASK [geerlingguy.mysql : Verify mysql include directory exists.] ****************************************************************************
+2019-11-27 19:22:59,083 p=5551 u=vagrant |  skipping: [sonarqube1.server.com]
+2019-11-27 19:22:59,111 p=5551 u=vagrant |  TASK [geerlingguy.mysql : Copy my.cnf override files into include directory.] ****************************************************************
+2019-11-27 19:22:59,168 p=5551 u=vagrant |  TASK [geerlingguy.mysql : Create slow query log file (if configured).] ***********************************************************************
+2019-11-27 19:22:59,204 p=5551 u=vagrant |  skipping: [sonarqube1.server.com]
+2019-11-27 19:22:59,226 p=5551 u=vagrant |  TASK [geerlingguy.mysql : Create datadir if it does not exist] *******************************************************************************
+2019-11-27 19:23:00,116 p=5551 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 19:23:00,137 p=5551 u=vagrant |  TASK [geerlingguy.mysql : Set ownership on slow query log file (if configured).] *************************************************************
+2019-11-27 19:23:00,174 p=5551 u=vagrant |  skipping: [sonarqube1.server.com]
+2019-11-27 19:23:00,193 p=5551 u=vagrant |  TASK [geerlingguy.mysql : Create error log file (if configured).] ****************************************************************************
+2019-11-27 19:23:01,088 p=5551 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 19:23:01,105 p=5551 u=vagrant |  TASK [geerlingguy.mysql : Set ownership on error log file (if configured).] ******************************************************************
+2019-11-27 19:23:02,049 p=5551 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 19:23:02,067 p=5551 u=vagrant |  TASK [geerlingguy.mysql : Ensure MySQL is started and enabled on boot.] **********************************************************************
+2019-11-27 19:23:03,394 p=5551 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 19:23:03,414 p=5551 u=vagrant |  TASK [geerlingguy.mysql : include_tasks] *****************************************************************************************************
+2019-11-27 19:23:03,512 p=5551 u=vagrant |  included: /home/vagrant/ansible_roles/geerlingguy.mysql/tasks/secure-installation.yml for sonarqube1.server.com
+2019-11-27 19:23:03,591 p=5551 u=vagrant |  TASK [geerlingguy.mysql : Ensure default user is present.] ***********************************************************************************
+2019-11-27 19:23:03,632 p=5551 u=vagrant |  skipping: [sonarqube1.server.com]
+2019-11-27 19:23:03,662 p=5551 u=vagrant |  TASK [geerlingguy.mysql : Copy user-my.cnf file with password credentials.] ******************************************************************
+2019-11-27 19:23:03,708 p=5551 u=vagrant |  skipping: [sonarqube1.server.com]
+2019-11-27 19:23:03,729 p=5551 u=vagrant |  TASK [geerlingguy.mysql : Disallow root login remotely] **************************************************************************************
+2019-11-27 19:23:04,824 p=5551 u=vagrant |  ok: [sonarqube1.server.com] => (item=DELETE FROM mysql.user WHERE User='root' AND Host NOT IN ('localhost', '127.0.0.1', '::1'))
+2019-11-27 19:23:04,849 p=5551 u=vagrant |  TASK [geerlingguy.mysql : Get list of hosts for the root user.] ******************************************************************************
+2019-11-27 19:23:04,893 p=5551 u=vagrant |  skipping: [sonarqube1.server.com]
+2019-11-27 19:23:04,910 p=5551 u=vagrant |  TASK [geerlingguy.mysql : Update MySQL root password for localhost root account (5.7.x).] ****************************************************
+2019-11-27 19:23:04,980 p=5551 u=vagrant |  TASK [geerlingguy.mysql : Update MySQL root password for localhost root account (< 5.7.x).] **************************************************
+2019-11-27 19:23:05,041 p=5551 u=vagrant |  TASK [geerlingguy.mysql : Copy .my.cnf file with root password credentials.] *****************************************************************
+2019-11-27 19:23:05,078 p=5551 u=vagrant |  skipping: [sonarqube1.server.com]
+2019-11-27 19:23:05,097 p=5551 u=vagrant |  TASK [geerlingguy.mysql : Get list of hosts for the anonymous user.] *************************************************************************
+2019-11-27 19:23:05,948 p=5551 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 19:23:05,978 p=5551 u=vagrant |  TASK [geerlingguy.mysql : Remove anonymous MySQL users.] *************************************************************************************
+2019-11-27 19:23:06,037 p=5551 u=vagrant |  TASK [geerlingguy.mysql : Remove MySQL test database.] ***************************************************************************************
+2019-11-27 19:23:07,460 p=5551 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 19:23:07,479 p=5551 u=vagrant |  TASK [geerlingguy.mysql : include_tasks] *****************************************************************************************************
+2019-11-27 19:23:07,546 p=5551 u=vagrant |  included: /home/vagrant/ansible_roles/geerlingguy.mysql/tasks/databases.yml for sonarqube1.server.com
+2019-11-27 19:23:07,633 p=5551 u=vagrant |  TASK [geerlingguy.mysql : Ensure MySQL databases are present.] *******************************************************************************
+2019-11-27 19:23:07,702 p=5551 u=vagrant |  TASK [geerlingguy.mysql : include_tasks] *****************************************************************************************************
+2019-11-27 19:23:07,769 p=5551 u=vagrant |  included: /home/vagrant/ansible_roles/geerlingguy.mysql/tasks/users.yml for sonarqube1.server.com
+2019-11-27 19:23:07,887 p=5551 u=vagrant |  TASK [geerlingguy.mysql : Ensure MySQL users are present.] ***********************************************************************************
+2019-11-27 19:23:07,946 p=5551 u=vagrant |  TASK [geerlingguy.mysql : include_tasks] *****************************************************************************************************
+2019-11-27 19:23:08,034 p=5551 u=vagrant |  included: /home/vagrant/ansible_roles/geerlingguy.mysql/tasks/replication.yml for sonarqube1.server.com
+2019-11-27 19:23:08,170 p=5551 u=vagrant |  TASK [geerlingguy.mysql : Ensure replication user exists on master.] *************************************************************************
+2019-11-27 19:23:08,213 p=5551 u=vagrant |  skipping: [sonarqube1.server.com]
+2019-11-27 19:23:08,233 p=5551 u=vagrant |  TASK [geerlingguy.mysql : Check slave replication status.] ***********************************************************************************
+2019-11-27 19:23:08,274 p=5551 u=vagrant |  skipping: [sonarqube1.server.com]
+2019-11-27 19:23:08,314 p=5551 u=vagrant |  TASK [geerlingguy.mysql : Check master replication status.] **********************************************************************************
+2019-11-27 19:23:08,359 p=5551 u=vagrant |  skipping: [sonarqube1.server.com]
+2019-11-27 19:23:08,376 p=5551 u=vagrant |  TASK [geerlingguy.mysql : Configure replication on the slave.] *******************************************************************************
+2019-11-27 19:23:08,421 p=5551 u=vagrant |  skipping: [sonarqube1.server.com]
+2019-11-27 19:23:08,441 p=5551 u=vagrant |  TASK [geerlingguy.mysql : Start replication.] ************************************************************************************************
+2019-11-27 19:23:08,488 p=5551 u=vagrant |  skipping: [sonarqube1.server.com]
+2019-11-27 19:23:08,509 p=5551 u=vagrant |  TASK [geerlingguy.sonar : Create a database for Sonar.] **************************************************************************************
+2019-11-27 19:23:09,424 p=5551 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 19:23:09,445 p=5551 u=vagrant |  TASK [geerlingguy.sonar : Create a sonar user.] **********************************************************************************************
+2019-11-27 19:23:10,968 p=5551 u=vagrant |  ok: [sonarqube1.server.com] => (item=127.0.0.1)
+2019-11-27 19:23:11,810 p=5551 u=vagrant |  ok: [sonarqube1.server.com] => (item=::1)
+2019-11-27 19:23:12,664 p=5551 u=vagrant |  ok: [sonarqube1.server.com] => (item=localhost)
+2019-11-27 19:23:12,678 p=5551 u=vagrant |  TASK [geerlingguy.sonar : Download Sonar.] ***************************************************************************************************
+2019-11-27 19:23:14,052 p=5551 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 19:23:14,073 p=5551 u=vagrant |  TASK [geerlingguy.sonar : Unzip Sonar.] ******************************************************************************************************
+2019-11-27 19:23:27,245 p=5551 u=vagrant |  changed: [sonarqube1.server.com]
+2019-11-27 19:23:27,264 p=5551 u=vagrant |  TASK [geerlingguy.sonar : Move Sonar into place.] ********************************************************************************************
+2019-11-27 19:23:28,306 p=5551 u=vagrant |  changed: [sonarqube1.server.com]
+2019-11-27 19:23:28,335 p=5551 u=vagrant |  TASK [geerlingguy.sonar : Configure SonarQube JDBC settings for MySQL.] **********************************************************************
+2019-11-27 19:23:29,533 p=5551 u=vagrant |  changed: [sonarqube1.server.com] => (item={u'regexp': u'^sonar.jdbc.username', u'line': u'sonar.jdbc.username=sonar'})
+2019-11-27 19:23:30,478 p=5551 u=vagrant |  changed: [sonarqube1.server.com] => (item={u'regexp': u'^sonar.jdbc.password', u'line': u'sonar.jdbc.password=sonar'})
+2019-11-27 19:23:31,328 p=5551 u=vagrant |  changed: [sonarqube1.server.com] => (item={u'regexp': u'^sonar.jdbc.url', u'line': u'sonar.jdbc.url=jdbc:mysql://localhost:3306/sonar?useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true&useConfigs=maxPerformance'})
+2019-11-27 19:23:32,095 p=5551 u=vagrant |  changed: [sonarqube1.server.com] => (item={u'regexp': u'^sonar.web.context', u'line': u'sonar.web.context='})
+2019-11-27 19:23:32,159 p=5551 u=vagrant |  TASK [geerlingguy.sonar : Symlink sonar bin.] ************************************************************************************************
+2019-11-27 19:23:33,118 p=5551 u=vagrant |  changed: [sonarqube1.server.com]
+2019-11-27 19:23:33,144 p=5551 u=vagrant |  TASK [geerlingguy.sonar : Add sonar as init script for service management.] ******************************************************************
+2019-11-27 19:23:33,191 p=5551 u=vagrant |  skipping: [sonarqube1.server.com]
+2019-11-27 19:23:33,205 p=5551 u=vagrant |  TASK [geerlingguy.sonar : Copy SonarQube systemd unit file into place (for systemd systems).] ************************************************
+2019-11-27 19:23:34,902 p=5551 u=vagrant |  changed: [sonarqube1.server.com]
+2019-11-27 19:23:34,923 p=5551 u=vagrant |  TASK [geerlingguy.sonar : Ensure Sonar is running and set to start on boot.] *****************************************************************
+2019-11-27 19:23:37,154 p=5551 u=vagrant |  changed: [sonarqube1.server.com]
+2019-11-27 19:23:37,196 p=5551 u=vagrant |  TASK [geerlingguy.sonar : Allow Sonar time to build on first start.] *************************************************************************
+2019-11-27 19:23:37,294 p=5551 u=vagrant |  Pausing for 180 seconds
+2019-11-27 19:23:37,295 p=5551 u=vagrant |  (ctrl+C then 'C' = continue early, ctrl+C then 'A' = abort)
+2019-11-27 19:26:37,303 p=5551 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 19:26:37,324 p=5551 u=vagrant |  TASK [geerlingguy.sonar : Make sure Sonar is responding on the configured port.] *************************************************************
+2019-11-27 19:26:47,971 p=5551 u=vagrant |  fatal: [sonarqube1.server.com]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Connection timed out during banner exchange\r\n", "unreachable": true}
+2019-11-27 19:26:47,974 p=5551 u=vagrant |  RUNNING HANDLER [geerlingguy.sonar : restart sonar] ******************************************************************************************
+2019-11-27 19:28:09,938 p=5551 u=vagrant |  changed: [sonarqube1.server.com]
+2019-11-27 19:28:09,940 p=5551 u=vagrant |  RUNNING HANDLER [geerlingguy.sonar : wait for sonar] *****************************************************************************************
+2019-11-27 19:28:44,008 p=5551 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 19:28:44,019 p=5551 u=vagrant |  	to retry, use: --limit @/home/vagrant/devopsdemo/ansible_roles/generic-sonarqube.retry
+
+2019-11-27 19:28:44,019 p=5551 u=vagrant |  PLAY RECAP ***********************************************************************************************************************************
+2019-11-27 19:28:44,020 p=5551 u=vagrant |  sonarqube1.server.com      : ok=54   changed=8    unreachable=1    failed=0   
+2019-11-27 20:28:41,409 p=6252 u=vagrant |  [DEPRECATION WARNING]: The use of 'include' for tasks has been deprecated. Use 'import_tasks' for static inclusions or 'include_tasks' for 
+dynamic inclusions. This feature will be removed in a future release. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2019-11-27 20:28:41,410 p=6252 u=vagrant |  [DEPRECATION WARNING]: include is kept for backwards compatibility but usage is discouraged. The module documentation details page may 
+explain more about this rationale.. This feature will be removed in a future release. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2019-11-27 20:28:41,603 p=6252 u=vagrant |  PLAY [all] ***********************************************************************************************************************************
+2019-11-27 20:28:41,634 p=6252 u=vagrant |  TASK [Gathering Facts] ***********************************************************************************************************************
+2019-11-27 20:28:49,652 p=6252 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 20:28:49,663 p=6252 u=vagrant |  TASK [users : create a user by name autodeploy] **********************************************************************************************
+2019-11-27 20:28:50,998 p=6252 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 20:28:51,010 p=6252 u=vagrant |  TASK [users : Fetch public key from remote server] *******************************************************************************************
+2019-11-27 20:28:51,867 p=6252 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 20:28:51,879 p=6252 u=vagrant |  TASK [users : Fetch private key from remote server] ******************************************************************************************
+2019-11-27 20:28:52,472 p=6252 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 20:28:52,483 p=6252 u=vagrant |  TASK [users : Append the public key to authorized key file] **********************************************************************************
+2019-11-27 20:28:53,615 p=6252 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 20:28:53,628 p=6252 u=vagrant |  TASK [users : Create a sudoers file backup (.bkp)] *******************************************************************************************
+2019-11-27 20:28:54,538 p=6252 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 20:28:54,550 p=6252 u=vagrant |  TASK [users : Enable sudo permission for autodeploy user] ************************************************************************************
+2019-11-27 20:28:55,363 p=6252 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 20:28:55,374 p=6252 u=vagrant |  TASK [sysutils : install frequently used system packages] ************************************************************************************
+2019-11-27 20:29:01,183 p=6252 u=vagrant |  ok: [sonarqube1.server.com] => (item=[u'net-tools.x86_64', u'vim-enhanced', u'unzip'])
+2019-11-27 20:29:01,195 p=6252 u=vagrant |  TASK [geerlingguy.java : Include OS-specific variables for Fedora or FreeBSD.] ***************************************************************
+2019-11-27 20:29:01,227 p=6252 u=vagrant |  skipping: [sonarqube1.server.com]
+2019-11-27 20:29:01,238 p=6252 u=vagrant |  TASK [geerlingguy.java : Include version-specific variables for CentOS/RHEL.] ****************************************************************
+2019-11-27 20:29:01,333 p=6252 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 20:29:01,344 p=6252 u=vagrant |  TASK [geerlingguy.java : Include version-specific variables for Ubuntu.] *********************************************************************
+2019-11-27 20:29:01,370 p=6252 u=vagrant |  skipping: [sonarqube1.server.com]
+2019-11-27 20:29:01,384 p=6252 u=vagrant |  TASK [geerlingguy.java : Include version-specific variables for Debian.] *********************************************************************
+2019-11-27 20:29:01,410 p=6252 u=vagrant |  skipping: [sonarqube1.server.com]
+2019-11-27 20:29:01,423 p=6252 u=vagrant |  TASK [geerlingguy.java : Define java_packages.] **********************************************************************************************
+2019-11-27 20:29:01,517 p=6252 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 20:29:01,528 p=6252 u=vagrant |  TASK [geerlingguy.java : include_tasks] ******************************************************************************************************
+2019-11-27 20:29:01,575 p=6252 u=vagrant |  included: /home/vagrant/ansible_roles/geerlingguy.java/tasks/setup-RedHat.yml for sonarqube1.server.com
+2019-11-27 20:29:01,590 p=6252 u=vagrant |  TASK [geerlingguy.java : Ensure Java is installed.] ******************************************************************************************
+2019-11-27 20:29:14,678 p=6252 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 20:29:14,688 p=6252 u=vagrant |  TASK [geerlingguy.java : include_tasks] ******************************************************************************************************
+2019-11-27 20:29:14,713 p=6252 u=vagrant |  skipping: [sonarqube1.server.com]
+2019-11-27 20:29:14,724 p=6252 u=vagrant |  TASK [geerlingguy.java : include_tasks] ******************************************************************************************************
+2019-11-27 20:29:14,749 p=6252 u=vagrant |  skipping: [sonarqube1.server.com]
+2019-11-27 20:29:14,762 p=6252 u=vagrant |  TASK [geerlingguy.java : Set JAVA_HOME if configured.] ***************************************************************************************
+2019-11-27 20:29:14,787 p=6252 u=vagrant |  skipping: [sonarqube1.server.com]
+2019-11-27 20:29:14,799 p=6252 u=vagrant |  TASK [geerlingguy.mysql : include_tasks] *****************************************************************************************************
+2019-11-27 20:29:14,861 p=6252 u=vagrant |  included: /home/vagrant/ansible_roles/geerlingguy.mysql/tasks/variables.yml for sonarqube1.server.com
+2019-11-27 20:29:14,877 p=6252 u=vagrant |  TASK [geerlingguy.mysql : Include OS-specific variables.] ************************************************************************************
+2019-11-27 20:29:14,947 p=6252 u=vagrant |  ok: [sonarqube1.server.com] => (item=/home/vagrant/ansible_roles/geerlingguy.mysql/vars/RedHat-7.yml)
+2019-11-27 20:29:14,960 p=6252 u=vagrant |  TASK [geerlingguy.mysql : Define mysql_packages.] ********************************************************************************************
+2019-11-27 20:29:15,021 p=6252 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 20:29:15,033 p=6252 u=vagrant |  TASK [geerlingguy.mysql : Define mysql_daemon.] **********************************************************************************************
+2019-11-27 20:29:15,099 p=6252 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 20:29:15,111 p=6252 u=vagrant |  TASK [geerlingguy.mysql : Define mysql_slow_query_log_file.] *********************************************************************************
+2019-11-27 20:29:15,173 p=6252 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 20:29:15,184 p=6252 u=vagrant |  TASK [geerlingguy.mysql : Define mysql_log_error.] *******************************************************************************************
+2019-11-27 20:29:15,248 p=6252 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 20:29:15,260 p=6252 u=vagrant |  TASK [geerlingguy.mysql : Define mysql_syslog_tag.] ******************************************************************************************
+2019-11-27 20:29:15,323 p=6252 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 20:29:15,336 p=6252 u=vagrant |  TASK [geerlingguy.mysql : Define mysql_pid_file.] ********************************************************************************************
+2019-11-27 20:29:15,398 p=6252 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 20:29:15,410 p=6252 u=vagrant |  TASK [geerlingguy.mysql : Define mysql_config_file.] *****************************************************************************************
+2019-11-27 20:29:15,472 p=6252 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 20:29:15,484 p=6252 u=vagrant |  TASK [geerlingguy.mysql : Define mysql_config_include_dir.] **********************************************************************************
+2019-11-27 20:29:15,546 p=6252 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 20:29:15,558 p=6252 u=vagrant |  TASK [geerlingguy.mysql : Define mysql_socket.] **********************************************************************************************
+2019-11-27 20:29:15,620 p=6252 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 20:29:15,632 p=6252 u=vagrant |  TASK [geerlingguy.mysql : Define mysql_supports_innodb_large_prefix.] ************************************************************************
+2019-11-27 20:29:15,693 p=6252 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 20:29:15,704 p=6252 u=vagrant |  TASK [geerlingguy.mysql : include_tasks] *****************************************************************************************************
+2019-11-27 20:29:15,753 p=6252 u=vagrant |  included: /home/vagrant/ansible_roles/geerlingguy.mysql/tasks/setup-RedHat.yml for sonarqube1.server.com
+2019-11-27 20:29:15,772 p=6252 u=vagrant |  TASK [geerlingguy.mysql : Ensure MySQL packages are installed.] ******************************************************************************
+2019-11-27 20:29:19,565 p=6252 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 20:29:19,577 p=6252 u=vagrant |  TASK [geerlingguy.mysql : Ensure MySQL Python libraries are installed.] **********************************************************************
+2019-11-27 20:29:20,967 p=6252 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 20:29:20,981 p=6252 u=vagrant |  TASK [geerlingguy.mysql : include_tasks] *****************************************************************************************************
+2019-11-27 20:29:21,006 p=6252 u=vagrant |  skipping: [sonarqube1.server.com]
+2019-11-27 20:29:21,018 p=6252 u=vagrant |  TASK [geerlingguy.mysql : include_tasks] *****************************************************************************************************
+2019-11-27 20:29:21,045 p=6252 u=vagrant |  skipping: [sonarqube1.server.com]
+2019-11-27 20:29:21,056 p=6252 u=vagrant |  TASK [geerlingguy.mysql : Check if MySQL packages were installed.] ***************************************************************************
+2019-11-27 20:29:21,118 p=6252 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 20:29:21,130 p=6252 u=vagrant |  TASK [geerlingguy.mysql : include_tasks] *****************************************************************************************************
+2019-11-27 20:29:21,192 p=6252 u=vagrant |  included: /home/vagrant/ansible_roles/geerlingguy.mysql/tasks/configure.yml for sonarqube1.server.com
+2019-11-27 20:29:21,218 p=6252 u=vagrant |  TASK [geerlingguy.mysql : Get MySQL version.] ************************************************************************************************
+2019-11-27 20:29:43,740 p=6252 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 20:29:43,753 p=6252 u=vagrant |  TASK [geerlingguy.mysql : Copy my.cnf global MySQL configuration.] ***************************************************************************
+2019-11-27 20:29:54,231 p=6252 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 20:29:54,243 p=6252 u=vagrant |  TASK [geerlingguy.mysql : Verify mysql include directory exists.] ****************************************************************************
+2019-11-27 20:29:54,269 p=6252 u=vagrant |  skipping: [sonarqube1.server.com]
+2019-11-27 20:29:54,281 p=6252 u=vagrant |  TASK [geerlingguy.mysql : Copy my.cnf override files into include directory.] ****************************************************************
+2019-11-27 20:29:54,317 p=6252 u=vagrant |  TASK [geerlingguy.mysql : Create slow query log file (if configured).] ***********************************************************************
+2019-11-27 20:29:54,337 p=6252 u=vagrant |  skipping: [sonarqube1.server.com]
+2019-11-27 20:29:54,350 p=6252 u=vagrant |  TASK [geerlingguy.mysql : Create datadir if it does not exist] *******************************************************************************
+2019-11-27 20:29:55,040 p=6252 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 20:29:55,057 p=6252 u=vagrant |  TASK [geerlingguy.mysql : Set ownership on slow query log file (if configured).] *************************************************************
+2019-11-27 20:29:55,086 p=6252 u=vagrant |  skipping: [sonarqube1.server.com]
+2019-11-27 20:29:55,106 p=6252 u=vagrant |  TASK [geerlingguy.mysql : Create error log file (if configured).] ****************************************************************************
+2019-11-27 20:29:55,903 p=6252 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 20:29:55,915 p=6252 u=vagrant |  TASK [geerlingguy.mysql : Set ownership on error log file (if configured).] ******************************************************************
+2019-11-27 20:29:56,847 p=6252 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 20:29:56,860 p=6252 u=vagrant |  TASK [geerlingguy.mysql : Ensure MySQL is started and enabled on boot.] **********************************************************************
+2019-11-27 20:30:05,428 p=6252 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 20:30:05,438 p=6252 u=vagrant |  TASK [geerlingguy.mysql : include_tasks] *****************************************************************************************************
+2019-11-27 20:30:05,507 p=6252 u=vagrant |  included: /home/vagrant/ansible_roles/geerlingguy.mysql/tasks/secure-installation.yml for sonarqube1.server.com
+2019-11-27 20:30:05,545 p=6252 u=vagrant |  TASK [geerlingguy.mysql : Ensure default user is present.] ***********************************************************************************
+2019-11-27 20:30:05,570 p=6252 u=vagrant |  skipping: [sonarqube1.server.com]
+2019-11-27 20:30:05,583 p=6252 u=vagrant |  TASK [geerlingguy.mysql : Copy user-my.cnf file with password credentials.] ******************************************************************
+2019-11-27 20:30:05,609 p=6252 u=vagrant |  skipping: [sonarqube1.server.com]
+2019-11-27 20:30:05,621 p=6252 u=vagrant |  TASK [geerlingguy.mysql : Disallow root login remotely] **************************************************************************************
+2019-11-27 20:30:09,701 p=6252 u=vagrant |  ok: [sonarqube1.server.com] => (item=DELETE FROM mysql.user WHERE User='root' AND Host NOT IN ('localhost', '127.0.0.1', '::1'))
+2019-11-27 20:30:09,713 p=6252 u=vagrant |  TASK [geerlingguy.mysql : Get list of hosts for the root user.] ******************************************************************************
+2019-11-27 20:30:09,741 p=6252 u=vagrant |  skipping: [sonarqube1.server.com]
+2019-11-27 20:30:09,757 p=6252 u=vagrant |  TASK [geerlingguy.mysql : Update MySQL root password for localhost root account (5.7.x).] ****************************************************
+2019-11-27 20:30:09,795 p=6252 u=vagrant |  TASK [geerlingguy.mysql : Update MySQL root password for localhost root account (< 5.7.x).] **************************************************
+2019-11-27 20:30:09,834 p=6252 u=vagrant |  TASK [geerlingguy.mysql : Copy .my.cnf file with root password credentials.] *****************************************************************
+2019-11-27 20:30:09,860 p=6252 u=vagrant |  skipping: [sonarqube1.server.com]
+2019-11-27 20:30:09,873 p=6252 u=vagrant |  TASK [geerlingguy.mysql : Get list of hosts for the anonymous user.] *************************************************************************
+2019-11-27 20:30:12,140 p=6252 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 20:30:12,153 p=6252 u=vagrant |  TASK [geerlingguy.mysql : Remove anonymous MySQL users.] *************************************************************************************
+2019-11-27 20:30:12,192 p=6252 u=vagrant |  TASK [geerlingguy.mysql : Remove MySQL test database.] ***************************************************************************************
+2019-11-27 20:30:18,234 p=6252 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 20:30:18,246 p=6252 u=vagrant |  TASK [geerlingguy.mysql : include_tasks] *****************************************************************************************************
+2019-11-27 20:30:18,287 p=6252 u=vagrant |  included: /home/vagrant/ansible_roles/geerlingguy.mysql/tasks/databases.yml for sonarqube1.server.com
+2019-11-27 20:30:18,338 p=6252 u=vagrant |  TASK [geerlingguy.mysql : Ensure MySQL databases are present.] *******************************************************************************
+2019-11-27 20:30:18,374 p=6252 u=vagrant |  TASK [geerlingguy.mysql : include_tasks] *****************************************************************************************************
+2019-11-27 20:30:18,412 p=6252 u=vagrant |  included: /home/vagrant/ansible_roles/geerlingguy.mysql/tasks/users.yml for sonarqube1.server.com
+2019-11-27 20:30:18,480 p=6252 u=vagrant |  TASK [geerlingguy.mysql : Ensure MySQL users are present.] ***********************************************************************************
+2019-11-27 20:30:18,516 p=6252 u=vagrant |  TASK [geerlingguy.mysql : include_tasks] *****************************************************************************************************
+2019-11-27 20:30:18,570 p=6252 u=vagrant |  included: /home/vagrant/ansible_roles/geerlingguy.mysql/tasks/replication.yml for sonarqube1.server.com
+2019-11-27 20:30:18,657 p=6252 u=vagrant |  TASK [geerlingguy.mysql : Ensure replication user exists on master.] *************************************************************************
+2019-11-27 20:30:18,685 p=6252 u=vagrant |  skipping: [sonarqube1.server.com]
+2019-11-27 20:30:18,698 p=6252 u=vagrant |  TASK [geerlingguy.mysql : Check slave replication status.] ***********************************************************************************
+2019-11-27 20:30:18,726 p=6252 u=vagrant |  skipping: [sonarqube1.server.com]
+2019-11-27 20:30:18,747 p=6252 u=vagrant |  TASK [geerlingguy.mysql : Check master replication status.] **********************************************************************************
+2019-11-27 20:30:18,775 p=6252 u=vagrant |  skipping: [sonarqube1.server.com]
+2019-11-27 20:30:18,787 p=6252 u=vagrant |  TASK [geerlingguy.mysql : Configure replication on the slave.] *******************************************************************************
+2019-11-27 20:30:18,815 p=6252 u=vagrant |  skipping: [sonarqube1.server.com]
+2019-11-27 20:30:18,827 p=6252 u=vagrant |  TASK [geerlingguy.mysql : Start replication.] ************************************************************************************************
+2019-11-27 20:30:18,860 p=6252 u=vagrant |  skipping: [sonarqube1.server.com]
+2019-11-27 20:30:18,873 p=6252 u=vagrant |  TASK [geerlingguy.sonar : Create a database for Sonar.] **************************************************************************************
+2019-11-27 20:30:23,262 p=6252 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 20:30:23,274 p=6252 u=vagrant |  TASK [geerlingguy.sonar : Create a sonar user.] **********************************************************************************************
+2019-11-27 20:30:25,730 p=6252 u=vagrant |  ok: [sonarqube1.server.com] => (item=127.0.0.1)
+2019-11-27 20:30:27,868 p=6252 u=vagrant |  ok: [sonarqube1.server.com] => (item=::1)
+2019-11-27 20:30:28,647 p=6252 u=vagrant |  ok: [sonarqube1.server.com] => (item=localhost)
+2019-11-27 20:30:28,665 p=6252 u=vagrant |  TASK [geerlingguy.sonar : Download Sonar.] ***************************************************************************************************
+2019-11-27 20:30:32,920 p=6252 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 20:30:32,931 p=6252 u=vagrant |  TASK [geerlingguy.sonar : Unzip Sonar.] ******************************************************************************************************
+2019-11-27 20:30:34,084 p=6252 u=vagrant |  skipping: [sonarqube1.server.com]
+2019-11-27 20:30:34,102 p=6252 u=vagrant |  TASK [geerlingguy.sonar : Move Sonar into place.] ********************************************************************************************
+2019-11-27 20:30:35,637 p=6252 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 20:30:35,648 p=6252 u=vagrant |  TASK [geerlingguy.sonar : Configure SonarQube JDBC settings for MySQL.] **********************************************************************
+2019-11-27 20:30:36,521 p=6252 u=vagrant |  ok: [sonarqube1.server.com] => (item={u'regexp': u'^sonar.jdbc.username', u'line': u'sonar.jdbc.username=sonar'})
+2019-11-27 20:30:37,188 p=6252 u=vagrant |  ok: [sonarqube1.server.com] => (item={u'regexp': u'^sonar.jdbc.password', u'line': u'sonar.jdbc.password=sonar'})
+2019-11-27 20:30:38,105 p=6252 u=vagrant |  ok: [sonarqube1.server.com] => (item={u'regexp': u'^sonar.jdbc.url', u'line': u'sonar.jdbc.url=jdbc:mysql://localhost:3306/sonar?useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true&useConfigs=maxPerformance'})
+2019-11-27 20:30:39,451 p=6252 u=vagrant |  ok: [sonarqube1.server.com] => (item={u'regexp': u'^sonar.web.context', u'line': u'sonar.web.context='})
+2019-11-27 20:30:39,465 p=6252 u=vagrant |  TASK [geerlingguy.sonar : Symlink sonar bin.] ************************************************************************************************
+2019-11-27 20:30:40,310 p=6252 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 20:30:40,323 p=6252 u=vagrant |  TASK [geerlingguy.sonar : Add sonar as init script for service management.] ******************************************************************
+2019-11-27 20:30:40,352 p=6252 u=vagrant |  skipping: [sonarqube1.server.com]
+2019-11-27 20:30:40,366 p=6252 u=vagrant |  TASK [geerlingguy.sonar : Copy SonarQube systemd unit file into place (for systemd systems).] ************************************************
+2019-11-27 20:30:43,429 p=6252 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 20:30:43,442 p=6252 u=vagrant |  TASK [geerlingguy.sonar : Ensure Sonar is running and set to start on boot.] *****************************************************************
+2019-11-27 20:30:47,447 p=6252 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 20:30:47,460 p=6252 u=vagrant |  TASK [geerlingguy.sonar : Allow Sonar time to build on first start.] *************************************************************************
+2019-11-27 20:30:47,491 p=6252 u=vagrant |  skipping: [sonarqube1.server.com]
+2019-11-27 20:30:47,504 p=6252 u=vagrant |  TASK [geerlingguy.sonar : Make sure Sonar is responding on the configured port.] *************************************************************
+2019-11-27 20:30:52,104 p=6252 u=vagrant |  ok: [sonarqube1.server.com]
+2019-11-27 20:30:52,112 p=6252 u=vagrant |  PLAY RECAP ***********************************************************************************************************************************
+2019-11-27 20:30:52,113 p=6252 u=vagrant |  sonarqube1.server.com      : ok=51   changed=0    unreachable=0    failed=0   
