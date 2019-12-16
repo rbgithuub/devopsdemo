@@ -7,7 +7,7 @@
   <servlet>
   	<servlet-name>SimpleServlet</servlet-name>
   	<display-name>SimpleServlet</display-name>
-  	<description></description>
+   <description></description>
   	<servlet-class>org.web.javaone.SimpleServlet</servlet-class>
   </servlet>
   <servlet-mapping>
