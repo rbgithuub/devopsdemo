@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <title>Election Nomination Form</title>
+ </head>
+ 
+ <body>
+ <h1>Election Nomination Form</h1>
+ <form method="post" action="/submit">
+ <label>Enter Your Name:</label><br>
+ <input type="text" name="firstName" placeholder="Enter first name..." required>
+ <input type="text" name="lastName" placeholder="Enter last name..." required><br>
+ <label>Select Your Block:</label><br>
+ <select name="blockNo">
+	<option value="A1">A1</option>
+	<option value="A2">A2</option>
+	<option value="A3">A3</option>
+	<option value="B1">B1</option>
+	<option value="B2">B2</option>
+	<option value="B3">B3</option>
+	<option value="C1">C1</option>
+	<option value="C2">C2</option>
+	<option value="C3">C3</option>
+	<option value="D1">D1</option>
+	<option value="D2">D2</option>
+	<option value="D3">D3</option>
+</select><br> 
+ <label>Enter Your Door.No</label><br>
+ <input type="text" name="doorNo"><br>
+ <label>Nominating for the Post of:</label><br>
+<input type="radio" name="postNomination" value="President">President<br>
+<input type="radio" name="postNomination" value="Secretary">Secretary<br>
+<input type="radio" name="postNomination" value="Treasurer">Treasurer<br>
+<input type="radio" name="postNomination" value="Vice-President">Vice-President<br>
+<input type="radio" name="postNomination" value="Joint Secretary">Joint Secretary<br>
+<input type="radio" name="postNomination" value="Joint Treasurer">Joint Treasurer<br>
+<input type="radio" name="postNomination" value="Block Representative - A1">Block Representative - A1<br>
+<input type="radio" name="postNomination" value="Block Representative - A2">Block Representative - A2<br>
+<input type="radio" name="postNomination" value="Block Representative - A3">Block Representative - A3<br>
+<input type="radio" name="postNomination" value="Block Representative - B1">Block Representative - B1<br>
+<input type="radio" name="postNomination" value="Block Representative - B2">Block Representative - B2<br>
+<input type="radio" name="postNomination" value="Block Representative - B3">Block Representative - B3<br>
+<input type="radio" name="postNomination" value="Block Representative - C1">Block Representative - C1<br>
+<input type="radio" name="postNomination" value="Block Representative - C2">Block Representative - C2<br>
+<input type="radio" name="postNomination" value="Block Representative - C3">Block Representative - C3<br>
+<input type="radio" name="postNomination" value="Block Representative - D1">Block Representative - D1<br>
+<input type="radio" name="postNomination" value="Block Representative - D2">Block Representative - D2<br>
+<input type="radio" name="postNomination" value="Block Representative - D3">Block Representative - D3<br>
+ <input type="submit" value="SUBMIT NOMINATION">
+ </form>
+ </body>
+</html>
