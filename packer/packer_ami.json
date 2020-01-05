@@ -1,0 +1,31 @@
+{
+    "variables": {
+      "name": "centos_7_haproxy",
+      "source_ami": "ami-d5bf2caa",
+      "access_key":"",
+      "secret_key":"",
+      "region":"us-east-1"
+    },
+    "builders": [{
+      "type": "amazon-ebs",
+      "access_key": "{{user `access_key`}}",
+      "secret_key":"{{user `secret_key`}}",
+      "ami_name": "{{user `name`}}",
+      "region": "{{user `region`}}",
+      "source_ami": "{{user `source_ami`}}",
+      "instance_type": "t2.micro",
+      "communicator": "ssh",
+      "ssh_username": "centos",
+      "run_tags":{"Name":"packer-image"}
+    }],
+    "provisioners": [
+        {
+            "type": "shell",
+            "inline": "sudo yum install -y epel-release"
+        },
+        {
+            "type": "shell",
+            "inline": ["sudo yum install -y haproxy","sudo systemctl enable haproxy", "sudo systemctl start haproxy"]
+        }
+      ]
+}
