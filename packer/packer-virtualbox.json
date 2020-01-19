@@ -41,14 +41,20 @@
 		  "modifyvm",
 		  "{{.Name}}",
 		  "--nic1",
-		  "intnet"
+		  "nat"
 		],
 		[
 		  "modifyvm",
 		  "{{.Name}}",
-		  "--bridgeadapter1",
+		  "--nic2",
+		  "bridged"
+		],
+		[
+		  "modifyvm",
+		  "{{.Name}}",
+		  "--bridgeadapter2",
 		  "Intel(R) Dual Band Wireless-AC 8265"
-		]
+		]		
 	],
 
       "virtualbox_version_file": ".vbox_version"
