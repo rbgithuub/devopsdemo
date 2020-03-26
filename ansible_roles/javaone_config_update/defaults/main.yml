@@ -1,0 +1,6 @@
+---
+# defaults file for javaone_config_update
+app_env: "stage"
+node_ip: "{{ ansible_host }}"
+node_user: "{{ ansible_user_id }}"
+

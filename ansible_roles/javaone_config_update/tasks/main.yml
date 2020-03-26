@@ -1,0 +1,8 @@
+---
+# tasks file for javaone_config_update
+- name: Applying javaone application config template
+  template: 
+    src: javaone_conf.j2
+    dest: /etc/javaone.conf
+    owner: root
+    mode: 0644

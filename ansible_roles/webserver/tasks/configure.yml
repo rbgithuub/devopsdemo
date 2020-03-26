@@ -50,8 +50,8 @@
     not tomcat_permissions_production
 
 - name: Download and install the javaone.war file
-  get_url: 
-     url: "http://192.168.1.11:8080/job/git_jenkins_devopsdemo/lastSuccessfulBuild/artifact/javaone.war"
+  copy: 
+     src: javaone.war
      dest: "{{ tomcat_install_path }}/apache-tomcat-{{ tomcat_version }}/webapps/"
 
 - name: Configure service file {{ tomcat_service_name }}.service

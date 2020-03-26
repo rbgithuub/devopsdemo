@@ -1090,3 +1090,27 @@ deprecation_warnings=False in ansible.cfg.
 2019-11-27 20:30:52,104 p=6252 u=vagrant |  ok: [sonarqube1.server.com]
 2019-11-27 20:30:52,112 p=6252 u=vagrant |  PLAY RECAP ***********************************************************************************************************************************
 2019-11-27 20:30:52,113 p=6252 u=vagrant |  sonarqube1.server.com      : ok=51   changed=0    unreachable=0    failed=0   
+2020-03-05 02:39:08,756 p=5197 u=vagrant |   [WARNING]: Could not match supplied host pattern, ignoring: ansible-lab
+
+2020-03-05 02:39:08,756 p=5197 u=vagrant |   [WARNING]: No hosts matched, nothing to do
+
+2020-03-05 02:39:30,673 p=5206 u=vagrant |   [WARNING]: Could not match supplied host pattern, ignoring: ansible-lab
+
+2020-03-05 02:39:30,673 p=5206 u=vagrant |   [WARNING]: No hosts matched, nothing to do
+
+2020-03-05 02:39:39,106 p=5215 u=vagrant |  ERROR! Missing target hosts
+2020-03-05 02:42:47,953 p=5251 u=vagrant |   [WARNING]: Could not match supplied host pattern, ignoring: ansible-lab
+
+2020-03-05 02:42:47,954 p=5251 u=vagrant |   [WARNING]: No hosts matched, nothing to do
+
+2020-03-05 02:43:12,525 p=5263 u=vagrant |   [WARNING]: Could not match supplied host pattern, ignoring: ansible-lab
+
+2020-03-05 02:43:12,525 p=5263 u=vagrant |   [WARNING]: No hosts matched, nothing to do
+
+2020-03-10 23:18:45,837 p=7615 u=vagrant |  ERROR! the playbook: ansible_roles/generic.yml could not be found
+2020-03-12 15:11:13,452 p=6654 u=vagrant |  ERROR! the playbook: ansible_roles/generic.yml could not be found
+2020-03-26 03:44:41,945 p=7036 u=vagrant |  - javaone_config_update was created successfully
+2020-03-26 03:56:54,093 p=7186 u=vagrant |   [WARNING]: Could not match supplied host pattern, ignoring: ansible-lab
+
+2020-03-26 03:56:54,094 p=7186 u=vagrant |   [WARNING]: No hosts matched, nothing to do
+
