@@ -1,5 +1,5 @@
 package org.web.javaone;
-
+/*Anitha*/
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * Servlet implementation class SimpleServlet - 10Jun2019 - 09:45:00 AM
+ * Adding changes on 08072019
  */
 @WebServlet("/hello")
 public class SimpleServlet extends HttpServlet {
