@@ -1,6 +1,7 @@
 # devopsdemo
 Sample DevOps Project by opensourcetechy
 Testing auto build trigger
+Testing on 240619
 =======
 <h1><b>Project Objective:</h1></b>
 <p>To explain a newcomer of DevOps with a working model of different stages involved in software development/integration/delivery/deployment/testing process using DevOps methodologies.
